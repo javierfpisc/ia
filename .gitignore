@@ -1,3 +1,4 @@
 anythingllm/
 pgvector/
 openwebui/
+docker-compose.yml
