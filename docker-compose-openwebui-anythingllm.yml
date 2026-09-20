@@ -18,7 +18,7 @@ services:
 
       # Embeddings mediante Ollama
       RAG_EMBEDDING_ENGINE: ollama
-      RAG_EMBEDDING_MODEL: nomic-embed-text
+      RAG_EMBEDDING_MODEL: nomic-embed-text-v2-moe
 
       # Ollama que está ejecutándose en el host
       OLLAMA_BASE_URLS: "http://host.docker.internal:11434"

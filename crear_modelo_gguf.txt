@@ -12,3 +12,10 @@ PARAMETER repeat_penalty 1.0
 PARAMETER num_ctx 16384
 PARAMETER num_predict 8192
 PARAMETER presence_penalty 1.5
+
+Modelo de embedding:
+
+wget -O nomic-embed-text-v2-moe.Q4_K_M.gguf   'https://huggingface.co/nomic-ai/nomic-embed-text-v2-moe-GGUF/resolve/main/nomic-embed-text-v2-moe.Q4_K_M.gguf
+
+Modelfile:
+FROM ./nomic-embed-text-v2-moe.Q4_K_M.gguf
