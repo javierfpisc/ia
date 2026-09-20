@@ -11,6 +11,17 @@ services:
 
     environment:
       WEBUI_SECRET_KEY: "abc123."
+
+      # PostgreSQL + pgvector
+      VECTOR_DB: webuid_vectors
+      PGVECTOR_DB_URL: "postgresql://rag:abc123.@pgvector:5432/rag"
+
+      # Embeddings mediante Ollama
+      RAG_EMBEDDING_ENGINE: ollama
+      RAG_EMBEDDING_MODEL: nomic-embed-text
+
+      # Ollama que está ejecutándose en el host
+      OLLAMA_BASE_URLS: "http://host.docker.internal:11434"
       
     extra_hosts:
       - "host.docker.internal:host-gateway"
@@ -23,6 +34,10 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
+
+    depends_on:
+      pgvector:
+        condition: service_healthy
 
   anythingllm:
     image: mintplexlabs/anythingllm:latest
@@ -43,11 +58,32 @@ services:
     volumes:
       - ./anythingllm/storage:/app/server/storage
 
-    depends_on:
-      - openwebui
-
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost:3001"]
       interval: 30s
       timeout: 10s
       retries: 3
+
+    depends_on:
+      pgvector:
+        condition: service_healthy
+
+  pgvector:
+    image: pgvector/pgvector:pg17
+    container_name: pgvector
+
+    #restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: rag
+      POSTGRES_USER: rag
+      POSTGRES_PASSWORD: "abc123."
+
+    volumes:
+      - ./pgvector/data:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rag -d rag"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
