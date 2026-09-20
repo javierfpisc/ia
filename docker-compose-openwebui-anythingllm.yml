@@ -13,7 +13,7 @@ services:
       WEBUI_SECRET_KEY: "abc123."
 
       # PostgreSQL + pgvector
-      VECTOR_DB: webuid_vectors
+      VECTOR_DB: pgvector
       PGVECTOR_DB_URL: "postgresql://rag:abc123.@pgvector:5432/rag"
 
       # Embeddings mediante Ollama
