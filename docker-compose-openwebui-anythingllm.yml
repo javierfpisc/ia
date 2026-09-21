@@ -20,12 +20,9 @@ services:
       RAG_EMBEDDING_ENGINE: ollama
       RAG_EMBEDDING_MODEL: nomic-embed-text-v2-moe
 
-      # Ollama que está ejecutándose en el host
-      OLLAMA_BASE_URLS: "http://host.docker.internal:11434"
+      # Ollama
+      OLLAMA_BASE_URLS: "http://ollama:11434"
       
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-
     volumes:
       - ./openwebui/data:/app/backend/data
 
@@ -38,6 +35,8 @@ services:
     depends_on:
       pgvector:
         condition: service_healthy
+      ollama:
+        condition: service_started
 
   anythingllm:
     image: mintplexlabs/anythingllm:latest
@@ -67,6 +66,8 @@ services:
     depends_on:
       pgvector:
         condition: service_healthy
+      ollama:
+        condition: service_started
 
   pgvector:
     image: pgvector/pgvector:pg17
