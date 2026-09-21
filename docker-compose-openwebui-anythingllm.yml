@@ -51,9 +51,6 @@ services:
       STORAGE_DIR: /app/server/storage
       JWT_SECRET: "abc123."
       
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-
     volumes:
       - ./anythingllm/storage:/app/server/storage
 
