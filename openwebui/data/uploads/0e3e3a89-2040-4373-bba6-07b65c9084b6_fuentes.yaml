@@ -1,9 +1,0 @@
-# Ubicación: documentacion/<unidadNN-nombre>/fuentes.yaml
-# Las URLs listadas son la fuente prioritaria de veracidad (documentación oficial) y están autorizadas.
-# Cada apartado de contenidos/unidades.yml selecciona las que usa mediante su campo `urls`.
-# Los documentos (pdf, odt, docx, epub, md, txt, html) de la misma carpeta se incorporan como fuentes secundarias.
-# Valida las URLs con: python3 scripts/auditar_fuentes.py documentacion/<unidadNN-nombre>
-
-- fuente: [Nombre de la documentación]
-  descripcion: [Qué contiene]
-  url: https://[documentación-oficial]

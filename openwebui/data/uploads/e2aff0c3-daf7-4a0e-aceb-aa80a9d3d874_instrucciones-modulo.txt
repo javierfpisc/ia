@@ -1,7 +1,0 @@
-# Instrucciones específicas del módulo sxe (prácticas)
-#
-# Complementan a ../../practicas/instrucciones.txt, que contiene las instrucciones generales comunes a todos los módulos.
-# Si una instrucción de este archivo entra en conflicto con las generales, prevalece esta, y se informa al profesor.
-#
-# Aquí solo deben figurar reglas propias de sxe: entornos y escenarios del módulo, tecnologías autorizadas,
-# restricciones de laboratorio o de seguridad específicas. Sin instrucciones propias todavía.
