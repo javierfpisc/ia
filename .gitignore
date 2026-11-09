@@ -1,4 +1,4 @@
 anythingllm/
 pgvector/
-#openwebui/
+openwebui/
 docker-compose.yml
