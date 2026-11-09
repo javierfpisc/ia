@@ -1,0 +1,78 @@
+// Estate module – kanban card polish
+// Scoped entirely under .o_estate_kanban so nothing bleeds into
+// other kanban views.  The class is added via the <kanban class="o_estate_kanban"> attribute.
+
+.o_estate_kanban {
+
+    // ── Card shell ────────────────────────────────────────────────────────────
+    .o_kanban_record:not(.o_kanban_ghost):not(.o-kanban-button-new) {
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .08), 0 1px 2px rgba(0, 0, 0, .05);
+        transition: box-shadow 0.18s ease, transform 0.18s ease;
+        border-color: rgba(0, 0, 0, .08);
+
+        &:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .12), 0 2px 6px rgba(0, 0, 0, .08);
+            transform: translateY(-2px);
+            z-index: 2;
+        }
+    }
+
+    // ── Price emphasis ────────────────────────────────────────────────────────
+    // Targets the monetary field wrappers inside the price rows
+    .o_estate_price_expected .o_field_monetary {
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--o-enterprise-action-color, #017e84); // teal accent, falls back gracefully
+    }
+
+    .o_estate_price_selling .o_field_monetary {
+        font-weight: 700;
+        font-size: 1.05rem;
+        color: #2e7d32; // sold/accepted green
+    }
+
+    // ── Tag chips ─────────────────────────────────────────────────────────────
+    .o_field_many2many_tags .badge {
+        margin-block: 2px;
+        letter-spacing: 0.02em;
+    }
+
+    // ── Country flag ─────────────────────────────────────────────────────────
+    .o_estate_country_flag {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 3px;
+        font-size: 0.8rem;
+        color: var(--text-muted, #6c757d);
+
+        img {
+            width: 18px;
+            height: auto;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(0,0,0,.12);
+            flex-shrink: 0;
+        }
+    }
+
+    // ── State accent – left border strip ─────────────────────────────────────
+    // We use a data attribute written by the kanban t-att-data-state trick below.
+    // Fallback: just card shadow is enough; this is purely cosmetic.
+    .o_kanban_record[data-estate-state="offer_received"]:not(.o_kanban_ghost) {
+        border-left: 3px solid #fb8c00; // warning orange
+    }
+
+    .o_kanban_record[data-estate-state="offer_accepted"]:not(.o_kanban_ghost) {
+        border-left: 3px solid #2e7d32; // success green
+    }
+
+    .o_kanban_record[data-estate-state="sold"]:not(.o_kanban_ghost) {
+        border-left: 3px solid #0d47a1; // info blue
+    }
+
+    .o_kanban_record[data-estate-state="cancelled"]:not(.o_kanban_ghost) {
+        border-left: 3px solid #c62828; // danger red
+        opacity: 0.75;
+    }
+}

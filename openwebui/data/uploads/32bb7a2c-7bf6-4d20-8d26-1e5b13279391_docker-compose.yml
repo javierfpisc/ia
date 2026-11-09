@@ -1,0 +1,16 @@
+services:
+  mkdocs:
+    # Contexto en el directorio real del Dockerfile: MODULO-BRS/mkdocs/Dockerfile es un enlace fuera del contexto.
+    build: ../../mkdocs
+    image: materiales-brs-mkdocs
+    ports:
+      - "127.0.0.1:8888:8000"
+    volumes:
+      - ./mkdocs.yml:/config/mkdocs.yml:ro
+      - ./docs-raiz/index.md:/docs/index.md:ro
+      - ../README.md:/docs/sistema.md:ro
+      - ./docs-raiz/.pages:/docs/.pages:ro
+      - ../contenidos:/docs/contenidos:ro
+      - ../practicas:/docs/practicas:ro
+      - ../modulo:/docs/modulo:ro
+    restart: unless-stopped

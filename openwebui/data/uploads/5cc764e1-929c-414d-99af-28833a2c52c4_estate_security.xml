@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Settings category -->
+    <record model="ir.module.category" id="module_category_real_estate">
+        <field name="name">Real Estate</field>
+        <field name="sequence">60</field>
+    </record>
+
+    <!-- Privilege (Odoo 19 requires this between category and groups) -->
+    <record model="res.groups.privilege" id="res_groups_privilege_estate">
+        <field name="name">Real Estate</field>
+        <field name="sequence">10</field>
+        <field name="category_id" ref="module_category_real_estate"/>
+    </record>
+
+    <!-- Agent: a regular real-estate user -->
+    <record id="group_estate_agent" model="res.groups">
+        <field name="name">Agent</field>
+        <field name="sequence">10</field>
+        <field name="privilege_id" ref="res_groups_privilege_estate"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <!-- Manager: implies Agent; admin is a Manager so the demo keeps full access -->
+    <record id="group_estate_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="sequence">20</field>
+        <field name="privilege_id" ref="res_groups_privilege_estate"/>
+        <field name="implied_ids" eval="[(4, ref('group_estate_agent'))]"/>
+        <field name="user_ids" eval="[(4, ref('base.user_admin'))]"/>
+    </record>
+
+    <data noupdate="1">
+        <!-- Agents see only the properties they are the salesperson for -->
+        <record id="estate_property_rule_agent" model="ir.rule">
+            <field name="name">Property: agent sees own</field>
+            <field name="model_id" ref="model_estate_property"/>
+            <field name="domain_force">[('salesperson_id', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_estate_agent'))]"/>
+        </record>
+
+        <!-- Managers see everything -->
+        <record id="estate_property_rule_manager" model="ir.rule">
+            <field name="name">Property: manager sees all</field>
+            <field name="model_id" ref="model_estate_property"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_estate_manager'))]"/>
+        </record>
+    </data>
+</odoo>

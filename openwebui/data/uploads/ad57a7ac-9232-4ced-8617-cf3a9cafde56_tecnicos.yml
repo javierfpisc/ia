@@ -1,0 +1,23 @@
+# Restricciones técnicas adicionales.
+# Deja una lista vacía cuando el profesor no imponga restricciones específicas.
+
+odoo_version: "19.0"
+development_conventions: "OCA"
+module_technical_name: "library_management"
+
+# Dependencias adicionales solicitadas expresamente por el profesor.
+depends: []
+
+# Restricciones de implementación.
+constraints:
+  - "No modificar las fuentes OCB/OCA."
+  - "Desarrollar dentro del directorio addons/."
+  - "Priorizar soluciones sencillas y legibles."
+  - "Verificar APIs y patrones contra Odoo 19."
+
+# Requisitos adicionales que no estén expresados en funcionales.md.
+notes:
+  - "Máximo fijo de tres préstamos activos por socio."
+  - "El préstamo permanece activo hasta registrar explícitamente la devolución."
+  - "El librero puede crear y modificar; solo el administrador de biblioteca puede eliminar."
+  - "El modelo library.loan define _rec_name = 'name' con campo computado store=True que genera referencia: 'Libro - Socio (DD/MM/YYYY)' para evitar mostrar IDs técnicos en la UI."

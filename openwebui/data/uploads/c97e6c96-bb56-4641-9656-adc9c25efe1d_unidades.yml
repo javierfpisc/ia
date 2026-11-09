@@ -1,0 +1,283 @@
+# =============================================================================
+# PLANIFICACIÓN DE PRÁCTICAS
+# =============================================================================
+#
+# Este archivo define las prácticas de cada unidad didáctica.
+#
+# Cada práctica debe describir:
+#   - Su finalidad y relación con los contenidos teóricos.
+#   - Los aspectos que se van a trabajar.
+#   - Los conocimientos y procedimientos mínimos que debe adquirir el alumno.
+#   - El escenario técnico necesario para realizarla.
+#   - Los procedimientos que debe ejecutar el alumno.
+#   - Los entregables y las comprobaciones que permitirán evaluarla.
+#
+# Los escenarios pueden ser ejecutables (Docker Compose, GNS3...) o estar
+# simplemente documentados cuando no se disponga de un entorno automatizado.
+#
+# IMPORTANTE:
+#   - No generar prácticas que no estén declaradas en este archivo.
+#   - No inventar configuraciones, direcciones, versiones ni recursos técnicos.
+#   - Los campos pendientes deben completarse antes de generar la práctica.
+#   - El estado inicial de toda práctica nueva será "borrador".
+#   - probada solo podrá establecerse a true después de su ejecución y
+#     comprobación por parte del profesor.
+#
+# NOTA DE RECONSTRUCCIÓN (ver informe entregado junto con esta versión):
+#   Este archivo ha sido reconstruido a partir del contenido ya existente en
+#   practicas/unidades/01-04. Los campos "sesiones" se han estimado a partir
+#   del nº de palabras real de cada práctica (ver "palabras") aplicando
+#   palabras_por_sesion y factor_tipo; deben revisarse y ajustarse por el
+#   profesor. Los campos "contenidos" enlazan con contenidos/unidades.yml;
+#   varios de estos enlaces son aproximados o señalan una laguna de
+#   contenidos (ver informe). Las unidades 5-7 no tienen prácticas porque no
+#   existe contenido alguno en practicas/unidades/05-07.
+#
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# CONFIGURACIÓN GENERAL
+# -----------------------------------------------------------------------------
+
+configuracion:
+
+  # Extensión orientativa del documento en función de las sesiones previstas.
+  palabras_por_sesion: 300
+
+  # Margen de variación permitido respecto a la extensión calculada.
+  tolerancia: 0.30
+
+  # Multiplicador aplicado a la extensión según el tipo de práctica.
+  factor_tipo:
+    guiada: 1.0
+    autonoma: 0.8
+    laboratorio: 1.3
+    caso_practico: 1.1
+
+  # Tipos de práctica admitidos.
+  tipos:
+    - guiada
+    - autonoma
+    - laboratorio
+    - caso_practico
+
+  # Tipos de escenario técnico admitidos.
+  escenarios:
+    - docker-compose
+    - documentado en recursos dentro de la unidad
+    - otro
+
+  # Modalidad de disponibilidad del escenario.
+  modalidades:
+    - ejecutable
+    - documentado
+
+  # Estados del proceso de elaboración y revisión.
+  estados:
+    - borrador
+    - revisado
+    - aprobado
+
+  # Directorios de trabajo del proyecto.
+  directorios:
+    contenidos: contenidos/unidades
+    practicas: practicas/unidades
+    artefactos: practicas/artefactos
+    documentacion: documentacion
+    recursos: practicas/unidades/<unidad>/recursos
+    trabajo: trabajo
+
+
+# -----------------------------------------------------------------------------
+# UNIDADES DIDÁCTICAS
+# -----------------------------------------------------------------------------
+
+unidades:
+
+  # ===========================================================================
+  # UNIDAD 5 — Desarrollo de Módulos con Odoo
+  # ===========================================================================
+
+  - unidad: 5
+    titulo: "Desarrollo de Módulos con Odoo"
+
+    practicas:
+
+      # -----------------------------------------------------------------------
+      # PLANTILLA DE PRÁCTICA
+      # Copiar este bloque para añadir una nueva práctica.
+      # -----------------------------------------------------------------------
+
+      # - id: "u01-pNN"
+      #
+      #   # Nombre descriptivo de la práctica.
+      #   titulo: ""
+      #
+      #   # Tipo: guiada, autonoma, laboratorio o caso_practico.
+      #   tipo: ""
+      #
+      #   # Identificadores de los contenidos teóricos relacionados.
+      #   # Utilizar los identificadores definidos en contenidos/unidades.yml.
+      #   contenidos: []
+      #
+      #   # Duración prevista en sesiones.
+      #   sesiones:
+      #
+      #   # Extensión orientativa en palabras. Si se deja vacía, se calculará
+      #   # a partir de las sesiones y de la configuración general.
+      #   palabras:
+      #
+      #   # Fuentes de información utilizadas para elaborar la práctica.
+      #   # Las referencias deben proceder de fuentes autorizadas.
+      #   fuentes: []
+      #
+      #   # URLs oficiales de consulta específicas de esta práctica.
+      #   urls: []
+      #
+      #   # Documentos locales de referencia.
+      #   # Indicar rutas relativas dentro de documentacion/.
+      #   documentos: []
+      #
+      #   # ---------------------------------------------------------------------
+      #   # CONTENIDO Y ALCANCE
+      #   # ---------------------------------------------------------------------
+      #
+      #   # Aspectos concretos que se van a trabajar.
+      #   aspectos: []
+      #
+      #   # Conocimientos y procedimientos mínimos que debe adquirir el alumno.
+      #   # Cada mínimo debe aparecer desarrollado en el procedimiento.
+      #   minimos: []
+      #
+      #   # Diagramas o esquemas que deben incluirse en el documento.
+      #   # Ejemplos: topología de red, arquitectura, flujo de autenticación...
+      #   diagramas: 0
+      #
+      #   # ---------------------------------------------------------------------
+      #   # ESCENARIO TÉCNICO
+      #   # ---------------------------------------------------------------------
+      #
+      #   escenario:
+      #
+      #     # Tipo de escenario:
+      #     # docker-compose | gns3 | documentado | otro
+      #     tipo: ""
+      #
+      #     # Modalidad:
+      #     # ejecutable | documentado
+      #     modalidad: ""
+      #
+      #     # Descripción del escenario y su finalidad didáctica.
+      #     descripcion: ""
+      #
+      #     # Ruta relativa a los recursos técnicos de la práctica.
+      #     # Ejemplo: practicas/artefactos/unidad01/u01-p01/
+      #     artefactos: ""
+      #
+      #     # Requisitos para preparar y ejecutar el escenario.
+      #     requisitos: []
+      #
+      #     # Máquinas virtuales, contenedores, equipos o dispositivos.
+      #     dispositivos: []
+      #
+      #     # Servicios y aplicaciones utilizados.
+      #     servicios: []
+      #
+      #     # Descripción de la topología o arquitectura.
+      #     topologia: ""
+      #
+      #     # Direccionamiento, nombres, puertos y otros parámetros.
+      #     # No incluir valores ficticios: documentar los reales.
+      #     direccionamiento: []
+      #
+      #     # Operaciones necesarias para gestionar el escenario.
+      #     operaciones:
+      #       inicio: []
+      #       parada: []
+      #       limpieza: []
+      #       validacion: []
+      #
+      #   # ---------------------------------------------------------------------
+      #   # PROCEDIMIENTO
+      #   # ---------------------------------------------------------------------
+      #
+      #   # Secuencia de tareas que realizará el alumno.
+      #   # Cada procedimiento debe describir la acción y su comprobación.
+      #   procedimientos: []
+      #
+      #   # ---------------------------------------------------------------------
+      #   # EVALUACIÓN Y RESULTADOS
+      #   # ---------------------------------------------------------------------
+      #
+      #   # Archivos, configuraciones, capturas o informes que debe entregar.
+      #   entregables: []
+      #
+      #   # Comprobaciones que permitirán verificar el resultado.
+      #   comprobaciones: []
+      #
+      #   # Riesgos, advertencias y posibles efectos de las operaciones.
+      #   riesgos: []
+      #
+      #   # ---------------------------------------------------------------------
+      #   # CONTROL DE ELABORACIÓN
+      #   # ---------------------------------------------------------------------
+      #
+      #   estado: borrador
+      #   probada: false
+
+      - id: "1-crear-modulo-con-agente"
+        titulo: "Creación de un módulo Odoo con agente IA"
+        tipo: laboratorio
+        contenidos: ["1-modulos-odoo", "2-modelos-odoo", "3-vistas-odoo", "4-acciones-odoo", "5-seguridad-odoo"]
+        sesiones: 5
+        fuentes: documentacion/unidad5-modulos
+        # Fragmentos que seleccionan las URLs de fuentes.yaml usadas por esta práctica.
+        urls:
+          - "developer/tutorials/server_framework_101"
+          - "reference/backend/orm"
+          - "reference/user_interface/view_architectures"
+          - "reference/backend/actions"
+          - "reference/backend/security"
+          - "reference/backend/data"
+          - "reference/backend/testing"
+          - "administration/install/source"
+          - "docs.docker.com/compose"
+        aspectos:
+          - "Estructura de un módulo Odoo"
+          - "Creación de modelos, vistas y acciones"
+          - "Instrucciones al agente de IA basadas en AGENTS.md y los requisitos funcionales"
+          - "Validación de un módulo: instalación, actualización y revisión de logs"
+        minimos:
+          - "Obtener una versión funcional de un módulo en base a las especificaciones de la práctica"
+        # Diagrama de flujo: instrucciones, agente, repositorio, contenedores y navegador.
+        diagramas: 1
+        escenario:
+          tipo: documentado en recursos dentro de la unidad
+          modalidad: ejecutable
+          descripcion: "Entorno Docker Compose con Odoo 19 y PostgreSQL 17 para desarrollar y probar, con un agente de IA, un módulo a partir del repositorio odoo-ai-lab."
+          artefactos: "practicas/unidades/05/recursos/05/odoo-ai-lab"
+          requisitos: ["Docker Engine y Docker Compose", "Imágenes de Odoo 19 y PostgreSQL 17 facilitadas para el curso", "Fuentes OCB/OCA 19 en el host (por defecto ~/odoo/src/OCB)", "odoo.conf del curso", "Visual Studio Code con un agente de programación", "Git"]
+          dispositivos: ["Contenedor odoo-ai-lab (Odoo 19)", "Contenedor postgres-ai-lab (PostgreSQL 17)"]
+          servicios: ["Odoo 19 (puerto 8069)", "PostgreSQL 17 (servicio db)"]
+          topologia: "Dos contenedores en la red por defecto de Compose; Odoo accede a la base de datos mediante el nombre de servicio db."
+          direccionamiento: ["Odoo: http://localhost:8069 en el equipo anfitrión", "PostgreSQL: sin puerto publicado, accesible solo desde la red de Compose"]
+          operaciones:
+            inicio: ["cp .env.example .env", "docker compose up -d"]
+            parada: ["docker compose stop"]
+            limpieza: ["docker compose down (conserva el volumen de PostgreSQL)", "docker compose down -v (elimina el volumen de PostgreSQL; solo con autorización)"]
+            validacion: ["docker compose ps", "docker compose logs -f odoo", "acceso a http://localhost:8069"]
+        procedimientos:
+          - "Configurar el entorno de trabajo para integrar un agente de IA de tipo free"
+          - "Revisar el AGENTS.md de los recursos de la práctica para entender el proceso de generación de código"
+          - "Añadir requisitos y funcionalidades del módulo a generar mediante instrucciones al agente IA"
+          - "Crear un nuevo módulo siguiendo la estructura recomendada mediante instrucciones al agente IA"
+          - "Probar el módulo en un entorno Odoo funcional y corregir errores mediante instrucciones al agente IA"
+        entregables: ["Módulo Odoo funcional según los requisitos"]
+        comprobaciones: ["El módulo se ejecuta correctamente", "Cumple los requisitos especificados en la práctica"]
+        riesgos:
+          - "La instalación o actualización del módulo modifica la base de datos de trabajo: no uses datos que quieras conservar"
+          - "docker compose down -v elimina el volumen de PostgreSQL y, con él, las bases de datos del laboratorio"
+          - "El agente puede proponer APIs o patrones que no existan en Odoo 19: deben comprobarse en las fuentes locales antes de aceptarlos"
+        estado: borrador
+        probada: false

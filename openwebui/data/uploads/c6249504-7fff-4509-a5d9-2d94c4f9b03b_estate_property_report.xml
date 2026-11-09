@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Report action — shows under the Print menu on a property -->
+    <record id="action_report_estate_property" model="ir.actions.report">
+        <field name="name">Property Sheet</field>
+        <field name="model">estate.property</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">estate.report_estate_property</field>
+        <field name="report_file">estate.report_estate_property</field>
+        <field name="print_report_name">'Property - %s' % (object.name)</field>
+        <field name="binding_model_id" ref="model_estate_property"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- Inner document — rendered once per property -->
+    <template id="report_estate_property_document">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <h2 class="mb-1"><span t-field="doc.name"/></h2>
+                <p class="text-muted mb-4"><span t-field="doc.property_type_id"/></p>
+
+                <div class="row mb-4">
+                    <div class="col-6">
+                        <p class="m-0"><strong>Expected Price: </strong>
+                            <span t-field="doc.expected_price"
+                                  t-options='{"widget": "monetary", "display_currency": doc.env.company.currency_id}'/>
+                        </p>
+                        <p class="m-0"><strong>Selling Price: </strong>
+                            <span t-field="doc.selling_price"
+                                  t-options='{"widget": "monetary", "display_currency": doc.env.company.currency_id}'/>
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <p class="m-0"><strong>Bedrooms: </strong><span t-field="doc.bedrooms"/></p>
+                        <p class="m-0"><strong>Living Area: </strong><span t-field="doc.living_area"/> m²</p>
+                        <p class="m-0"><strong>Status: </strong><span t-field="doc.state"/></p>
+                    </div>
+                </div>
+
+                <t t-if="doc.offer_ids">
+                    <h3 class="mb-3">Offers</h3>
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th class="text-start">Partner</th>
+                                <th class="text-end">Offered Price</th>
+                                <th class="text-start">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="doc.offer_ids" t-as="offer">
+                                <td><span t-field="offer.partner_id"/></td>
+                                <td class="text-end">
+                                    <span t-field="offer.price"
+                                          t-options='{"widget": "monetary", "display_currency": doc.env.company.currency_id}'/>
+                                </td>
+                                <td><span t-field="offer.state"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </t>
+                <p t-else="" class="text-muted fst-italic">No offers yet.</p>
+            </div>
+        </t>
+    </template>
+
+    <!-- Outer container — report_name points here -->
+    <template id="report_estate_property">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="estate.report_estate_property_document"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>

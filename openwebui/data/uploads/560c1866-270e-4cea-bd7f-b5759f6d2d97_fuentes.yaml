@@ -1,0 +1,239 @@
+# ============================================================
+# 1. IDENTIDAD DIGITAL Y MARCOS DE AUTENTICACIÓN
+# ============================================================
+
+- fuente: "NIST SP 800-63-4 – Digital Identity Guidelines"
+  descripcion: "Marco de referencia del NIST sobre identidad digital. Abarca prueba de identidad, registro, autenticadores, autenticación, gestión de credenciales y federación de identidades. Edición 4, publicada en 2025."
+  url: "https://csrc.nist.gov/pubs/sp/800/63/4/final"
+
+- fuente: "NIST SP 800-63A-4 – Identity Proofing and Enrollment"
+  descripcion: "Define los procesos de prueba, verificación y registro de la identidad de una persona antes de emitir o asociar credenciales digitales."
+  url: "https://csrc.nist.gov/pubs/sp/800/63/A/4/final"
+
+- fuente: "NIST SP 800-63B-4 – Authentication and Authenticator Management"
+  descripcion: "Referencia fundamental sobre autenticación y gestión de autenticadores. Trata factores de autenticación, contraseñas, autenticadores multifactor, niveles de garantía, resistencia al phishing y ciclo de vida de las credenciales."
+  url: "https://csrc.nist.gov/pubs/sp/800/63/B/4/final"
+
+- fuente: "NIST SP 800-63C-4 – Federation and Assertions"
+  descripcion: "Describe la federación de identidades, las aserciones y los mecanismos mediante los que un proveedor de identidad comunica la autenticación de un usuario a otros servicios."
+  url: "https://csrc.nist.gov/pubs/sp/800/63/C/4/final"
+
+- fuente: "NIST – Digital Identity Guidelines: Implementation Resources"
+  descripcion: "Recursos complementarios para implementar las directrices de identidad digital. Incluye ejemplos de autenticadores, características de los factores, resistencia a ataques de repetición y resistencia al phishing."
+  url: "https://pages.nist.gov/800-63-4-Implementation-Resources/"
+
+# ============================================================
+# 2. NORMATIVA Y REFERENCIAS ESPAÑOLAS
+# ============================================================
+
+- fuente: "CCN-CERT – Catálogo de guías CCN-STIC"
+  descripcion: "Repositorio oficial de guías del Centro Criptológico Nacional. Permite consultar documentación relacionada con control de acceso, identificación, autenticación, gestión de credenciales, administración de sistemas y medidas de seguridad."
+  url: "https://www.ccn-cert.cni.es/es/guias"
+
+- fuente: "CCN-CERT – Guías del Esquema Nacional de Seguridad (serie 800)"
+  descripcion: "Colección de guías técnicas para la aplicación del Esquema Nacional de Seguridad. Referencia para contextualizar la identificación, autenticación, control de acceso y gestión de usuarios dentro de un sistema de gestión de seguridad."
+  url: "https://www.ccn-cert.cni.es/es/series-ccn-stic/guias/series-ccn-stic/800-guia-esquema-nacional-de-seguridad.html"
+
+- fuente: "INCIBE – Recursos y políticas de seguridad para empresas"
+  descripcion: "Repositorio de documentación práctica sobre protección de cuentas, gestión de contraseñas, autenticación, control de acceso y medidas de seguridad aplicables a organizaciones."
+  url: "https://www.incibe.es/empresas"
+
+# ============================================================
+# 3. FACTORES DE AUTENTICACIÓN Y AUTENTICACIÓN MULTIFACTOR
+# ============================================================
+
+- fuente: "OWASP – Authentication Cheat Sheet"
+  descripcion: "Guía para diseñar e implementar procesos de autenticación seguros. Incluye validación de credenciales, protección de cuentas, recuperación, reautenticación y medidas contra ataques."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
+
+- fuente: "OWASP – Multifactor Authentication Cheat Sheet"
+  descripcion: "Explica los factores de autenticación (conocimiento, posesión e inherencia), los mecanismos MFA, su independencia, los riesgos de implementación y las recomendaciones de seguridad."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html"
+
+- fuente: "CISA – Implementing Phishing-Resistant MFA"
+  descripcion: "Recomendaciones de la agencia estadounidense de ciberseguridad para implantar autenticación multifactor resistente al phishing. Explica las ventajas de FIDO/WebAuthn y los riesgos de métodos tradicionales."
+  url: "https://www.cisa.gov/resources-tools/resources/implementing-phishing-resistant-mfa"
+
+- fuente: "NIST – Authentication and Authenticator Management"
+  descripcion: "Documentación técnica sobre los tipos de autenticadores, sus características, los factores de autenticación y los requisitos de seguridad de los distintos mecanismos."
+  url: "https://pages.nist.gov/800-63-4/sp800-63b.html"
+
+# ============================================================
+# 4. GESTIÓN DE CONTRASEÑAS Y PROTECCIÓN DE CREDENCIALES
+# ============================================================
+
+- fuente: "NIST SP 800-63B-4 – Password Authenticators"
+  descripcion: "Requisitos y recomendaciones sobre contraseñas: longitud, listas de contraseñas comprometidas, almacenamiento seguro, verificación, limitación de intentos y protección frente a ataques."
+  url: "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/"
+
+- fuente: "OWASP – Password Storage Cheat Sheet"
+  descripcion: "Buenas prácticas para almacenar contraseñas de forma segura. Trata algoritmos de derivación y hash como Argon2id, bcrypt y PBKDF2, sal única, factores de coste y protección frente a ataques offline."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"
+
+- fuente: "OWASP – Forgot Password Cheat Sheet"
+  descripcion: "Recomendaciones para los procesos de recuperación y restablecimiento de contraseñas, emisión y validación de tokens, protección frente a enumeración de cuentas y gestión de sesiones."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html"
+
+- fuente: "OWASP – Credential Stuffing Prevention Cheat Sheet"
+  descripcion: "Explica los ataques de reutilización automatizada de credenciales obtenidas en filtraciones y las medidas de protección frente a ellos."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
+
+- fuente: "OWASP – Authentication Cheat Sheet: Passwords"
+  descripcion: "Recomendaciones para la validación de contraseñas, prevención de ataques de fuerza bruta, limitación de intentos y protección de los mecanismos de inicio de sesión."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
+
+# ============================================================
+# 5. AUTENTICACIÓN EN LINUX
+# ============================================================
+
+- fuente: "Linux-PAM – The Linux-PAM System Administrators' Guide"
+  descripcion: "Documentación oficial de Linux-PAM sobre la arquitectura de módulos de autenticación conectables. Explica la configuración de los servicios de autenticación, las pilas de módulos y los mecanismos auth, account, password y session."
+  url: "https://www.linux-pam.org/Linux-PAM-html/"
+
+- fuente: "Linux man-pages – pam.d(5)"
+  descripcion: "Manual técnico de los ficheros de configuración PAM, normalmente ubicados en /etc/pam.d/. Explica los tipos de módulos, controles de ejecución y apilamiento de reglas."
+  url: "https://man7.org/linux/man-pages/man5/pam.d.5.html"
+
+- fuente: "Linux-PAM – pam_unix(8)"
+  descripcion: "Manual del módulo PAM tradicional para autenticación Unix. Explica su relación con las cuentas locales y los ficheros /etc/passwd y /etc/shadow."
+  url: "https://www.man7.org/linux/man-pages/man8/pam_unix.8.html"
+
+- fuente: "Linux man-pages – shadow(5)"
+  descripcion: "Documentación del fichero /etc/shadow, utilizado para almacenar información de autenticación de las cuentas locales de Linux, incluyendo hashes de contraseñas y datos de caducidad."
+  url: "https://man7.org/linux/man-pages/man5/shadow.5.html"
+
+- fuente: "SSSD – System Security Services Daemon"
+  descripcion: "Documentación oficial de SSSD sobre integración de sistemas Linux con proveedores de identidad y directorios, autenticación centralizada, caché de credenciales y control de acceso."
+  url: "https://sssd.io/docs/"
+
+- fuente: "FreeIPA – Documentation"
+  descripcion: "Documentación del proyecto FreeIPA sobre gestión centralizada de identidades en Linux. Incluye usuarios, grupos, autenticación Kerberos, políticas de acceso, certificados y administración de dominios."
+  url: "https://www.freeipa.org/page/Documentation"
+
+- fuente: "OpenSSH – sshd_config(5)"
+  descripcion: "Manual oficial de configuración del servidor OpenSSH. Incluye autenticación mediante contraseña, claves públicas, teclado interactivo, métodos combinados y autenticación multifactor mediante AuthenticationMethods."
+  url: "https://man.openbsd.org/sshd_config"
+
+- fuente: "OpenSSH – ssh(1)"
+  descripcion: "Manual del cliente SSH. Explica los mecanismos de conexión y autenticación remota, utilización de claves, agentes SSH y configuración de conexiones seguras."
+  url: "https://man.openbsd.org/ssh"
+
+# ============================================================
+# 6. AUTENTICACIÓN EN WINDOWS Y ACTIVE DIRECTORY
+# ============================================================
+
+- fuente: "Microsoft Learn – Información general de la autenticación de Windows"
+  descripcion: "Documentación técnica sobre la arquitectura de autenticación de Windows, incluyendo Kerberos, NTLM, TLS, autenticación integrada, tarjetas inteligentes y administración de credenciales."
+  url: "https://learn.microsoft.com/es-es/windows-server/security/windows-authentication/windows-authentication-overview"
+
+- fuente: "Microsoft Learn – Arquitectura de autenticación de Windows"
+  descripcion: "Explica los componentes de la arquitectura de autenticación de Windows, los proveedores de compatibilidad de seguridad (SSP), los procesos de inicio de sesión y la validación de credenciales."
+  url: "https://learn.microsoft.com/en-us/windows-server/security/windows-authentication/windows-authentication-architecture"
+
+- fuente: "Microsoft Learn – Introducción a la autenticación Kerberos en Windows Server"
+  descripcion: "Describe el funcionamiento de Kerberos V5 en Windows, el Centro de Distribución de Claves (KDC), los tickets TGT y de servicio, la autenticación mutua y la delegación."
+  url: "https://learn.microsoft.com/es-es/windows-server/security/kerberos/kerberos-authentication-overview"
+
+- fuente: "Microsoft Learn – Introducción a NTLM"
+  descripcion: "Describe los protocolos NTLM, su mecanismo de desafío-respuesta, los escenarios en los que todavía se utiliza y la preferencia por Kerberos en entornos de Active Directory."
+  url: "https://learn.microsoft.com/es-es/windows-server/security/kerberos/ntlm-overview"
+
+- fuente: "Microsoft Learn – Active Directory Domain Services"
+  descripcion: "Documentación oficial sobre Active Directory Domain Services. Incluye estructura de dominios, usuarios, grupos, equipos, unidades organizativas, controladores de dominio y administración centralizada de identidades."
+  url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-domain-services"
+
+- fuente: "Microsoft Learn – Windows Hello para empresas"
+  descripcion: "Documentación sobre autenticación sin contraseña mediante credenciales basadas en claves, PIN y biometría. Explica su integración con Microsoft Entra ID, Active Directory y tecnologías FIDO."
+  url: "https://learn.microsoft.com/es-es/windows/security/identity-protection/hello-for-business/"
+
+- fuente: "Microsoft Learn – Credential Guard"
+  descripcion: "Explica cómo Credential Guard utiliza seguridad basada en virtualización para aislar y proteger secretos de autenticación, como hashes NTLM y tickets Kerberos, frente al robo de credenciales."
+  url: "https://learn.microsoft.com/es-es/windows/security/identity-protection/credential-guard/"
+
+- fuente: "Microsoft Learn – Protección y administración de credenciales en Windows"
+  descripcion: "Documentación sobre los mecanismos de protección y almacenamiento de credenciales en Windows, incluyendo el Administrador de credenciales y los mecanismos de protección de secretos."
+  url: "https://learn.microsoft.com/en-us/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication"
+
+# ============================================================
+# 7. AUTENTICACIÓN MEDIANTE CERTIFICADOS Y CRIPTOGRAFÍA
+# ============================================================
+
+- fuente: "Microsoft Learn – Certificate Services"
+  descripcion: "Documentación de los Servicios de certificados de Active Directory (AD CS). Explica la infraestructura de clave pública (PKI), autoridades de certificación, plantillas de certificados y emisión de certificados para autenticación."
+  url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-cs/active-directory-certificate-services-overview"
+
+- fuente: "NIST – FIPS 201-3: Personal Identity Verification (PIV)"
+  descripcion: "Estándar para la identificación y autenticación de personas mediante credenciales de identidad basadas en certificados y tarjetas inteligentes. Incluye autenticación criptográfica y mecanismos de verificación de identidad."
+  url: "https://csrc.nist.gov/pubs/fips/201-3/final"
+
+- fuente: "IETF RFC 5280 – Internet X.509 Public Key Infrastructure Certificate and CRL Profile"
+  descripcion: "Especificación del formato de certificados digitales X.509 y las listas de revocación de certificados (CRL). Referencia fundamental para comprender la autenticación basada en certificados."
+  url: "https://www.rfc-editor.org/rfc/rfc5280.html"
+
+# ============================================================
+# 8. FIDO2, PASSKEYS Y AUTENTICACIÓN SIN CONTRASEÑA
+# ============================================================
+
+- fuente: "FIDO Alliance – Passkeys"
+  descripcion: "Documentación sobre passkeys y autenticación mediante criptografía de clave pública. Explica cómo sustituir las contraseñas por credenciales vinculadas a dispositivos y resistentes al phishing."
+  url: "https://fidoalliance.org/passkeys/"
+
+- fuente: "FIDO Alliance – Specifications"
+  descripcion: "Repositorio de especificaciones técnicas de FIDO Alliance, incluyendo FIDO2, CTAP y U2F. Referencia para estudiar autenticadores hardware, autenticación web y mecanismos de autenticación sin contraseña."
+  url: "https://fidoalliance.org/specifications/"
+
+- fuente: "W3C – Web Authentication (WebAuthn) Level 3"
+  descripcion: "Especificación del W3C para crear y utilizar credenciales de clave pública asociadas a autenticadores. Es la base técnica de muchos sistemas de passkeys y autenticación FIDO en aplicaciones web."
+  url: "https://www.w3.org/TR/webauthn-3/"
+
+- fuente: "FIDO Alliance – FIDO2"
+  descripcion: "Descripción de la arquitectura FIDO2, formada por WebAuthn y CTAP. Explica la autenticación mediante claves criptográficas y el uso de autenticadores externos o integrados en los dispositivos."
+  url: "https://fidoalliance.org/fido2/"
+
+# ============================================================
+# 9. CONTRASEÑAS DE UN SOLO USO: HOTP Y TOTP
+# ============================================================
+
+- fuente: "IETF RFC 6238 – TOTP: Time-Based One-Time Password Algorithm"
+  descripcion: "Especificación del algoritmo TOTP, que genera contraseñas de un solo uso basadas en el tiempo. Es la base técnica de numerosos autenticadores software y sistemas de códigos temporales."
+  url: "https://www.rfc-editor.org/rfc/rfc6238.html"
+
+- fuente: "IETF RFC 4226 – HOTP: An HMAC-Based One-Time Password Algorithm"
+  descripcion: "Especificación del algoritmo HOTP, que genera contraseñas de un solo uso mediante HMAC y un contador. Incluye requisitos y consideraciones de seguridad."
+  url: "https://www.rfc-editor.org/rfc/rfc4226.html"
+
+# ============================================================
+# 10. AUTENTICACIÓN CENTRALIZADA Y PROTOCOLOS DE RED
+# ============================================================
+
+- fuente: "IETF RFC 4120 – The Kerberos Network Authentication Service (V5)"
+  descripcion: "Especificación oficial del protocolo Kerberos V5. Describe la arquitectura de autenticación, el intercambio de tickets, el KDC y los mecanismos de autenticación entre clientes y servicios."
+  url: "https://www.rfc-editor.org/rfc/rfc4120.html"
+
+- fuente: "IETF RFC 4511 – Lightweight Directory Access Protocol (LDAP)"
+  descripcion: "Especificación del protocolo LDAPv3 para acceder y administrar servicios de directorio. Describe operaciones de búsqueda, modificación, vinculación (Bind) y gestión de conexiones."
+  url: "https://www.rfc-editor.org/rfc/rfc4511.html"
+
+- fuente: "IETF RFC 2865 – Remote Authentication Dial In User Service (RADIUS)"
+  descripcion: "Especificación del protocolo RADIUS para centralizar la autenticación, autorización y contabilidad de accesos a redes y servicios. Es especialmente relevante en redes empresariales, Wi-Fi y acceso remoto."
+  url: "https://www.rfc-editor.org/rfc/rfc2865.html"
+
+- fuente: "IETF RFC 7665 – Service Function Chaining: Architecture"
+  descripcion: "Documento de arquitectura de encadenamiento de funciones de servicio. Referencia complementaria para comprender arquitecturas de red y servicios de seguridad, aunque no constituye una especificación de autenticación."
+  url: "https://www.rfc-editor.org/rfc/rfc7665.html"
+
+# ============================================================
+# 11. IDENTIDAD FEDERADA Y AUTENTICACIÓN WEB
+# ============================================================
+
+- fuente: "OpenID Foundation – OpenID Connect Core 1.0"
+  descripcion: "Especificación del protocolo de identidad construido sobre OAuth 2.0. Define cómo un cliente obtiene información verificable sobre la autenticación y la identidad de un usuario desde un proveedor de identidad."
+  url: "https://openid.net/specs/openid-connect-core-1_0.html"
+
+- fuente: "IETF RFC 6749 – The OAuth 2.0 Authorization Framework"
+  descripcion: "Especificación del marco de autorización OAuth 2.0. Define cómo una aplicación puede obtener acceso limitado a recursos protegidos en nombre de un usuario. Debe estudiarse junto con OpenID Connect para distinguir autorización y autenticación."
+  url: "https://www.rfc-editor.org/rfc/rfc6749.html"
+
+- fuente: "IETF RFC 8446 – The Transport Layer Security (TLS) Protocol Version 1.3"
+  descripcion: "Especificación de TLS 1.3, protocolo que protege los canales de comunicación utilizados durante numerosos procesos de autenticación y permite autenticar servidores y, opcionalmente, clientes mediante certificados."
+  url: "https://www.rfc-editor.org/rfc/rfc8446.html"

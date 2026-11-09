@@ -1,0 +1,19 @@
+<odoo>
+    <record id="estate_property_view_form_inherit" model="ir.ui.view">
+        <field name="name">estate.property.form.inherit</field>
+        <field name="model">estate.property</field>
+        <field name="inherit_id" ref="estate.estate_property_view_form"/>
+        <field name="arch" type="xml">
+            <!-- ============================================================
+                 TODO (WORKSHOP): replace this placeholder with the real
+                 inheritance from the estate_account lesson. An inherited
+                 view modifies its parent using <xpath ... position="...">.
+                 For now this just proves inheritance is wired up by adding
+                 one separator to the property form.
+                 ============================================================ -->
+            <xpath expr="//sheet" position="inside">
+                <separator string="Added by estate_accounts (placeholder — replace me)"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

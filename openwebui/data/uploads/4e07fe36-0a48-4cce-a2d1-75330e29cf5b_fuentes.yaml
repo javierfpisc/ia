@@ -1,0 +1,496 @@
+# ============================================================
+# 23. CLOUD NATIVE: FUNDAMENTOS Y ECOSISTEMA CNCF
+# ============================================================
+
+- fuente: "Cloud Native Computing Foundation (CNCF)"
+  descripcion: "Organización de referencia del ecosistema cloud native, perteneciente a The Linux Foundation. Promueve y mantiene proyectos de código abierto relacionados con la orquestación de contenedores, automatización, observabilidad, redes, almacenamiento, seguridad y despliegue de aplicaciones. Referencia principal para introducir el ecosistema tecnológico alrededor de Kubernetes."
+  url: "https://www.cncf.io/"
+
+- fuente: "CNCF – Cloud Native Landscape"
+  descripcion: "Mapa del ecosistema cloud native que recoge proyectos, productos y tecnologías organizados por categorías funcionales. Permite identificar las principales herramientas utilizadas en entornos Kubernetes, incluyendo redes, almacenamiento, observabilidad, seguridad, CI/CD, service mesh y automatización de infraestructura. Es una referencia especialmente útil para comprender la amplitud del ecosistema."
+  url: "https://landscape.cncf.io/"
+
+- fuente: "CNCF – Projects"
+  descripcion: "Catálogo oficial de proyectos de la CNCF, organizados según su nivel de madurez: Graduated, Incubating y Sandbox. Permite identificar los proyectos que forman parte de la fundación, su ámbito funcional y su evolución dentro del ecosistema cloud native."
+  url: "https://www.cncf.io/projects/"
+
+- fuente: "CNCF – Project Lifecycle"
+  descripcion: "Descripción del ciclo de vida y los niveles de madurez de los proyectos de la CNCF. Explica los criterios de entrada y evolución de los proyectos desde Sandbox hasta Incubating y Graduated, así como la categoría Archived. Referencia para comprender los mecanismos de gobernanza y madurez del software cloud native."
+  url: "https://contribute.cncf.io/projects/lifecycle/"
+
+- fuente: "CNCF – Cloud Native Trail Map"
+  descripcion: "Guía de referencia que propone un recorrido de adopción de tecnologías cloud native. Presenta las principales categorías tecnológicas y una secuencia de incorporación de herramientas y prácticas para construir plataformas modernas de desarrollo y despliegue de aplicaciones."
+  url: "https://github.com/cncf/trailmap"
+
+- fuente: "The Linux Foundation – Cloud Native"
+  descripcion: "Recursos formativos y documentación sobre tecnologías cloud native, Kubernetes, contenedores, automatización, DevOps y plataformas distribuidas. Permite contextualizar la evolución de las arquitecturas tradicionales hacia infraestructuras basadas en servicios y aplicaciones desacopladas."
+  url: "https://www.linuxfoundation.org/"
+
+
+# ============================================================
+# 24. KUBERNETES: FUNDAMENTOS, ARQUITECTURA Y COMPONENTES
+# ============================================================
+
+- fuente: "Kubernetes – Documentación oficial"
+  descripcion: "Documentación oficial del proyecto Kubernetes, mantenido por la comunidad Kubernetes y la CNCF. Referencia principal para estudiar la plataforma de orquestación de contenedores, su arquitectura, recursos, APIs, administración, seguridad y despliegue de aplicaciones."
+  url: "https://kubernetes.io/docs/"
+
+- fuente: "Kubernetes – Concepts"
+  descripcion: "Introducción a los conceptos fundamentales de Kubernetes. Explica la arquitectura de clústeres, Pods, Workloads, Deployments, StatefulSets, DaemonSets, Services, almacenamiento, configuración, seguridad, políticas y mecanismos de planificación."
+  url: "https://kubernetes.io/docs/concepts/"
+
+- fuente: "Kubernetes – Cluster Architecture"
+  descripcion: "Descripción de la arquitectura de un clúster Kubernetes. Explica la separación entre control plane y worker nodes, así como las funciones de kube-apiserver, etcd, kube-scheduler, kube-controller-manager, kubelet y kube-proxy. Referencia esencial para comprender el funcionamiento interno del orquestador."
+  url: "https://kubernetes.io/docs/concepts/architecture/"
+
+- fuente: "Kubernetes – Components"
+  descripcion: "Referencia de los componentes principales que integran un clúster Kubernetes, sus responsabilidades y las relaciones entre ellos. Permite estudiar la arquitectura de control y ejecución de cargas de trabajo."
+  url: "https://kubernetes.io/docs/concepts/overview/components/"
+
+- fuente: "Kubernetes – Workloads"
+  descripcion: "Documentación sobre los recursos que permiten ejecutar aplicaciones en Kubernetes. Explica Pods, ReplicaSets, Deployments, StatefulSets, DaemonSets, Jobs y CronJobs, así como sus características y escenarios de utilización."
+  url: "https://kubernetes.io/docs/concepts/workloads/"
+
+- fuente: "Kubernetes – Services, Load Balancing and Networking"
+  descripcion: "Documentación sobre los mecanismos de comunicación entre aplicaciones y servicios dentro y fuera del clúster. Explica Services, ClusterIP, NodePort, LoadBalancer, DNS, balanceo de tráfico y fundamentos de la conectividad de red."
+  url: "https://kubernetes.io/docs/concepts/services-networking/"
+
+- fuente: "Kubernetes – Storage"
+  descripcion: "Documentación sobre el almacenamiento persistente y temporal de las aplicaciones. Introduce Volumes, PersistentVolumes, PersistentVolumeClaims, StorageClasses, aprovisionamiento dinámico y la integración con sistemas de almacenamiento externos."
+  url: "https://kubernetes.io/docs/concepts/storage/"
+
+- fuente: "Kubernetes – Configuration"
+  descripcion: "Referencia sobre los mecanismos de configuración de aplicaciones en Kubernetes. Explica ConfigMaps, Secrets, variables de entorno, volúmenes de configuración y otros mecanismos para desacoplar la configuración del ciclo de vida de las aplicaciones."
+  url: "https://kubernetes.io/docs/concepts/configuration/"
+
+- fuente: "Kubernetes – Cluster Administration"
+  descripcion: "Documentación orientada a la administración de clústeres Kubernetes. Incluye gestión de nodos, recursos, certificados, componentes del sistema, monitorización, políticas, mantenimiento y operaciones administrativas."
+  url: "https://kubernetes.io/docs/concepts/cluster-administration/"
+
+- fuente: "Kubernetes – kubectl"
+  descripcion: "Documentación de la herramienta de línea de comandos kubectl, utilizada para interactuar con la API de Kubernetes. Explica la consulta y modificación de recursos, aplicación de manifiestos YAML, gestión de contextos, depuración y operaciones administrativas."
+  url: "https://kubernetes.io/docs/reference/kubectl/"
+
+- fuente: "Kubernetes – API Reference"
+  descripcion: "Referencia técnica de la API de Kubernetes. Describe los recursos disponibles, sus propiedades, versiones y operaciones. Permite consultar la estructura de los manifiestos y comprender la interacción entre los clientes y el API Server."
+  url: "https://kubernetes.io/docs/reference/kubernetes-api/"
+
+- fuente: "Kubernetes – Resource Management"
+  descripcion: "Documentación sobre la asignación y limitación de recursos computacionales. Explica requests, limits, cuotas, LimitRanges y mecanismos para controlar el consumo de CPU y memoria de las aplicaciones."
+  url: "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+
+
+# ============================================================
+# 25. DESPLIEGUE Y ADMINISTRACIÓN DE CLÚSTERES KUBERNETES
+# ============================================================
+
+- fuente: "Kubernetes – Production Environment"
+  descripcion: "Guía oficial para preparar y desplegar entornos Kubernetes destinados a producción. Aborda los requisitos de infraestructura, selección de herramientas, componentes de red, almacenamiento, alta disponibilidad y consideraciones operativas."
+  url: "https://kubernetes.io/docs/setup/production-environment/"
+
+- fuente: "Kubernetes – Installing kubeadm"
+  descripcion: "Procedimiento oficial para instalar kubeadm, kubelet y kubectl en los nodos de un clúster. Explica los requisitos previos y la preparación de los sistemas operativos para desplegar Kubernetes mediante kubeadm."
+  url: "https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/"
+
+- fuente: "Kubernetes – Bootstrapping Clusters with kubeadm"
+  descripcion: "Guía de referencia para crear clústeres Kubernetes mediante kubeadm. Explica la inicialización del control plane, incorporación de nodos worker, configuración de certificados, alta disponibilidad y actualización del clúster."
+  url: "https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/"
+
+- fuente: "Kubernetes – Container Runtimes"
+  descripcion: "Documentación sobre los entornos de ejecución de contenedores compatibles con Kubernetes. Explica la relación entre kubelet, Container Runtime Interface (CRI) y runtimes como containerd y CRI-O, así como los requisitos de configuración."
+  url: "https://kubernetes.io/docs/setup/production-environment/container-runtimes/"
+
+- fuente: "K3s – Documentación oficial"
+  descripcion: "Documentación de K3s, distribución ligera y certificada de Kubernetes desarrollada por SUSE/Rancher. Explica su arquitectura, instalación, configuración, administración, alta disponibilidad y componentes integrados. Especialmente interesante para laboratorios, edge computing, IoT y despliegues con recursos limitados."
+  url: "https://docs.k3s.io/"
+
+- fuente: "K3s – Quick Start"
+  descripcion: "Guía de instalación rápida de K3s. Describe el despliegue de un servidor Kubernetes y la incorporación de nodos adicionales, así como los primeros pasos para administrar el clúster."
+  url: "https://docs.k3s.io/quick-start"
+
+- fuente: "K3s – Architecture"
+  descripcion: "Explicación de la arquitectura de K3s y de sus componentes. Describe el funcionamiento de los nodos server y agent, los servicios integrados, el datastore y las diferencias respecto a una instalación Kubernetes convencional."
+  url: "https://docs.k3s.io/architecture"
+
+- fuente: "RKE2 – Documentación oficial"
+  descripcion: "Documentación de RKE2, distribución Kubernetes orientada a entornos empresariales y seguridad. Explica su instalación, arquitectura, configuración, administración y mecanismos de endurecimiento de la plataforma."
+  url: "https://docs.rke2.io/"
+
+- fuente: "Cluster API – Documentación oficial"
+  descripcion: "Proyecto de la comunidad Kubernetes para gestionar el ciclo de vida de clústeres mediante APIs declarativas. Permite automatizar la creación, configuración, actualización y eliminación de clústeres Kubernetes sobre diferentes proveedores de infraestructura."
+  url: "https://cluster-api.sigs.k8s.io/"
+
+- fuente: "Kubespray – Documentación oficial"
+  descripcion: "Proyecto basado en Ansible para desplegar y administrar clústeres Kubernetes en diferentes entornos. Permite estudiar la integración entre automatización de infraestructura, configuración de sistemas y despliegue del orquestador."
+  url: "https://kubespray.io/"
+
+
+# ============================================================
+# 26. REDES KUBERNETES: CNI, CILIUM, CALICO Y COREDNS
+# ============================================================
+
+- fuente: "Kubernetes – Cluster Networking"
+  descripcion: "Explicación del modelo de red de Kubernetes y de los mecanismos necesarios para permitir la comunicación entre Pods, nodos, servicios y redes externas. Introduce los requisitos de conectividad y el papel de los plugins de red."
+  url: "https://kubernetes.io/docs/concepts/cluster-administration/networking/"
+
+- fuente: "Kubernetes – Network Plugins"
+  descripcion: "Documentación sobre los plugins de red que implementan el modelo de conectividad de Kubernetes. Explica el papel de CNI y la necesidad de disponer de una implementación compatible para proporcionar conectividad entre Pods."
+  url: "https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/"
+
+- fuente: "CNI – Container Network Interface Specification"
+  descripcion: "Especificación oficial de la interfaz de red para contenedores. Define el protocolo de comunicación entre los runtimes y los plugins de red, así como las operaciones necesarias para configurar y eliminar interfaces de red."
+  url: "https://github.com/containernetworking/cni/blob/main/SPEC.md"
+
+- fuente: "Cilium – Documentación oficial"
+  descripcion: "Documentación de Cilium, solución de conectividad, seguridad y observabilidad para entornos Kubernetes basada en eBPF. Explica la arquitectura de red, políticas de seguridad, balanceo de servicios, integración con Gateway API y monitorización del tráfico."
+  url: "https://docs.cilium.io/en/stable/"
+
+- fuente: "Cilium – Getting Started"
+  descripcion: "Guía de iniciación a Cilium. Explica su instalación en Kubernetes, configuración de red, utilización de eBPF y comprobación de la conectividad entre aplicaciones."
+  url: "https://docs.cilium.io/en/stable/gettingstarted/"
+
+- fuente: "Calico – Documentación oficial"
+  descripcion: "Documentación de Calico, plataforma de red y seguridad para Kubernetes. Explica la implementación de redes de Pods, políticas de red, enrutamiento, conectividad entre nodos y mecanismos de aislamiento de tráfico."
+  url: "https://docs.tigera.io/calico/latest/about/"
+
+- fuente: "Calico – Network Policy"
+  descripcion: "Guía sobre la implementación de políticas de red en Kubernetes. Explica cómo controlar el tráfico de entrada y salida mediante selectores, namespaces, etiquetas y reglas de acceso. Permite introducir la segmentación de red y el principio de mínimo privilegio en entornos de contenedores."
+  url: "https://docs.tigera.io/calico/latest/network-policy/"
+
+- fuente: "CoreDNS – Documentación oficial"
+  descripcion: "Documentación de CoreDNS, servidor DNS extensible utilizado habitualmente en Kubernetes para proporcionar resolución de nombres y descubrimiento de servicios. Explica su arquitectura, configuración, plugins e integración con el DNS interno del clúster."
+  url: "https://coredns.io/manual/toc/"
+
+
+# ============================================================
+# 27. EXPOSICIÓN DE SERVICIOS: INGRESS, GATEWAY API Y LOAD BALANCING
+# ============================================================
+
+- fuente: "Kubernetes – Ingress"
+  descripcion: "Documentación oficial del recurso Ingress. Explica cómo publicar servicios HTTP y HTTPS mediante reglas de encaminamiento basadas en nombres de host y rutas. Introduce los conceptos de terminación TLS y exposición de aplicaciones. La API Ingress está estabilizada y congelada; Kubernetes recomienda estudiar también Gateway API para nuevas funcionalidades."
+  url: "https://kubernetes.io/docs/concepts/services-networking/ingress/"
+
+- fuente: "Kubernetes – Ingress Controllers"
+  descripcion: "Catálogo y explicación de los controladores necesarios para implementar recursos Ingress. Describe el papel de los controladores en la recepción, procesamiento y encaminamiento del tráfico externo hacia los servicios internos."
+  url: "https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/"
+
+- fuente: "Kubernetes SIG Network – Gateway API"
+  descripcion: "Proyecto oficial de Kubernetes orientado a proporcionar una API más expresiva y extensible para el encaminamiento de tráfico. Introduce GatewayClass, Gateway, HTTPRoute y otros recursos, así como la separación de responsabilidades entre operadores de infraestructura y desarrolladores de aplicaciones."
+  url: "https://gateway-api.sigs.k8s.io/"
+
+- fuente: "Gateway API – Introduction"
+  descripcion: "Introducción conceptual a Gateway API. Explica su modelo de recursos, objetivos de diseño, relación con Ingress y posibilidades de gestión del tráfico de entrada y comunicación entre servicios."
+  url: "https://gateway-api.sigs.k8s.io/docs/introduction/"
+
+- fuente: "Gateway API – API Overview"
+  descripcion: "Referencia sobre los recursos y conceptos de Gateway API. Describe GatewayClass, Gateway, Routes y los distintos roles que intervienen en la administración del tráfico de red de un clúster."
+  url: "https://gateway-api.sigs.k8s.io/docs/concepts/api-overview/"
+
+- fuente: "MetalLB – Documentación oficial"
+  descripcion: "Documentación de MetalLB, implementación de balanceo de servicios de tipo LoadBalancer para clústeres Kubernetes que no disponen de un proveedor cloud que proporcione esta funcionalidad. Especialmente útil para despliegues bare metal y laboratorios on-premises."
+  url: "https://metallb.io/"
+
+- fuente: "Traefik Proxy – Kubernetes Documentation"
+  descripcion: "Documentación del proxy Traefik y su integración con Kubernetes mediante Ingress, CRDs y Gateway API. Permite estudiar la publicación de aplicaciones, encaminamiento HTTP, terminación TLS y gestión de tráfico externo."
+  url: "https://doc.traefik.io/traefik/"
+
+- fuente: "NGINX – Kubernetes Ingress and Gateway"
+  descripcion: "Documentación sobre las soluciones NGINX para publicar servicios en Kubernetes, incluyendo controladores Ingress, implementaciones de Gateway API y mecanismos de migración. Útil para estudiar alternativas de exposición de aplicaciones y la evolución del ecosistema Ingress."
+  url: "https://kubernetes.nginx.org/"
+
+
+# ============================================================
+# 28. ALMACENAMIENTO PERSISTENTE: CSI, ROOK-CEPH Y LONGHORN
+# ============================================================
+
+- fuente: "Kubernetes – Persistent Volumes"
+  descripcion: "Documentación sobre los mecanismos de almacenamiento persistente de Kubernetes. Explica PersistentVolumes, PersistentVolumeClaims, StorageClasses, aprovisionamiento estático y dinámico y ciclo de vida de los volúmenes."
+  url: "https://kubernetes.io/docs/concepts/storage/persistent-volumes/"
+
+- fuente: "Kubernetes – Storage Classes"
+  descripcion: "Referencia sobre StorageClasses y los mecanismos para definir diferentes tipos de almacenamiento disponibles en un clúster. Explica parámetros de aprovisionamiento, provisioners, políticas de recuperación y modos de vinculación de volúmenes."
+  url: "https://kubernetes.io/docs/concepts/storage/storage-classes/"
+
+- fuente: "Kubernetes CSI – Container Storage Interface"
+  descripcion: "Documentación técnica de la interfaz estándar que permite integrar sistemas de almacenamiento externos con Kubernetes. Explica la arquitectura CSI, los controladores y las operaciones necesarias para proporcionar almacenamiento persistente a las aplicaciones."
+  url: "https://kubernetes-csi.github.io/docs/"
+
+- fuente: "Rook – Documentación oficial"
+  descripcion: "Documentación de Rook, proyecto cloud native que permite desplegar y administrar sistemas de almacenamiento distribuido mediante operadores de Kubernetes. Su integración con Ceph permite proporcionar almacenamiento de bloques, sistemas de archivos compartidos y almacenamiento de objetos."
+  url: "https://rook.io/docs/rook/latest/"
+
+- fuente: "Rook – Ceph Storage Architecture"
+  descripcion: "Explicación de la arquitectura de integración entre Rook y Ceph. Describe los operadores, monitores, OSD, pools, sistemas de archivos y servicios de almacenamiento que permiten ofrecer recursos persistentes a las aplicaciones Kubernetes."
+  url: "https://rook.io/docs/rook/latest/Getting-Started/storage-architecture/"
+
+- fuente: "Ceph – Documentación oficial"
+  descripcion: "Documentación del sistema de almacenamiento distribuido Ceph. Explica su arquitectura, almacenamiento de bloques mediante RBD, almacenamiento de objetos mediante RGW y sistemas de archivos distribuidos mediante CephFS. Referencia para comprender la infraestructura de almacenamiento que puede integrarse con Kubernetes."
+  url: "https://docs.ceph.com/en/latest/"
+
+- fuente: "Longhorn – Documentación oficial"
+  descripcion: "Documentación de Longhorn, solución de almacenamiento distribuido para Kubernetes. Explica la creación y administración de volúmenes persistentes, replicación entre nodos, snapshots, backups y mecanismos de recuperación."
+  url: "https://longhorn.io/docs/"
+
+
+# ============================================================
+# 29. GESTIÓN DE APLICACIONES: HELM, KUSTOMIZE Y OPERADORES
+# ============================================================
+
+- fuente: "Helm – Documentación oficial"
+  descripcion: "Documentación oficial de Helm, gestor de paquetes de Kubernetes. Explica cómo empaquetar, distribuir, instalar, actualizar y administrar aplicaciones mediante Charts. Es una herramienta fundamental para desplegar componentes complejos del ecosistema Kubernetes."
+  url: "https://helm.sh/docs/"
+
+- fuente: "Helm – Introduction"
+  descripcion: "Introducción al funcionamiento de Helm. Explica los conceptos de Chart, Release y Repository, así como la utilización de plantillas para parametrizar los manifiestos de Kubernetes y facilitar la instalación de aplicaciones."
+  url: "https://helm.sh/docs/intro/"
+
+- fuente: "Helm – Chart Development Guide"
+  descripcion: "Guía para desarrollar Charts propios. Explica la estructura de directorios, Chart.yaml, values.yaml, plantillas, dependencias y mecanismos de distribución de paquetes de aplicaciones Kubernetes."
+  url: "https://helm.sh/docs/topics/charts/"
+
+- fuente: "Kustomize – Documentación oficial"
+  descripcion: "Documentación de Kustomize, herramienta para personalizar manifiestos Kubernetes mediante modificaciones declarativas sin necesidad de utilizar plantillas. Permite organizar configuraciones comunes y adaptarlas a diferentes entornos."
+  url: "https://kubectl.docs.kubernetes.io/references/kustomize/"
+
+- fuente: "Kubernetes – Custom Resources"
+  descripcion: "Documentación sobre la extensión de la API de Kubernetes mediante recursos personalizados. Explica cómo definir nuevas clases de recursos para ampliar las capacidades del orquestador y adaptar la plataforma a necesidades específicas."
+  url: "https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/"
+
+- fuente: "Kubernetes – CustomResourceDefinitions"
+  descripcion: "Referencia técnica sobre CustomResourceDefinitions (CRDs). Explica cómo ampliar la API de Kubernetes mediante nuevos tipos de recursos declarativos y cómo integrarlos con los mecanismos de gestión del clúster."
+  url: "https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/"
+
+- fuente: "Operator Framework – Documentation"
+  descripcion: "Documentación del ecosistema Operator Framework. Introduce el patrón Operator, que permite automatizar la instalación, configuración, mantenimiento y ciclo de vida de aplicaciones complejas mediante controladores y recursos personalizados de Kubernetes."
+  url: "https://operatorframework.io/docs/"
+
+- fuente: "Artifact Hub"
+  descripcion: "Catálogo de referencia para localizar y consultar artefactos del ecosistema cloud native, incluyendo Helm Charts, operadores, plugins, políticas y otros componentes. Permite descubrir herramientas y paquetes reutilizables para ampliar las capacidades de Kubernetes."
+  url: "https://artifacthub.io/"
+
+
+# ============================================================
+# 30. GITOPS Y DESPLIEGUE CONTINUO: ARGO CD Y FLUX
+# ============================================================
+
+- fuente: "OpenGitOps – Principios de GitOps"
+  descripcion: "Definición y principios fundamentales de GitOps. Explica la utilización de sistemas declarativos, versionados, reconciliados automáticamente y observables para administrar infraestructuras y aplicaciones. Referencia conceptual para comprender el modelo de despliegue basado en Git."
+  url: "https://opengitops.dev/"
+
+- fuente: "Argo Project – Documentación oficial"
+  descripcion: "Documentación del ecosistema Argo, conjunto de proyectos cloud native para automatizar flujos de trabajo, despliegues y procesos CI/CD. Incluye Argo CD, Argo Workflows, Argo Rollouts y Argo Events."
+  url: "https://argoproj.github.io/"
+
+- fuente: "Argo CD – Documentación oficial"
+  descripcion: "Documentación de Argo CD, herramienta declarativa de entrega continua basada en GitOps para Kubernetes. Explica la sincronización entre repositorios Git y el estado real del clúster, gestión de aplicaciones, sincronización automática, detección de desviaciones y mecanismos de despliegue y recuperación."
+  url: "https://argo-cd.readthedocs.io/en/stable/"
+
+- fuente: "Argo CD – Getting Started"
+  descripcion: "Guía de iniciación a Argo CD. Describe su instalación en Kubernetes, configuración de repositorios Git, creación de aplicaciones y sincronización de manifiestos para desplegar aplicaciones mediante GitOps."
+  url: "https://argo-cd.readthedocs.io/en/stable/getting_started/"
+
+- fuente: "Argo CD – User Guide"
+  descripcion: "Guía de utilización de Argo CD. Explica la gestión de aplicaciones, proyectos, repositorios, sincronización, políticas de acceso, gestión de múltiples clústeres y automatización de despliegues."
+  url: "https://argo-cd.readthedocs.io/en/stable/user-guide/"
+
+- fuente: "Argo Rollouts – Documentación oficial"
+  descripcion: "Herramienta para implementar estrategias avanzadas de despliegue progresivo en Kubernetes. Explica mecanismos como Blue-Green, Canary, análisis de métricas y promoción o reversión automática de versiones."
+  url: "https://argoproj.github.io/rollouts/"
+
+- fuente: "Flux CD – Documentación oficial"
+  descripcion: "Documentación de Flux, solución GitOps para mantener clústeres Kubernetes sincronizados con repositorios de configuración. Explica sus controladores, gestión de fuentes, reconciliación automática, integración con Helm y Kustomize y automatización de despliegues."
+  url: "https://fluxcd.io/flux/"
+
+- fuente: "Flux CD – Getting Started"
+  descripcion: "Guía de iniciación para desplegar Flux y configurar un flujo de trabajo GitOps. Explica la instalación de la CLI, conexión con repositorios Git y sincronización de configuraciones con Kubernetes."
+  url: "https://fluxcd.io/flux/get-started/"
+
+
+# ============================================================
+# 31. SERVICE MESH: ISTIO Y ENVOY
+# ============================================================
+
+- fuente: "Istio – Documentación oficial"
+  descripcion: "Documentación oficial de Istio, plataforma de service mesh para gestionar la comunicación entre microservicios. Explica la arquitectura del mesh, control del tráfico, seguridad, autenticación mutua TLS, políticas de acceso y observabilidad. Incluye los modelos de despliegue sidecar y ambient."
+  url: "https://istio.io/latest/docs/"
+
+- fuente: "Istio – What is Istio?"
+  descripcion: "Introducción conceptual a Istio y a la arquitectura service mesh. Explica cómo se gestionan las comunicaciones entre microservicios, la distribución del tráfico, la seguridad de las comunicaciones y la observabilidad sin necesidad de modificar el código de las aplicaciones."
+  url: "https://istio.io/latest/docs/concepts/what-is-istio/"
+
+- fuente: "Istio – Getting Started"
+  descripcion: "Guía práctica para instalar Istio en un clúster Kubernetes y desplegar una aplicación de ejemplo. Permite estudiar la incorporación de aplicaciones al mesh y comprobar las capacidades de gestión de tráfico y seguridad."
+  url: "https://istio.io/latest/docs/setup/getting-started/"
+
+- fuente: "Istio – Traffic Management"
+  descripcion: "Documentación sobre la gestión avanzada del tráfico mediante Istio. Explica enrutamiento, balanceo, reintentos, timeouts, circuit breaking, división de tráfico y despliegues progresivos."
+  url: "https://istio.io/latest/docs/concepts/traffic-management/"
+
+- fuente: "Istio – Security"
+  descripcion: "Documentación sobre los mecanismos de seguridad de Istio. Explica identidades de servicio, autenticación mutua TLS, autorización, certificados y aplicación de políticas de seguridad entre microservicios."
+  url: "https://istio.io/latest/docs/concepts/security/"
+
+- fuente: "Envoy Proxy – Documentación oficial"
+  descripcion: "Documentación de Envoy, proxy de alto rendimiento utilizado en arquitecturas cloud native y como plano de datos en diferentes implementaciones de service mesh. Explica su arquitectura, listeners, clusters, filtros, balanceo y gestión de conexiones."
+  url: "https://www.envoyproxy.io/docs/envoy/latest/"
+
+
+# ============================================================
+# 32. BACKUP, RESTAURACIÓN Y RECUPERACIÓN: VELERO
+# ============================================================
+
+- fuente: "Velero – Documentación oficial"
+  descripcion: "Documentación de Velero, herramienta para realizar copias de seguridad y restaurar recursos de Kubernetes y volúmenes persistentes. Permite estudiar estrategias de backup, recuperación ante desastres, migración de aplicaciones entre clústeres y almacenamiento de copias en sistemas externos."
+  url: "https://velero.io/docs/"
+
+- fuente: "Velero – Overview"
+  descripcion: "Introducción a la arquitectura y funcionamiento de Velero. Explica los componentes de servidor y cliente, el proceso de backup y restore y la integración con proveedores de almacenamiento de objetos y sistemas de persistencia."
+  url: "https://velero.io/docs/main/"
+
+- fuente: "Velero – Backup Reference"
+  descripcion: "Referencia técnica sobre la creación y administración de copias de seguridad de recursos Kubernetes. Explica la selección de namespaces y recursos, políticas de retención, almacenamiento de backups y mecanismos de programación."
+  url: "https://velero.io/docs/main/backup-reference/"
+
+- fuente: "Velero – Restore Reference"
+  descripcion: "Documentación sobre la restauración de recursos y aplicaciones Kubernetes a partir de copias de seguridad. Explica los procedimientos de recuperación y las opciones de configuración de las operaciones de restauración."
+  url: "https://velero.io/docs/main/restore-reference/"
+
+
+# ============================================================
+# 33. CERTIFICADOS, IDENTIDAD Y SEGURIDAD DE KUBERNETES
+# ============================================================
+
+- fuente: "Kubernetes – Security"
+  descripcion: "Documentación oficial sobre la seguridad de Kubernetes. Explica autenticación, autorización, RBAC, secretos, seguridad de Pods, políticas de admisión, aislamiento de cargas de trabajo y mecanismos de protección del clúster."
+  url: "https://kubernetes.io/docs/concepts/security/"
+
+- fuente: "Kubernetes – Security Checklist"
+  descripcion: "Lista de comprobación de seguridad para entornos Kubernetes. Recoge recomendaciones relacionadas con RBAC, Pod Security Standards, secretos, imágenes de contenedores, aislamiento de workloads, auditoría y configuración segura del clúster."
+  url: "https://kubernetes.io/docs/concepts/security/security-checklist/"
+
+- fuente: "Kubernetes – RBAC Authorization"
+  descripcion: "Documentación sobre el control de acceso basado en roles (RBAC). Explica Roles, ClusterRoles, RoleBindings y ClusterRoleBindings, así como la asignación de permisos a usuarios, grupos y cuentas de servicio."
+  url: "https://kubernetes.io/docs/reference/access-authn-authz/rbac/"
+
+- fuente: "Kubernetes – Pod Security Standards"
+  descripcion: "Referencia sobre los estándares de seguridad aplicables a Pods. Explica los niveles Privileged, Baseline y Restricted, así como los mecanismos de aplicación mediante Pod Security Admission."
+  url: "https://kubernetes.io/docs/concepts/security/pod-security-standards/"
+
+- fuente: "cert-manager – Documentación oficial"
+  descripcion: "Documentación de cert-manager, controlador para la gestión automatizada de certificados TLS en Kubernetes. Explica la creación, renovación y administración de certificados mediante recursos Certificate, Issuer y ClusterIssuer, así como la integración con Let's Encrypt y autoridades de certificación privadas."
+  url: "https://cert-manager.io/docs/"
+
+- fuente: "cert-manager – Getting Started"
+  descripcion: "Guía de instalación y primeros pasos con cert-manager. Permite estudiar la instalación del controlador, la configuración de autoridades certificadoras y la emisión automática de certificados para aplicaciones y servicios."
+  url: "https://cert-manager.io/docs/installation/"
+
+- fuente: "Kyverno – Documentación oficial"
+  descripcion: "Documentación de Kyverno, motor de políticas cloud native para Kubernetes. Permite validar, modificar y generar recursos mediante políticas declarativas, aplicar requisitos de seguridad y cumplimiento y controlar las configuraciones desplegadas en el clúster."
+  url: "https://kyverno.io/docs/"
+
+- fuente: "Kyverno – Introduction"
+  descripcion: "Introducción a la arquitectura y funcionalidades de Kyverno. Explica su integración con la API de Kubernetes, los mecanismos de admisión y los tipos de políticas para validar, modificar y generar recursos."
+  url: "https://kyverno.io/docs/introduction/"
+
+- fuente: "Open Policy Agent – OPA"
+  descripcion: "Documentación de Open Policy Agent, motor de políticas de propósito general utilizado para centralizar decisiones de autorización y cumplimiento. Permite estudiar la separación entre políticas y aplicaciones y su integración con infraestructuras cloud native."
+  url: "https://www.openpolicyagent.org/docs/"
+
+- fuente: "Gatekeeper – Documentación oficial"
+  descripcion: "Documentación de Gatekeeper, implementación de políticas para Kubernetes basada en Open Policy Agent. Explica el uso de CRDs, ConstraintTemplates, Constraints y mecanismos de validación y auditoría de recursos."
+  url: "https://open-policy-agent.github.io/gatekeeper/website/docs/"
+
+- fuente: "Falco – Documentación oficial"
+  descripcion: "Documentación de Falco, herramienta de detección de amenazas y seguridad en tiempo de ejecución para sistemas Linux, contenedores y Kubernetes. Explica la supervisión de eventos del sistema, reglas de detección y generación de alertas ante comportamientos anómalos."
+  url: "https://falco.org/docs/"
+
+- fuente: "Trivy – Documentación oficial"
+  descripcion: "Documentación de Trivy, herramienta de análisis de vulnerabilidades y seguridad de la cadena de suministro. Permite examinar imágenes de contenedores, sistemas de archivos, configuraciones Kubernetes y otros artefactos para identificar vulnerabilidades y problemas de configuración."
+  url: "https://trivy.dev/latest/docs/"
+
+
+# ============================================================
+# 34. OBSERVABILIDAD, MONITORIZACIÓN Y LOGGING
+# ============================================================
+
+- fuente: "Prometheus – Documentación oficial"
+  descripcion: "Documentación de Prometheus, sistema de monitorización y alertas basado en métricas. Explica la recopilación de datos temporales, exporters, consultas PromQL, reglas de alerta y almacenamiento de series temporales. Es una de las referencias principales para monitorizar clústeres y aplicaciones Kubernetes."
+  url: "https://prometheus.io/docs/"
+
+- fuente: "Prometheus – Overview"
+  descripcion: "Introducción a la arquitectura y funcionamiento de Prometheus. Explica la recopilación de métricas, modelo de datos, etiquetado, consultas, alertas y componentes del ecosistema de monitorización."
+  url: "https://prometheus.io/docs/introduction/overview/"
+
+- fuente: "Prometheus Operator"
+  descripcion: "Documentación del operador de Prometheus para Kubernetes. Explica la administración declarativa de instancias Prometheus y Alertmanager mediante recursos personalizados, descubrimiento automático de objetivos y gestión de configuraciones de monitorización."
+  url: "https://prometheus-operator.dev/docs/"
+
+- fuente: "Grafana – Documentación oficial"
+  descripcion: "Documentación de Grafana, plataforma de visualización y análisis de métricas, logs y trazas. Explica la configuración de fuentes de datos, creación de dashboards, alertas y representación de información procedente de sistemas de observabilidad."
+  url: "https://grafana.com/docs/grafana/latest/"
+
+- fuente: "OpenTelemetry – Documentación oficial"
+  descripcion: "Documentación de OpenTelemetry, conjunto de estándares y herramientas para instrumentar, recopilar y exportar datos de observabilidad. Explica los conceptos de métricas, logs y trazas distribuidas, así como la integración con plataformas de monitorización."
+  url: "https://opentelemetry.io/docs/"
+
+- fuente: "OpenTelemetry – Kubernetes"
+  descripcion: "Documentación específica sobre la utilización de OpenTelemetry en Kubernetes. Explica el despliegue del Collector, operadores, instrumentación automática de aplicaciones y recopilación de datos de observabilidad del clúster."
+  url: "https://opentelemetry.io/docs/platforms/kubernetes/"
+
+- fuente: "Loki – Documentación oficial"
+  descripcion: "Documentación de Grafana Loki, sistema de agregación y almacenamiento de logs. Explica su arquitectura, recopilación de registros, etiquetado, consultas LogQL e integración con Grafana para centralizar los registros de aplicaciones y sistemas."
+  url: "https://grafana.com/docs/loki/latest/"
+
+- fuente: "Fluent Bit – Documentación oficial"
+  descripcion: "Documentación de Fluent Bit, procesador y distribuidor de registros utilizado habitualmente en arquitecturas de observabilidad. Permite estudiar la recopilación de logs desde nodos y contenedores, procesamiento, filtrado y envío a sistemas centralizados."
+  url: "https://docs.fluentbit.io/manual/"
+
+
+# ============================================================
+# 35. RUNTIMES Y TECNOLOGÍAS DE CONTENEDORES
+# ============================================================
+
+- fuente: "containerd – Documentación oficial"
+  descripcion: "Documentación de containerd, runtime de contenedores utilizado ampliamente en entornos Kubernetes. Explica la gestión del ciclo de vida de contenedores, imágenes, snapshots, namespaces e integración con Kubernetes mediante CRI."
+  url: "https://containerd.io/docs/"
+
+- fuente: "CRI-O – Documentación oficial"
+  descripcion: "Documentación de CRI-O, runtime de contenedores diseñado específicamente para Kubernetes. Explica su arquitectura, integración con CRI, gestión de imágenes y ejecución de contenedores."
+  url: "https://cri-o.io/"
+
+- fuente: "Open Container Initiative (OCI)"
+  descripcion: "Organización y especificaciones abiertas que definen estándares para formatos de imágenes de contenedores y ejecución de runtimes. Referencia para comprender la interoperabilidad entre herramientas y plataformas de contenedores."
+  url: "https://opencontainers.org/"
+
+- fuente: "Open Container Initiative – Specifications"
+  descripcion: "Repositorio de especificaciones técnicas de OCI, incluyendo Image Specification, Runtime Specification y Distribution Specification. Permite estudiar los estándares que sustentan el empaquetado, distribución y ejecución de contenedores."
+  url: "https://github.com/opencontainers"
+
+
+# ============================================================
+# 36. REFERENCIAS COMPLEMENTARIAS: ARQUITECTURAS CLOUD NATIVE
+# ============================================================
+
+- fuente: "CNCF – Cloud Native Definition"
+  descripcion: "Definición de cloud native de la CNCF. Explica los principios de construcción y operación de sistemas modernos, escalables y resilientes, basados en contenedores, microservicios, automatización, servicios declarativos y tecnologías de código abierto."
+  url: "https://github.com/cncf/toc/blob/main/DEFINITION.md"
+
+- fuente: "Microsoft – Cloud Native Architecture"
+  descripcion: "Recursos técnicos sobre arquitectura cloud native, microservicios, contenedores, orquestación, escalabilidad, resiliencia y automatización. Referencia complementaria para comprender los patrones arquitectónicos que motivan la adopción de Kubernetes."
+  url: "https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/"
+
+- fuente: "Google Cloud – Kubernetes Best Practices"
+  descripcion: "Recomendaciones técnicas para diseñar, desplegar y administrar aplicaciones Kubernetes. Aborda aspectos de arquitectura, recursos, seguridad, disponibilidad, escalabilidad y operación de cargas de trabajo."
+  url: "https://cloud.google.com/kubernetes-engine/docs/best-practices"
+
+- fuente: "NSA / CISA – Kubernetes Hardening Guidance"
+  descripcion: "Guía de endurecimiento de seguridad de Kubernetes publicada por la NSA y CISA. Recoge recomendaciones para proteger el plano de control, configurar RBAC, restringir contenedores, gestionar secretos, monitorizar actividad y reducir la superficie de ataque de los clústeres."
+  url: "https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/2788428/nsa-and-cisa-release-kubernetes-hardening-guidance/"
+
+- fuente: "NIST – Application Container Security Guide (SP 800-190)"
+  descripcion: "Publicación técnica del NIST sobre seguridad de aplicaciones basadas en contenedores. Analiza amenazas, riesgos y mecanismos de protección relacionados con imágenes, registros, runtimes, orquestadores y sistemas de gestión de contenedores. Referencia para contextualizar la seguridad de Kubernetes dentro de la seguridad de infraestructuras."
+  url: "https://csrc.nist.gov/pubs/sp/800/190/final"
+
+- fuente: "NIST – Security Strategies for Microservices-based Application Systems (SP 800-204)"
+  descripcion: "Publicación del NIST sobre arquitecturas basadas en microservicios y sus implicaciones de seguridad. Analiza mecanismos de comunicación, autenticación, autorización, protección de APIs, service mesh y otros controles necesarios en plataformas distribuidas."
+  url: "https://csrc.nist.gov/pubs/sp/800/204/final"

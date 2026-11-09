@@ -1,0 +1,126 @@
+OBJETIVO
+Crear materiales de estudio en Markdown para el módulo, organizados por unidades, a partir de las fuentes autorizadas de `documentacion/` y el contexto docente de `modulo/`.
+
+1. PREPARACIÓN
+- Lee primero `AGENTS.md` y `instrucciones/flujo_trabajo.md`.
+- Usa `unidades.yml` (alcance, orden, sesiones, extensión, profundidad, diagramas, fuentes, mínimos y estado de cada apartado) para determinar los artefactos a generar.
+- Inspecciona los archivos existentes antes de modificarlos.
+
+2. FUENTES Y FIDELIDAD
+- Prioridad de fuentes: 1) URLs oficiales de `fuentes.yaml` de la unidad; 2) documentos locales; 3) muestras (solo estilo). Si discrepan, prevalece la URL y se anota en el informe de trabajo.
+- No leas documentos completos: ejecuta `python3 scripts/ingesta.py documentacion/<unidad> <apartado-id>`, lee `trabajo/<unidad>/<apartado-id>/indice.md` y consulta solo los trozos necesarios de `extracto.md`.
+- Usa las muestras como referencia de estilo, no como autoridad factual salvo indicación expresa.
+- No inventes contenido ni completes lagunas con fuentes externas.
+- Si falta información importante o hay contradicciones, regístralas y pregunta al profesor.
+
+3. TRAZABILIDAD Y REGISTRO INTERNO
+- La trazabilidad (sección → fuente → trozo), lagunas y contradicciones se registran en `trabajo/<unidad>/<apartado-id>/informe.md` (plantilla `plantillas/informe_trabajo.md`), nunca en el material del alumnado.
+- Registra en ese mismo informe la ubicación aproximada de cada mínimo cubierto.
+
+4. DESTINATARIO Y ESTRUCTURA DEL MATERIAL
+Destinatario: alumnado (técnicos superiores en sistemas informáticos).
+- El material es de consumo final del alumnado. No incluye comentarios ni referencias a la documentación original, a la programación ni a la docencia (nada de «según el documento», estado, páginas, lagunas o notas al profesor).
+- Única referencia permitida: enlaces a documentación oficial, en el apartado final «Documentación oficial».
+- Lenguaje sencillo y ameno, con rigor técnico adecuado al perfil.
+- Incluye diagramas Mermaid (flujos, secuencias, capas, topologías, estados) en el número indicado en `unidades.yml`; usa un diagrama solo si aclara algo que las fuentes describen.
+- La sección «Comprueba lo aprendido» (preguntas tipo test con soluciones) solo se genera si el apartado declara `autoevaluacion: N` en `unidades.yml`; con ese número de preguntas. Si no lo declara, no se incluye.
+
+5. CONTENIDOS MÍNIMOS
+- Cada apartado puede definir en `unidades.yml` una lista de `minimos`: conceptos y aspectos que DEBEN mencionarse obligatoriamente en el material.
+- Los mínimos son aspectos fundamentales definidos por el profesor para garantizar cobertura de contenidos no negociables.
+- Asegúrate de que cada mínimo está presente en el documento. Si alguno falta, el script `calidad.py` lo reportará como error.
+
+6. EXTENSIÓN
+- Ajusta cada apartado al presupuesto de palabras que resulta de `unidades.yml` (sesiones × palabras por sesión × factor de profundidad), con la tolerancia definida allí.
+
+7. REDACCIÓN
+- Escribe en español, salvo que se indique otro idioma.
+- Utiliza Markdown limpio y jerarquía coherente de encabezados.
+- Explica los conceptos de forma progresiva y adecuada al nivel del alumnado.
+- Emplea ejemplos cuando ayuden a comprender y no introduzcan hechos externos.
+- Evita repeticiones, relleno y afirmaciones que las fuentes no sostengan.
+- No inventes objetivos, criterios de evaluación ni duración.
+
+8. FORMATO Y PRESENTACIÓN
+## 1. Principios generales de presentación
+
+Todos los documentos generados deberán utilizar Markdown enriquecido, compatible con MkDocs Material, con el objetivo de producir materiales didácticos visualmente atractivos, profesionales, claros y agradables de leer.
+
+La presentación debe facilitar el aprendizaje, mejorar la comprensión de los conceptos y permitir localizar rápidamente la información relevante.
+
+Se aplicarán los siguientes principios:
+
+- Priorizar la claridad, legibilidad y organización visual.
+- Utilizar una jerarquía de títulos coherente y consistente.
+- Evitar bloques de texto excesivamente largos.
+- Dividir las explicaciones complejas en apartados y subapartados.
+- Alternar explicaciones, ejemplos, esquemas, tablas y elementos visuales.
+- Utilizar los recursos gráficos para reforzar el aprendizaje, no como elementos decorativos.
+- Mantener una identidad editorial homogénea entre todos los documentos del módulo.
+- Evitar tanto la presentación excesivamente austera como la sobrecarga de elementos visuales.
+- Mantener un tono técnico, didáctico, riguroso y adecuado al nivel formativo del alumnado.
+- No abuses de los emoticonos, son demasiado vulgares en exceso.
+- Mantén una redacción formal pero humanizada y fluida.
+- No interrumpas demasiado el texto con bloques aclarativos y notas, solo las necesarias y que aporten significado
+
+## 2. Jerarquía y organización del contenido
+
+Los documentos deberán seguir una estructura jerárquica clara.
+
+- Utilizar un único título principal (#) por documento.
+- Organizar los apartados principales mediante (##).
+- Utilizar (###) y (####) para desarrollar contenidos subordinados.
+- No saltar arbitrariamente niveles de encabezamiento.
+- Utilizar títulos descriptivos que permitan anticipar el contenido de cada sección.
+- Incorporar índices automáticos mediante los mecanismos de navegación de MkDocs.
+- Evitar apartados excesivamente pequeños o fragmentaciones innecesarias.
+
+Los documentos deberán estructurarse de forma que puedan consultarse tanto de manera secuencial como mediante búsquedas y navegación directa.
+
+## 3. Elementos visuales y bloques informativos
+
+Utilizar las extensiones de Markdown de MkDocs Material para destacar información relevante.
+
+Se utilizarán preferentemente los siguientes bloques:
+
+- note: notas y aclaraciones.
+- abstract: ideas principales y síntesis.
+- info: información complementaria.
+- tip: consejos y recomendaciones.
+- example: ejemplos ilustrativos.
+- success: resultados correctos y situaciones satisfactorias.
+- warning: advertencias y precauciones.
+- danger: errores graves y riesgos.
+- question: cuestiones para reflexionar.
+
+Ejemplo:
+
+!!! warning "Precaución"
+    Modificar la configuración de red puede provocar la pérdida de conectividad con el servidor.
+
+Se podrán utilizar bloques desplegables mediante ??? cuando se quiera presentar información complementaria, explicaciones adicionales o detalles técnicos que no sean imprescindibles para comprender el contenido principal.
+
+Utilizar estos recursos con moderación. No convertir cada párrafo en un bloque informativo.
+
+## 4. Código fuente y comandos
+
+Los contenidos técnicos deberán presentar el código de forma especialmente cuidada.
+
+Aplicar las siguientes convenciones:
+
+- Utilizar siempre bloques de código delimitados mediante tres acentos graves.
+- Especificar el lenguaje correspondiente para habilitar el resaltado de sintaxis.
+- Utilizar los lenguajes adecuados: bash, python, yaml, json, sql, dockerfile, powershell, ini, etc.
+- Diferenciar visualmente los comandos que debe ejecutar el alumno de las salidas que debe observar.
+- Identificar los fragmentos de configuración y los ficheros a los que pertenecen.
+- Incluir explicaciones antes o después de los bloques de código.
+- Evitar bloques de código excesivamente
+
+9. SALIDA Y VERIFICACIÓN
+- Genera los materiales en `contenidos/unidades/NN/`, con NN como identificador de unidad.
+- Utiliza `plantillas/contenido_unidad.md` como punto de partida, adaptándola cuando proceda.
+- Inspecciona los archivos existentes antes de modificarlos.
+- Verifica con `python3 scripts/calidad.py contenidos/unidades/NN/<apartado>.md` y corrige los errores antes de entregar.
+- Al terminar, deja el apartado en `estado: borrador` en `unidades.yml`; solo el profesor lo pasa a `revisado` o `aprobado`.
+- No guardes los resultados en `documentacion/`.
+- Al finalizar, informa de archivos creados/modificados, fuentes usadas, comprobaciones y dudas pendientes.

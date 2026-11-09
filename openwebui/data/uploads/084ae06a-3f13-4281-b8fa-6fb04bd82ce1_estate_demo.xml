@@ -1,0 +1,93 @@
+<odoo>
+    <!-- ============ Demo buyers (contacts) ============ -->
+    <record id="estate_partner_john" model="res.partner">
+        <field name="name">John Buyer</field>
+        <field name="email">john.buyer@example.com</field>
+    </record>
+    <record id="estate_partner_sara" model="res.partner">
+        <field name="name">Sara Investor</field>
+        <field name="email">sara.investor@example.com</field>
+    </record>
+
+    <!-- ============ Property types ============ -->
+    <record id="estate_type_house" model="estate.property.type">
+        <field name="name">House</field>
+        <field name="sequence">1</field>
+    </record>
+    <record id="estate_type_apartment" model="estate.property.type">
+        <field name="name">Apartment</field>
+        <field name="sequence">2</field>
+    </record>
+    <record id="estate_type_office" model="estate.property.type">
+        <field name="name">Office</field>
+        <field name="sequence">3</field>
+    </record>
+
+    <!-- ============ Tags ============ -->
+    <record id="estate_tag_cozy" model="estate.property.tag">
+        <field name="name">Cozy</field>
+        <field name="color">4</field>
+    </record>
+    <record id="estate_tag_renovated" model="estate.property.tag">
+        <field name="name">Renovated</field>
+        <field name="color">10</field>
+    </record>
+    <record id="estate_tag_garden" model="estate.property.tag">
+        <field name="name">Garden</field>
+        <field name="color">7</field>
+    </record>
+
+    <!-- ============ Properties ============ -->
+    <record id="estate_property_apartment1" model="estate.property">
+        <field name="name">Cozy Downtown Apartment</field>
+        <field name="property_type_id" ref="estate_type_apartment"/>
+        <field name="postcode">12345</field>
+        <field name="expected_price">900000</field>
+        <field name="bedrooms">2</field>
+        <field name="living_area">85</field>
+        <field name="facades">2</field>
+        <field name="description">A bright apartment in the city center.</field>
+        <field name="tag_ids" eval="[(6, 0, [ref('estate_tag_cozy'), ref('estate_tag_renovated')])]"/>
+    </record>
+
+    <record id="estate_property_villa1" model="estate.property">
+        <field name="name">Big Modern Villa</field>
+        <field name="property_type_id" ref="estate_type_house"/>
+        <field name="postcode">54321</field>
+        <field name="expected_price">1600000</field>
+        <field name="bedrooms">5</field>
+        <field name="living_area">320</field>
+        <field name="facades">4</field>
+        <field name="garage" eval="True"/>
+        <field name="has_garden" eval="True"/>
+        <field name="garden_area">250</field>
+        <field name="garden_orientation">south</field>
+        <field name="description">Spacious family villa with a large garden.</field>
+        <field name="tag_ids" eval="[(6, 0, [ref('estate_tag_garden')])]"/>
+    </record>
+
+    <record id="estate_property_office1" model="estate.property">
+        <field name="name">City Center Office</field>
+        <field name="property_type_id" ref="estate_type_office"/>
+        <field name="postcode">10001</field>
+        <field name="expected_price">450000</field>
+        <field name="bedrooms">0</field>
+        <field name="living_area">120</field>
+        <field name="facades">1</field>
+        <field name="description">Open-plan office space, ready to move in.</field>
+    </record>
+
+    <!-- ============ Offers (will flip the apartment to "Offer Received") ============ -->
+    <record id="estate_offer_1" model="estate.property.offer">
+        <field name="price">850000</field>
+        <field name="partner_id" ref="estate_partner_john"/>
+        <field name="property_id" ref="estate_property_apartment1"/>
+        <field name="validity">14</field>
+    </record>
+    <record id="estate_offer_2" model="estate.property.offer">
+        <field name="price">880000</field>
+        <field name="partner_id" ref="estate_partner_sara"/>
+        <field name="property_id" ref="estate_property_apartment1"/>
+        <field name="validity">10</field>
+    </record>
+</odoo>

@@ -1,0 +1,547 @@
+# ============================================================
+# 1. IDENTIDAD DIGITAL Y MARCOS DE AUTENTICACIÓN
+# ============================================================
+
+- fuente: "NIST SP 800-63-4 – Digital Identity Guidelines"
+  descripcion: "Marco de referencia del NIST sobre identidad digital. Abarca prueba de identidad, registro, autenticadores, autenticación, gestión de credenciales y federación de identidades. Edición 4, publicada en 2025."
+  url: "https://csrc.nist.gov/pubs/sp/800/63/4/final"
+
+- fuente: "NIST SP 800-63A-4 – Identity Proofing and Enrollment"
+  descripcion: "Define los procesos de prueba, verificación y registro de la identidad de una persona antes de emitir o asociar credenciales digitales."
+  url: "https://csrc.nist.gov/pubs/sp/800/63/A/4/final"
+
+- fuente: "NIST SP 800-63B-4 – Authentication and Authenticator Management"
+  descripcion: "Referencia fundamental sobre autenticación y gestión de autenticadores. Trata factores de autenticación, contraseñas, autenticadores multifactor, niveles de garantía, resistencia al phishing y ciclo de vida de las credenciales."
+  url: "https://csrc.nist.gov/pubs/sp/800/63/B/4/final"
+
+- fuente: "NIST SP 800-63C-4 – Federation and Assertions"
+  descripcion: "Describe la federación de identidades, las aserciones y los mecanismos mediante los que un proveedor de identidad comunica la autenticación de un usuario a otros servicios."
+  url: "https://csrc.nist.gov/pubs/sp/800/63/C/4/final"
+
+- fuente: "NIST – Digital Identity Guidelines: Implementation Resources"
+  descripcion: "Recursos complementarios para implementar las directrices de identidad digital. Incluye ejemplos de autenticadores, características de los factores, resistencia a ataques de repetición y resistencia al phishing."
+  url: "https://pages.nist.gov/800-63-4-Implementation-Resources/"
+
+# ============================================================
+# 2. NORMATIVA Y REFERENCIAS ESPAÑOLAS
+# ============================================================
+
+- fuente: "CCN-CERT – Catálogo de guías CCN-STIC"
+  descripcion: "Repositorio oficial de guías del Centro Criptológico Nacional. Permite consultar documentación relacionada con control de acceso, identificación, autenticación, gestión de credenciales, administración de sistemas y medidas de seguridad."
+  url: "https://www.ccn-cert.cni.es/es/guias"
+
+- fuente: "CCN-CERT – Guías del Esquema Nacional de Seguridad (serie 800)"
+  descripcion: "Colección de guías técnicas para la aplicación del Esquema Nacional de Seguridad. Referencia para contextualizar la identificación, autenticación, control de acceso y gestión de usuarios dentro de un sistema de gestión de seguridad."
+  url: "https://www.ccn-cert.cni.es/es/series-ccn-stic/guias/series-ccn-stic/800-guia-esquema-nacional-de-seguridad.html"
+
+- fuente: "INCIBE – Recursos y políticas de seguridad para empresas"
+  descripcion: "Repositorio de documentación práctica sobre protección de cuentas, gestión de contraseñas, autenticación, control de acceso y medidas de seguridad aplicables a organizaciones."
+  url: "https://www.incibe.es/empresas"
+
+# ============================================================
+# 3. FACTORES DE AUTENTICACIÓN Y AUTENTICACIÓN MULTIFACTOR
+# ============================================================
+
+- fuente: "OWASP – Authentication Cheat Sheet"
+  descripcion: "Guía para diseñar e implementar procesos de autenticación seguros. Incluye validación de credenciales, protección de cuentas, recuperación, reautenticación y medidas contra ataques."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
+
+- fuente: "OWASP – Multifactor Authentication Cheat Sheet"
+  descripcion: "Explica los factores de autenticación (conocimiento, posesión e inherencia), los mecanismos MFA, su independencia, los riesgos de implementación y las recomendaciones de seguridad."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html"
+
+- fuente: "CISA – Implementing Phishing-Resistant MFA"
+  descripcion: "Recomendaciones de la agencia estadounidense de ciberseguridad para implantar autenticación multifactor resistente al phishing. Explica las ventajas de FIDO/WebAuthn y los riesgos de métodos tradicionales."
+  url: "https://www.cisa.gov/resources-tools/resources/implementing-phishing-resistant-mfa"
+
+- fuente: "NIST – Authentication and Authenticator Management"
+  descripcion: "Documentación técnica sobre los tipos de autenticadores, sus características, los factores de autenticación y los requisitos de seguridad de los distintos mecanismos."
+  url: "https://pages.nist.gov/800-63-4/sp800-63b.html"
+
+# ============================================================
+# 4. GESTIÓN DE CONTRASEÑAS Y PROTECCIÓN DE CREDENCIALES
+# ============================================================
+
+- fuente: "NIST SP 800-63B-4 – Password Authenticators"
+  descripcion: "Requisitos y recomendaciones sobre contraseñas: longitud, listas de contraseñas comprometidas, almacenamiento seguro, verificación, limitación de intentos y protección frente a ataques."
+  url: "https://pages.nist.gov/800-63-4/sp800-63b/authenticators/"
+
+- fuente: "OWASP – Password Storage Cheat Sheet"
+  descripcion: "Buenas prácticas para almacenar contraseñas de forma segura. Trata algoritmos de derivación y hash como Argon2id, bcrypt y PBKDF2, sal única, factores de coste y protección frente a ataques offline."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html"
+
+- fuente: "OWASP – Forgot Password Cheat Sheet"
+  descripcion: "Recomendaciones para los procesos de recuperación y restablecimiento de contraseñas, emisión y validación de tokens, protección frente a enumeración de cuentas y gestión de sesiones."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html"
+
+- fuente: "OWASP – Credential Stuffing Prevention Cheat Sheet"
+  descripcion: "Explica los ataques de reutilización automatizada de credenciales obtenidas en filtraciones y las medidas de protección frente a ellos."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Credential_Stuffing_Prevention_Cheat_Sheet.html"
+
+- fuente: "OWASP – Authentication Cheat Sheet: Passwords"
+  descripcion: "Recomendaciones para la validación de contraseñas, prevención de ataques de fuerza bruta, limitación de intentos y protección de los mecanismos de inicio de sesión."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html"
+
+# ============================================================
+# 5. AUTENTICACIÓN EN LINUX
+# ============================================================
+
+- fuente: "Linux-PAM – The Linux-PAM System Administrators' Guide"
+  descripcion: "Documentación oficial de Linux-PAM sobre la arquitectura de módulos de autenticación conectables. Explica la configuración de los servicios de autenticación, las pilas de módulos y los mecanismos auth, account, password y session."
+  url: "https://www.linux-pam.org/Linux-PAM-html/"
+
+- fuente: "Linux man-pages – pam.d(5)"
+  descripcion: "Manual técnico de los ficheros de configuración PAM, normalmente ubicados en /etc/pam.d/. Explica los tipos de módulos, controles de ejecución y apilamiento de reglas."
+  url: "https://man7.org/linux/man-pages/man5/pam.d.5.html"
+
+- fuente: "Linux-PAM – pam_unix(8)"
+  descripcion: "Manual del módulo PAM tradicional para autenticación Unix. Explica su relación con las cuentas locales y los ficheros /etc/passwd y /etc/shadow."
+  url: "https://www.man7.org/linux/man-pages/man8/pam_unix.8.html"
+
+- fuente: "Linux man-pages – shadow(5)"
+  descripcion: "Documentación del fichero /etc/shadow, utilizado para almacenar información de autenticación de las cuentas locales de Linux, incluyendo hashes de contraseñas y datos de caducidad."
+  url: "https://man7.org/linux/man-pages/man5/shadow.5.html"
+
+- fuente: "SSSD – System Security Services Daemon"
+  descripcion: "Documentación oficial de SSSD sobre integración de sistemas Linux con proveedores de identidad y directorios, autenticación centralizada, caché de credenciales y control de acceso."
+  url: "https://sssd.io/docs/"
+
+- fuente: "FreeIPA – Documentation"
+  descripcion: "Documentación del proyecto FreeIPA sobre gestión centralizada de identidades en Linux. Incluye usuarios, grupos, autenticación Kerberos, políticas de acceso, certificados y administración de dominios."
+  url: "https://www.freeipa.org/page/Documentation"
+
+- fuente: "OpenSSH – sshd_config(5)"
+  descripcion: "Manual oficial de configuración del servidor OpenSSH. Incluye autenticación mediante contraseña, claves públicas, teclado interactivo, métodos combinados y autenticación multifactor mediante AuthenticationMethods."
+  url: "https://man.openbsd.org/sshd_config"
+
+- fuente: "OpenSSH – ssh(1)"
+  descripcion: "Manual del cliente SSH. Explica los mecanismos de conexión y autenticación remota, utilización de claves, agentes SSH y configuración de conexiones seguras."
+  url: "https://man.openbsd.org/ssh"
+
+# ============================================================
+# 6. AUTENTICACIÓN EN WINDOWS Y ACTIVE DIRECTORY
+# ============================================================
+
+- fuente: "Microsoft Learn – Información general de la autenticación de Windows"
+  descripcion: "Documentación técnica sobre la arquitectura de autenticación de Windows, incluyendo Kerberos, NTLM, TLS, autenticación integrada, tarjetas inteligentes y administración de credenciales."
+  url: "https://learn.microsoft.com/es-es/windows-server/security/windows-authentication/windows-authentication-overview"
+
+- fuente: "Microsoft Learn – Arquitectura de autenticación de Windows"
+  descripcion: "Explica los componentes de la arquitectura de autenticación de Windows, los proveedores de compatibilidad de seguridad (SSP), los procesos de inicio de sesión y la validación de credenciales."
+  url: "https://learn.microsoft.com/en-us/windows-server/security/windows-authentication/windows-authentication-architecture"
+
+- fuente: "Microsoft Learn – Introducción a la autenticación Kerberos en Windows Server"
+  descripcion: "Describe el funcionamiento de Kerberos V5 en Windows, el Centro de Distribución de Claves (KDC), los tickets TGT y de servicio, la autenticación mutua y la delegación."
+  url: "https://learn.microsoft.com/es-es/windows-server/security/kerberos/kerberos-authentication-overview"
+
+- fuente: "Microsoft Learn – Introducción a NTLM"
+  descripcion: "Describe los protocolos NTLM, su mecanismo de desafío-respuesta, los escenarios en los que todavía se utiliza y la preferencia por Kerberos en entornos de Active Directory."
+  url: "https://learn.microsoft.com/es-es/windows-server/security/kerberos/ntlm-overview"
+
+- fuente: "Microsoft Learn – Active Directory Domain Services"
+  descripcion: "Documentación oficial sobre Active Directory Domain Services. Incluye estructura de dominios, usuarios, grupos, equipos, unidades organizativas, controladores de dominio y administración centralizada de identidades."
+  url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-domain-services"
+
+- fuente: "Microsoft Learn – Windows Hello para empresas"
+  descripcion: "Documentación sobre autenticación sin contraseña mediante credenciales basadas en claves, PIN y biometría. Explica su integración con Microsoft Entra ID, Active Directory y tecnologías FIDO."
+  url: "https://learn.microsoft.com/es-es/windows/security/identity-protection/hello-for-business/"
+
+- fuente: "Microsoft Learn – Credential Guard"
+  descripcion: "Explica cómo Credential Guard utiliza seguridad basada en virtualización para aislar y proteger secretos de autenticación, como hashes NTLM y tickets Kerberos, frente al robo de credenciales."
+  url: "https://learn.microsoft.com/es-es/windows/security/identity-protection/credential-guard/"
+
+- fuente: "Microsoft Learn – Protección y administración de credenciales en Windows"
+  descripcion: "Documentación sobre los mecanismos de protección y almacenamiento de credenciales en Windows, incluyendo el Administrador de credenciales y los mecanismos de protección de secretos."
+  url: "https://learn.microsoft.com/en-us/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication"
+
+# ============================================================
+# 7. AUTENTICACIÓN MEDIANTE CERTIFICADOS Y CRIPTOGRAFÍA
+# ============================================================
+
+- fuente: "Microsoft Learn – Certificate Services"
+  descripcion: "Documentación de los Servicios de certificados de Active Directory (AD CS). Explica la infraestructura de clave pública (PKI), autoridades de certificación, plantillas de certificados y emisión de certificados para autenticación."
+  url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-cs/active-directory-certificate-services-overview"
+
+- fuente: "NIST – FIPS 201-3: Personal Identity Verification (PIV)"
+  descripcion: "Estándar para la identificación y autenticación de personas mediante credenciales de identidad basadas en certificados y tarjetas inteligentes. Incluye autenticación criptográfica y mecanismos de verificación de identidad."
+  url: "https://csrc.nist.gov/pubs/fips/201-3/final"
+
+- fuente: "IETF RFC 5280 – Internet X.509 Public Key Infrastructure Certificate and CRL Profile"
+  descripcion: "Especificación del formato de certificados digitales X.509 y las listas de revocación de certificados (CRL). Referencia fundamental para comprender la autenticación basada en certificados."
+  url: "https://www.rfc-editor.org/rfc/rfc5280.html"
+
+# ============================================================
+# 8. FIDO2, PASSKEYS Y AUTENTICACIÓN SIN CONTRASEÑA
+# ============================================================
+
+- fuente: "FIDO Alliance – Passkeys"
+  descripcion: "Documentación sobre passkeys y autenticación mediante criptografía de clave pública. Explica cómo sustituir las contraseñas por credenciales vinculadas a dispositivos y resistentes al phishing."
+  url: "https://fidoalliance.org/passkeys/"
+
+- fuente: "FIDO Alliance – Specifications"
+  descripcion: "Repositorio de especificaciones técnicas de FIDO Alliance, incluyendo FIDO2, CTAP y U2F. Referencia para estudiar autenticadores hardware, autenticación web y mecanismos de autenticación sin contraseña."
+  url: "https://fidoalliance.org/specifications/"
+
+- fuente: "W3C – Web Authentication (WebAuthn) Level 3"
+  descripcion: "Especificación del W3C para crear y utilizar credenciales de clave pública asociadas a autenticadores. Es la base técnica de muchos sistemas de passkeys y autenticación FIDO en aplicaciones web."
+  url: "https://www.w3.org/TR/webauthn-3/"
+
+- fuente: "FIDO Alliance – FIDO2"
+  descripcion: "Descripción de la arquitectura FIDO2, formada por WebAuthn y CTAP. Explica la autenticación mediante claves criptográficas y el uso de autenticadores externos o integrados en los dispositivos."
+  url: "https://fidoalliance.org/fido2/"
+
+# ============================================================
+# 9. CONTRASEÑAS DE UN SOLO USO: HOTP Y TOTP
+# ============================================================
+
+- fuente: "IETF RFC 6238 – TOTP: Time-Based One-Time Password Algorithm"
+  descripcion: "Especificación del algoritmo TOTP, que genera contraseñas de un solo uso basadas en el tiempo. Es la base técnica de numerosos autenticadores software y sistemas de códigos temporales."
+  url: "https://www.rfc-editor.org/rfc/rfc6238.html"
+
+- fuente: "IETF RFC 4226 – HOTP: An HMAC-Based One-Time Password Algorithm"
+  descripcion: "Especificación del algoritmo HOTP, que genera contraseñas de un solo uso mediante HMAC y un contador. Incluye requisitos y consideraciones de seguridad."
+  url: "https://www.rfc-editor.org/rfc/rfc4226.html"
+
+# ============================================================
+# 10. AUTENTICACIÓN CENTRALIZADA Y PROTOCOLOS DE RED
+# ============================================================
+
+- fuente: "IETF RFC 4120 – The Kerberos Network Authentication Service (V5)"
+  descripcion: "Especificación oficial del protocolo Kerberos V5. Describe la arquitectura de autenticación, el intercambio de tickets, el KDC y los mecanismos de autenticación entre clientes y servicios."
+  url: "https://www.rfc-editor.org/rfc/rfc4120.html"
+
+- fuente: "IETF RFC 4511 – Lightweight Directory Access Protocol (LDAP)"
+  descripcion: "Especificación del protocolo LDAPv3 para acceder y administrar servicios de directorio. Describe operaciones de búsqueda, modificación, vinculación (Bind) y gestión de conexiones."
+  url: "https://www.rfc-editor.org/rfc/rfc4511.html"
+
+- fuente: "IETF RFC 2865 – Remote Authentication Dial In User Service (RADIUS)"
+  descripcion: "Especificación del protocolo RADIUS para centralizar la autenticación, autorización y contabilidad de accesos a redes y servicios. Es especialmente relevante en redes empresariales, Wi-Fi y acceso remoto."
+  url: "https://www.rfc-editor.org/rfc/rfc2865.html"
+
+- fuente: "IETF RFC 7665 – Service Function Chaining: Architecture"
+  descripcion: "Documento de arquitectura de encadenamiento de funciones de servicio. Referencia complementaria para comprender arquitecturas de red y servicios de seguridad, aunque no constituye una especificación de autenticación."
+  url: "https://www.rfc-editor.org/rfc/rfc7665.html"
+
+# ============================================================
+# 11. IDENTIDAD FEDERADA Y AUTENTICACIÓN WEB
+# ============================================================
+
+- fuente: "OpenID Foundation – OpenID Connect Core 1.0"
+  descripcion: "Especificación del protocolo de identidad construido sobre OAuth 2.0. Define cómo un cliente obtiene información verificable sobre la autenticación y la identidad de un usuario desde un proveedor de identidad."
+  url: "https://openid.net/specs/openid-connect-core-1_0.html"
+
+- fuente: "IETF RFC 6749 – The OAuth 2.0 Authorization Framework"
+  descripcion: "Especificación del marco de autorización OAuth 2.0. Define cómo una aplicación puede obtener acceso limitado a recursos protegidos en nombre de un usuario. Debe estudiarse junto con OpenID Connect para distinguir autorización y autenticación."
+  url: "https://www.rfc-editor.org/rfc/rfc6749.html"
+
+- fuente: "IETF RFC 8446 – The Transport Layer Security (TLS) Protocol Version 1.3"
+  descripcion: "Especificación de TLS 1.3, protocolo que protege los canales de comunicación utilizados durante numerosos procesos de autenticación y permite autenticar servidores y, opcionalmente, clientes mediante certificados."
+  url: "https://www.rfc-editor.org/rfc/rfc8446.html"
+
+# ============================================================
+# 12. ARQUITECTURA AAA: AUTHENTICATION, AUTHORIZATION, ACCOUNTING
+# ============================================================
+
+- fuente: "IETF RFC 6733 – Diameter Base Protocol"
+  descripcion: "Especificación del protocolo Diameter, un framework AAA para autenticación, autorización y contabilidad. Describe arquitectura, mensajes, atributos, transporte, seguridad y aplicaciones de AAA en redes y servicios de movilidad."
+  url: "https://www.rfc-editor.org/rfc/rfc6733.html"
+
+- fuente: "IETF RFC 2903 – Generic AAA Architecture"
+  descripcion: "Documento de arquitectura genérica AAA. Explica los conceptos fundamentales de autenticación, autorización y contabilidad, así como las relaciones entre clientes, servidores y servicios AAA."
+  url: "https://www.rfc-editor.org/rfc/rfc2903.html"
+
+- fuente: "IETF RFC 3539 – Authentication, Authorization and Accounting (AAA) Transport Profile"
+  descripcion: "Define requisitos y consideraciones para el transporte de protocolos AAA, incluyendo fiabilidad, seguridad, control de congestión y gestión de conexiones."
+  url: "https://www.rfc-editor.org/rfc/rfc3539.html"
+
+- fuente: "IETF RFC 2865 – Remote Authentication Dial In User Service (RADIUS)"
+  descripcion: "Especificación fundamental de RADIUS. Define el intercambio de mensajes entre un servidor de acceso a la red (NAS) y un servidor de autenticación centralizado. Incluye Access-Request, Access-Accept, Access-Reject y atributos."
+  url: "https://www.rfc-editor.org/rfc/rfc2865.html"
+
+- fuente: "IETF RFC 2866 – RADIUS Accounting"
+  descripcion: "Extensión de RADIUS para contabilidad y registro de sesiones. Define los mensajes Accounting-Request y Accounting-Response y permite registrar el inicio, finalización y duración de las conexiones."
+  url: "https://www.rfc-editor.org/rfc/rfc2866.html"
+
+- fuente: "IETF RFC 5080 – Common RADIUS Implementation Issues and Suggested Fixes"
+  descripcion: "Identifica problemas habituales de implementación de RADIUS y proporciona recomendaciones para mejorar la interoperabilidad, seguridad y funcionamiento de los servidores y clientes."
+  url: "https://www.rfc-editor.org/rfc/rfc5080.html"
+
+- fuente: "IETF RFC 6929 – RADIUS Protocol Extensions"
+  descripcion: "Amplía RADIUS mediante nuevos mecanismos de representación de atributos, atributos extendidos y estructuras de datos más complejas."
+  url: "https://www.rfc-editor.org/rfc/rfc6929.html"
+
+- fuente: "IETF RFC 8044 – Data Types in RADIUS"
+  descripcion: "Define tipos de datos y reglas de representación para atributos RADIUS, facilitando la interoperabilidad entre implementaciones."
+  url: "https://www.rfc-editor.org/rfc/rfc8044.html"
+
+- fuente: "IETF RFC 5176 – Dynamic Authorization Extensions to RADIUS"
+  descripcion: "Define mecanismos para modificar dinámicamente las autorizaciones de una sesión RADIUS ya establecida. Incluye Disconnect-Request y CoA (Change of Authorization), utilizados para desconectar usuarios o modificar sus políticas de acceso."
+  url: "https://www.rfc-editor.org/rfc/rfc5176.html"
+
+- fuente: "IETF RFC 9765 – RADIUS/1.1"
+  descripcion: "Especificación de RADIUS/1.1, que utiliza negociación mediante ALPN para eliminar la dependencia de MD5 del protocolo RADIUS tradicional. Referencia importante para conocer la evolución de la seguridad de RADIUS."
+  url: "https://www.rfc-editor.org/rfc/rfc9765.html"
+
+# ============================================================
+# 13. TACACS Y TACACS+
+# ============================================================
+
+- fuente: "IETF RFC 8907 – The Terminal Access Controller Access-Control System Plus (TACACS+) Protocol"
+  descripcion: "Especificación informativa de TACACS+. Describe su arquitectura, intercambio de mensajes y separación de los procesos de autenticación, autorización y contabilidad. Especialmente utilizado para administrar centralizadamente el acceso administrativo a routers, switches y otros dispositivos de red."
+  url: "https://www.rfc-editor.org/rfc/rfc8907.html"
+
+- fuente: "IETF RFC 9887 – TACACS+ over TLS 1.3"
+  descripcion: "Define el uso de TLS 1.3 para proteger las comunicaciones entre clientes y servidores TACACS+. Amplía RFC 8907 e incorpora protección criptográfica del canal de comunicación."
+  url: "https://www.rfc-editor.org/rfc/rfc9887.html"
+
+- fuente: "Cisco – TACACS+ Configuration Guides"
+  descripcion: "Documentación del fabricante sobre configuración y utilización de TACACS+ para centralizar la autenticación, autorización de comandos y auditoría administrativa de dispositivos de red Cisco."
+  url: "https://www.cisco.com/c/en/us/support/security/secure-access-control-server/products-installation-and-configuration-guides-list.html"
+
+# ============================================================
+# 14. SEGURIDAD DEL TRANSPORTE RADIUS
+# ============================================================
+
+- fuente: "IETF RFC 6614 – Transport Layer Security (TLS) Encryption for RADIUS"
+  descripcion: "Define el transporte de RADIUS sobre TLS, conocido habitualmente como RadSec. Permite proteger las comunicaciones entre servidores y clientes RADIUS mediante certificados y canales TLS."
+  url: "https://www.rfc-editor.org/rfc/rfc6614.html"
+
+- fuente: "IETF RFC 7360 – Datagram Transport Layer Security (DTLS) as a Transport Layer for RADIUS"
+  descripcion: "Especifica el uso de DTLS como mecanismo de protección de las comunicaciones RADIUS sobre datagramas. Permite añadir confidencialidad e integridad al transporte UDP."
+  url: "https://www.rfc-editor.org/rfc/rfc7360.html"
+
+- fuente: "IETF RFC 6613 – RADIUS over TCP"
+  descripcion: "Define el transporte de RADIUS sobre TCP en lugar del transporte UDP tradicional. Es una referencia complementaria para comprender las alternativas de transporte del protocolo."
+  url: "https://www.rfc-editor.org/rfc/rfc6613.html"
+
+- fuente: "IANA – RADIUS Attribute Types Registry"
+  descripcion: "Registro oficial de tipos de paquetes, atributos y valores asociados al protocolo RADIUS. Es una referencia esencial para interpretar capturas de tráfico, configurar servidores AAA y estudiar extensiones del protocolo."
+  url: "https://www.iana.org/assignments/radius-types/radius-types.xhtml"
+
+# ============================================================
+# 15. FRAMEWORK EAP: EXTENSIBLE AUTHENTICATION PROTOCOL
+# ============================================================
+
+- fuente: "IETF RFC 3748 – Extensible Authentication Protocol (EAP)"
+  descripcion: "Especificación fundamental del framework EAP. Define la arquitectura de autenticación extensible, los roles de peer, authenticator y authentication server, los tipos de mensajes y el funcionamiento de los métodos de autenticación."
+  url: "https://www.rfc-editor.org/rfc/rfc3748.html"
+
+- fuente: "IETF RFC 5247 – Extensible Authentication Protocol (EAP) Key Management Framework"
+  descripcion: "Define el framework de gestión de claves de EAP, incluyendo derivación, distribución y utilización de material criptográfico generado durante los procesos de autenticación."
+  url: "https://www.rfc-editor.org/rfc/rfc5247.html"
+
+- fuente: "IANA – EAP Method Types Registry"
+  descripcion: "Registro oficial de tipos de métodos EAP asignados. Permite consultar los identificadores y las especificaciones asociadas a los distintos métodos de autenticación EAP."
+  url: "https://www.iana.org/assignments/eap-numbers/eap-numbers.xhtml"
+
+# ============================================================
+# 16. MÉTODOS EAP BASADOS EN CERTIFICADOS Y TÚNELES TLS
+# ============================================================
+
+- fuente: "IETF RFC 5216 – The EAP-TLS Authentication Protocol"
+  descripcion: "Especificación del método EAP-TLS, que utiliza certificados digitales y TLS para realizar autenticación mutua entre cliente y servidor. Es uno de los métodos EAP más sólidos y adecuados para autenticación de dispositivos y usuarios mediante certificados."
+  url: "https://www.rfc-editor.org/rfc/rfc5216.html"
+
+- fuente: "IETF RFC 9190 – EAP-TLS 1.3"
+  descripcion: "Actualización de EAP-TLS para utilizar TLS 1.3. Incorpora mejoras de seguridad, confidencialidad, secreto hacia adelante y protección de la identidad del usuario."
+  url: "https://www.rfc-editor.org/rfc/rfc9190.html"
+
+- fuente: "IETF RFC 9427 – TLS-Based Extensible Authentication Protocol (EAP) Types for Use with TLS 1.3"
+  descripcion: "Describe las consideraciones y adaptaciones necesarias para utilizar TLS 1.3 en métodos EAP basados en TLS, incluyendo EAP-TLS, EAP-TTLS, EAP-FAST y TEAP."
+  url: "https://www.rfc-editor.org/rfc/rfc9427.html"
+
+- fuente: "IETF RFC 5281 – EAP Tunneled TLS Authentication Protocol (EAP-TTLS)"
+  descripcion: "Especificación de EAP-TTLS. Utiliza un túnel TLS para proteger el intercambio de credenciales y permitir métodos de autenticación internos dentro del túnel seguro."
+  url: "https://www.rfc-editor.org/rfc/rfc5281.html"
+
+- fuente: "IETF RFC 4851 – The Flexible Authentication via Secure Tunneling (EAP-FAST) Protocol"
+  descripcion: "Define EAP-FAST, un método EAP que establece un túnel TLS protegido mediante credenciales PAC o certificados y permite realizar autenticación interna dentro del túnel."
+  url: "https://www.rfc-editor.org/rfc/rfc4851.html"
+
+- fuente: "IETF RFC 7170 – Tunnel Extensible Authentication Protocol (TEAP) Version 1"
+  descripcion: "Define TEAP, un método EAP basado en túneles TLS que permite realizar varias operaciones de autenticación y vincular credenciales dentro de una misma sesión protegida."
+  url: "https://www.rfc-editor.org/rfc/rfc7170.html"
+
+- fuente: "Microsoft – Protected Extensible Authentication Protocol (PEAP)"
+  descripcion: "Documentación técnica sobre PEAP, método de autenticación EAP basado en un túnel TLS. Explica su utilización con certificados de servidor y mecanismos de autenticación internos como EAP-MSCHAPv2."
+  url: "https://learn.microsoft.com/en-us/windows-server/networking/technologies/extensible-authentication-protocol/network-access"
+
+# ============================================================
+# 17. OTROS MÉTODOS EAP
+# ============================================================
+
+- fuente: "IETF RFC 4186 – Extensible Authentication Protocol Method for GSM Subscriber Identity Modules (EAP-SIM)"
+  descripcion: "Define EAP-SIM, un método EAP basado en los mecanismos de autenticación de tarjetas SIM GSM. Permite utilizar credenciales de identidad móvil en procesos de autenticación de red."
+  url: "https://www.rfc-editor.org/rfc/rfc4186.html"
+
+- fuente: "IETF RFC 4187 – EAP-AKA Authentication"
+  descripcion: "Define EAP-AKA, un método EAP basado en mecanismos de autenticación y acuerdo de claves de sistemas móviles 3G. Utiliza credenciales de tarjetas USIM."
+  url: "https://www.rfc-editor.org/rfc/rfc4187.html"
+
+- fuente: "IETF RFC 5448 – Improved EAP-AKA Authentication"
+  descripcion: "Define EAP-AKA', una evolución de EAP-AKA que incorpora mejoras en la derivación de claves y vinculación criptográfica del contexto de autenticación."
+  url: "https://www.rfc-editor.org/rfc/rfc5448.html"
+
+- fuente: "IETF RFC 4851 – EAP-FAST"
+  descripcion: "Documentación del método EAP-FAST para autenticación mediante túneles protegidos. Se incluye también en el apartado de métodos EAP basados en TLS por su relevancia arquitectónica."
+  url: "https://www.rfc-editor.org/rfc/rfc4851.html"
+
+- fuente: "IETF RFC 5433 – Generic Pre-Shared Key (EAP-GPSK) Method"
+  descripcion: "Especifica un método EAP basado en claves precompartidas. Incluye mecanismos de autenticación mutua y derivación de claves sin necesidad de certificados digitales."
+  url: "https://www.rfc-editor.org/rfc/rfc5433.html"
+
+- fuente: "IETF RFC 5931 – Extensible Authentication Protocol (EAP) Authentication Using Only a Password"
+  descripcion: "Define EAP-PWD, un método EAP basado en contraseñas que utiliza técnicas criptográficas para establecer una autenticación mutua y derivar claves de sesión."
+  url: "https://www.rfc-editor.org/rfc/rfc5931.html"
+
+- fuente: "IETF RFC 3748 – EAP-MD5 Challenge"
+  descripcion: "Describe el método EAP-MD5 como parte del framework EAP original. Su interés es principalmente histórico y didáctico, ya que no proporciona autenticación mutua ni protección suficiente frente a determinados ataques y no debe utilizarse como mecanismo moderno de autenticación."
+  url: "https://www.rfc-editor.org/rfc/rfc3748.html"
+
+# ============================================================
+# 18. IEEE 802.1X Y CONTROL DE ACCESO A RED
+# ============================================================
+
+- fuente: "IETF RFC 3580 – IEEE 802.1X RADIUS Usage Guidelines"
+  descripcion: "Describe cómo utilizar RADIUS en entornos IEEE 802.1X. Explica la relación entre supplicant, authenticator y authentication server, así como los atributos RADIUS utilizados en el control de acceso a redes cableadas e inalámbricas."
+  url: "https://www.rfc-editor.org/rfc/rfc3580.html"
+
+- fuente: "IEEE – IEEE 802.1X: Port-Based Network Access Control"
+  descripcion: "Estándar IEEE para el control de acceso a redes basado en puertos. Define los mecanismos de autenticación y autorización que permiten controlar el acceso de dispositivos a redes Ethernet y Wi-Fi mediante 802.1X y EAP."
+  url: "https://standards.ieee.org/ieee/802.1X/"
+
+- fuente: "IEEE – IEEE 802.11 Wireless LAN"
+  descripcion: "Familia de estándares para redes inalámbricas. Incluye mecanismos de seguridad y autenticación de redes Wi-Fi, integración con 802.1X y utilización de EAP en entornos empresariales."
+  url: "https://www.ieee802.org/11/"
+
+- fuente: "Wi-Fi Alliance – Wi-Fi CERTIFIED WPA3"
+  descripcion: "Documentación sobre WPA3, evolución de los mecanismos de seguridad Wi-Fi. Incluye mejoras en autenticación, protección criptográfica y seguridad de redes inalámbricas personales y empresariales."
+  url: "https://www.wi-fi.org/discover-wi-fi/security"
+
+- fuente: "IETF RFC 4017 – Extensible Authentication Protocol (EAP) Method Requirements for Wireless LANs"
+  descripcion: "Define requisitos de los métodos EAP utilizados en redes inalámbricas, incluyendo autenticación mutua, protección de identidad y derivación de claves."
+  url: "https://www.rfc-editor.org/rfc/rfc4017.html"
+
+# ============================================================
+# 19. LDAP: SERVICIOS DE DIRECTORIO Y AUTENTICACIÓN
+# ============================================================
+
+- fuente: "IETF RFC 4510 – LDAP Technical Specification Road Map"
+  descripcion: "Presenta la arquitectura documental de LDAPv3 y las especificaciones que forman el estándar, incluyendo protocolo, modelos de información, autenticación, seguridad, nombres y filtros."
+  url: "https://www.rfc-editor.org/rfc/rfc4510.html"
+
+- fuente: "IETF RFC 4511 – Lightweight Directory Access Protocol: The Protocol"
+  descripcion: "Especificación principal del protocolo LDAPv3. Define operaciones de conexión, autenticación Bind, búsqueda Search, modificación, adición y eliminación de entradas de directorio."
+  url: "https://www.rfc-editor.org/rfc/rfc4511.html"
+
+- fuente: "IETF RFC 4512 – LDAP Directory Information Models"
+  descripcion: "Describe el modelo de información de LDAP, incluyendo entradas, atributos, clases de objeto, esquemas y estructura jerárquica del directorio."
+  url: "https://www.rfc-editor.org/rfc/rfc4512.html"
+
+- fuente: "IETF RFC 4513 – LDAP Authentication Methods and Security Mechanisms"
+  descripcion: "Referencia fundamental para la autenticación LDAP. Explica Bind simple, autenticación SASL, mecanismos EXTERNAL, protección mediante TLS y seguridad de las comunicaciones con directorios."
+  url: "https://www.rfc-editor.org/rfc/rfc4513.html"
+
+- fuente: "IETF RFC 4514 – LDAP Distinguished Names"
+  descripcion: "Define la representación textual de los nombres distinguidos (DN) utilizados para identificar de forma única entradas dentro de un directorio LDAP."
+  url: "https://www.rfc-editor.org/rfc/rfc4514.html"
+
+- fuente: "IETF RFC 4515 – LDAP Search Filters"
+  descripcion: "Define la sintaxis de los filtros de búsqueda LDAP. Es una referencia útil para comprender consultas de usuarios, grupos, atributos y objetos de directorio."
+  url: "https://www.rfc-editor.org/rfc/rfc4515.html"
+
+- fuente: "IETF RFC 4516 – LDAP Uniform Resource Locator"
+  descripcion: "Define el formato de las URL LDAP, incluyendo servidor, base de búsqueda, ámbito y filtros."
+  url: "https://www.rfc-editor.org/rfc/rfc4516.html"
+
+- fuente: "IETF RFC 4422 – Simple Authentication and Security Layer (SASL)"
+  descripcion: "Define el framework SASL, que permite incorporar mecanismos de autenticación a protocolos orientados a conexión. Se utiliza, entre otros, en LDAP y otros servicios de red."
+  url: "https://www.rfc-editor.org/rfc/rfc4422.html"
+
+# ============================================================
+# 20. ACTIVE DIRECTORY Y SERVICIOS DE IDENTIDAD MICROSOFT
+# ============================================================
+
+- fuente: "Microsoft Open Specifications – Active Directory Protocols Overview"
+  descripcion: "Documento técnico que describe los protocolos que componen Active Directory y las relaciones entre servicios de directorio, autenticación, replicación, políticas y administración de cuentas."
+  url: "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-adod/5ff67bf4-c145-48cb-89cd-4f5482d94664"
+
+- fuente: "Microsoft Learn – Active Directory Domain Services"
+  descripcion: "Documentación oficial de Active Directory Domain Services. Explica dominios, bosques, árboles, controladores de dominio, usuarios, grupos, unidades organizativas y administración centralizada de identidades."
+  url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-domain-services"
+
+- fuente: "Microsoft Learn – Active Directory Domain Services Overview"
+  descripcion: "Introducción a los servicios de dominio de Active Directory y su papel en la autenticación, autorización, administración de recursos y centralización de identidades en redes Windows."
+  url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview"
+
+- fuente: "Microsoft Open Specifications – Active Directory Technical Specification (MS-ADTS)"
+  descripcion: "Especificación técnica del funcionamiento de Active Directory Domain Services. Describe modelos de datos, operaciones de directorio, objetos, atributos, búsquedas y mecanismos de acceso."
+  url: "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/"
+
+- fuente: "Microsoft Learn – Group Policy Overview"
+  descripcion: "Documentación sobre directivas de grupo de Windows. Explica cómo centralizar la configuración de seguridad, las restricciones de acceso, las políticas de contraseñas y la administración de usuarios y equipos en dominios."
+  url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview"
+
+- fuente: "Microsoft Learn – Network Policy Server (NPS)"
+  descripcion: "Documentación de Windows Server Network Policy Server, implementación de Microsoft del servidor RADIUS. Permite centralizar autenticación, autorización y contabilidad para conexiones de red, VPN y acceso inalámbrico."
+  url: "https://learn.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-top"
+
+- fuente: "Microsoft Learn – LDAP Signing"
+  descripcion: "Documentación sobre la firma LDAP en Windows y la protección frente a modificaciones o manipulaciones de las comunicaciones entre clientes y controladores de dominio."
+  url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/ldap-signing"
+
+- fuente: "Microsoft Learn – LDAP Channel Binding"
+  descripcion: "Explica el mecanismo LDAP Channel Binding, utilizado para vincular la autenticación a la conexión TLS y reducir determinados ataques de intermediario contra servicios de directorio."
+  url: "https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/ldap-channel-binding"
+
+# ============================================================
+# 21. SERVIDORES AAA Y PLATAFORMAS DE AUTENTICACIÓN
+# ============================================================
+
+- fuente: "FreeRADIUS – Official Documentation"
+  descripcion: "Documentación oficial de FreeRADIUS, uno de los servidores AAA de código abierto más utilizados. Incluye instalación, configuración, clientes RADIUS, usuarios, políticas, módulos, integración LDAP, SQL y métodos EAP."
+  url: "https://www.freeradius.org/documentation/"
+
+- fuente: "FreeRADIUS – Configuration and EAP"
+  descripcion: "Documentación sobre la configuración de EAP en FreeRADIUS. Permite estudiar EAP-TLS, EAP-TTLS, PEAP, certificados, validación de clientes e integración con sistemas de identidad."
+  url: "https://www.freeradius.org/documentation/freeradius-server/4.0.0/reference/raddb/mods-available/eap.html"
+
+- fuente: "Microsoft – Network Policy Server (NPS)"
+  descripcion: "Implementación de servidor RADIUS de Microsoft para administrar políticas de acceso a redes. Permite estudiar la integración con Active Directory y la autenticación de conexiones VPN, Wi-Fi y otros servicios."
+  url: "https://learn.microsoft.com/en-us/windows-server/networking/technologies/nps/nps-top"
+
+- fuente: "Cisco – Identity Services Engine (ISE)"
+  descripcion: "Plataforma de control de acceso a redes y gestión centralizada de identidades. Integra autenticación 802.1X, RADIUS, TACACS+, políticas de autorización, perfiles de dispositivos y control de acceso basado en contexto."
+  url: "https://www.cisco.com/site/us/en/products/security/identity-services-engine/index.html"
+
+- fuente: "Aruba – ClearPass Policy Manager"
+  descripcion: "Plataforma de control de acceso a redes que integra servicios RADIUS, autenticación 802.1X, políticas de acceso, gestión de dispositivos y control de acceso basado en identidad."
+  url: "https://www.hpe.com/us/en/aruba-clearpass-policy-manager.html"
+
+- fuente: "FreeIPA – Documentation"
+  descripcion: "Plataforma de gestión centralizada de identidades para entornos Linux. Integra LDAP, Kerberos, certificados, DNS, políticas de acceso y administración de usuarios y equipos."
+  url: "https://www.freeipa.org/page/Documentation"
+
+# ============================================================
+# 22. SERVICIOS COMPLEMENTARIOS DE INFRAESTRUCTURA DE IDENTIDAD
+# ============================================================
+
+- fuente: "IETF RFC 2782 – A DNS RR for specifying the location of services (DNS SRV)"
+  descripcion: "Define los registros DNS SRV utilizados para localizar servicios de red. Son esenciales en infraestructuras de identidad como Active Directory y Kerberos para descubrir controladores de dominio y servicios de autenticación."
+  url: "https://www.rfc-editor.org/rfc/rfc2782.html"
+
+- fuente: "IETF RFC 4120 – The Kerberos Network Authentication Service (V5)"
+  descripcion: "Especificación del protocolo Kerberos V5. Define el modelo de autenticación mediante tickets, el Authentication Server, el Ticket Granting Server y la autenticación entre clientes y servicios."
+  url: "https://www.rfc-editor.org/rfc/rfc4120.html"
+
+- fuente: "IETF RFC 4121 – The Kerberos Version 5 Generic Security Service Application Program Interface (GSS-API) Mechanism"
+  descripcion: "Define el mecanismo Kerberos V5 para GSS-API, permitiendo integrar autenticación Kerberos y servicios de seguridad en aplicaciones y protocolos de red."
+  url: "https://www.rfc-editor.org/rfc/rfc4121.html"
+
+- fuente: "MIT Kerberos – Documentation"
+  descripcion: "Documentación oficial de MIT Kerberos sobre instalación, configuración y administración de infraestructuras Kerberos. Incluye KDC, principals, keytabs, tickets, realms y herramientas de diagnóstico."
+  url: "https://web.mit.edu/kerberos/krb5-latest/doc/"
+
+- fuente: "IETF RFC 5896 – Generic Security Service Application Program Interface (GSS-API): Extensible Mechanism Support"
+  descripcion: "Referencia complementaria sobre mecanismos de seguridad GSS-API, utilizados para integrar servicios de autenticación y seguridad como Kerberos en aplicaciones distribuidas."
+  url: "https://www.rfc-editor.org/rfc/rfc5896.html"

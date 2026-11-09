@@ -1,0 +1,23 @@
+# Especificación opcional de modelos.
+# El agente debe generar los archivos Python correspondientes.
+# Este YAML no es cargado directamente por Odoo.
+
+models:
+  # - name: "library.book"
+  #   description: "Ejemplo de modelo; sustituir o eliminar para la práctica."
+  #   fields:
+  #     - name: "name"
+  #       type: "char"
+  #       string: "Título"
+  #       required: true
+
+  #     - name: "active"
+  #       type: "boolean"
+  #       string: "Activo"
+  #       default: true
+
+  #   # Ejemplos de relaciones: many2one, one2many, many2many.
+  #   relations: []
+
+  #   # Reglas de negocio que deben implementarse y validarse.
+  #   constraints: []

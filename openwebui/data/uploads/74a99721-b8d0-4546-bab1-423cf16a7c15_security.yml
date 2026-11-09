@@ -1,0 +1,18 @@
+# Especificación opcional de seguridad.
+# El agente debe generar grupos, ACL y reglas de registro si son necesarias.
+# No conceder permisos por defecto sin analizar los requisitos.
+
+# groups:
+#   - id: "group_library_user"
+#     name: "Usuario de biblioteca"
+#     category: ""
+
+# access:
+#   - model: "library.book"
+#     group: "group_library_user"
+#     read: true
+#     write: true
+#     create: true
+#     unlink: false
+
+# record_rules: []

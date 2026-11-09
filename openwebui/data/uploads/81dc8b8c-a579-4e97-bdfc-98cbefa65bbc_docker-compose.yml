@@ -1,0 +1,36 @@
+services:
+  db:
+    image: ${POSTGRES_IMAGE:-postgres:17}
+    container_name: postgres-ai-lab
+    hostname: postgres-ai-lab
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-odoo}
+      POSTGRES_USER: ${POSTGRES_USER:-odoo}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-odoo}
+    volumes:
+      - postgres-ai-data:/var/lib/postgresql/data
+  odoo:
+    image: ${ODOO_IMAGE:-odoo:19}
+    container_name: odoo-ai-lab
+    hostname: odoo-ai-lab
+    depends_on:
+      - db
+    ports:
+      - "8069:8069"
+    volumes:
+      # Fuentes OCB/OCA del host: ~/odoo/src -> /opt/odoo/src
+      - ${ODOO_SRC:-~/odoo/src/OCB}:/opt/odoo/src/OCB:ro
+      # Addons del alumno: se monta sobre el directorio de addons adicionales
+      - ./addons:/opt/odoo/src/extra-addons
+      # Configuración suministrada por el profesor
+      - ./odoo.conf:/opt/odoo/odoo.conf:ro
+    command:
+      - /bin/sh
+      - -c
+      - |
+          chown -R odoo:odoo /opt/odoo/.local/share/Odoo
+          su -s /bin/bash odoo -c '/opt/odoo/src/OCB/odoo-bin -c /opt/odoo/odoo.conf'
+          exec bash -c 'while true; do sleep 3600; done'
+
+volumes:
+  postgres-ai-data:

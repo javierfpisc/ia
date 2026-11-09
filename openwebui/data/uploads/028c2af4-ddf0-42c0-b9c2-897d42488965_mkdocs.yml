@@ -1,0 +1,53 @@
+site_name: Materiales SXE (vista previa local)
+site_description: Vista previa local de contenidos y prácticas del módulo de SXE
+docs_dir: /docs
+site_dir: /tmp/site
+use_directory_urls: true
+
+# instrucciones.txt de contenidos/ y practicas/ son enlaces a ../../ que no existen dentro de los volúmenes montados.
+exclude_docs: |
+  *.txt
+
+theme:
+  name: material
+  language: es
+
+plugins:
+  - search:
+      lang: es
+  - awesome-pages
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+      slugify: !!python/name:markdown.extensions.toc.slugify_unicode
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+# Navegación explícita generada a partir de contenidos/unidades.yml
+nav:
+- Inicio: index.md
+- Sistema de generación: sistema.md
+- Contenidos:
+  # - Unidad 0 · Introducción al módulo:
+  #   - '0.1 · Resumen del Módulo Profesional: Sistemas de Xestión Empresarial': contenidos/unidades/00/1-aspectos-legales-modulo.md
+  #   - '0.2 · Guía del Entorno de Prácticas: Infraestructura y Herramientas de Trabajo': contenidos/unidades/00/2-entorno-trabajo.md
+  #   - '0.3 · Preparación del entorno de trabajo': contenidos/unidades/00/3-creacion-entorno.md
+  - Unidad 5 · Desarrollo de Módulos en Odoo:
+    - '5.1 · Creación de Módulos en Odoo: Estructura y Componentes': contenidos/unidades/05/1-modulos-odoo.md
+    - '5.2 · Modelos de Datos en Odoo: Creación y Gestión': contenidos/unidades/05/2-modelos-odoo.md
+    - '5.3 · Vistas en Odoo: Definición y Configuración': contenidos/unidades/05/3-vistas-odoo.md
+    - '5.4 · Acciones en Odoo: Definición y Configuración': contenidos/unidades/05/4-acciones-odoo.md
+    - '5.5 · Seguridad en Odoo: Definición y Configuración': contenidos/unidades/05/5-seguridad-odoo.md
+  - Muestras: contenidos/muestras/README.md
+- Prácticas:
+  - Unidad 5 · Desarrollo de Módulos en Odoo:
+    - '5.1 · Creación de un módulo Odoo con agente IA': practicas/unidades/05/1-crear-modulo-con-agente.md
+  - Muestras: practicas/muestras/README.md
+- Módulo: modulo/
+

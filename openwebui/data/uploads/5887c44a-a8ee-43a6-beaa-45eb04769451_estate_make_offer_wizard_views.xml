@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- WIZARD FORM VIEW -->
+    <record id="estate_make_offer_wizard_view_form" model="ir.ui.view">
+        <field name="name">estate.make.offer.wizard.form</field>
+        <field name="model">estate.make.offer.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Make an Offer">
+                <group>
+                    <field name="property_id" readonly="1"/>
+                    <field name="partner_id"/>
+                    <field name="price"/>
+                    <field name="validity"/>
+                </group>
+                <footer>
+                    <button name="action_submit" type="object"
+                            string="Submit Offer" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- ACTION: opens the wizard in a dialog (target='new') -->
+    <record id="estate_make_offer_wizard_action" model="ir.actions.act_window">
+        <field name="name">Make an Offer</field>
+        <field name="res_model">estate.make.offer.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

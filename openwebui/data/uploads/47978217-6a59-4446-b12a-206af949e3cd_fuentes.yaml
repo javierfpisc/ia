@@ -1,0 +1,795 @@
+# ============================================================
+# FUENTES DE REFERENCIA: VIRTUALIZACIÓN, PROXMOX VE Y LABORATORIOS
+# Selección de documentación oficial y proyectos de referencia.
+# Comprobar siempre la versión de cada documento antes de utilizarlo.
+# ============================================================
+
+# ============================================================
+# 1. FUNDAMENTOS DE VIRTUALIZACIÓN E HIPERVISORES
+# ============================================================
+
+- fuente: "Proxmox VE – Administration Guide"
+  descripcion: "Manual principal de administración de Proxmox VE. Es la referencia central para el curso: instalación, administración del host, clústeres, almacenamiento, máquinas virtuales KVM/QEMU, contenedores LXC, redes SDN, firewall, usuarios, alta disponibilidad y copias de seguridad."
+  url: "https://pve.proxmox.com/pve-docs/pve-admin-guide.html"
+
+- fuente: "Proxmox VE – Documentation"
+  descripcion: "Portal oficial de documentación y descargas de Proxmox VE. Permite acceder a las guías de administración y a la documentación correspondiente a las distintas versiones."
+  url: "https://www.proxmox.com/en/downloads/proxmox-virtual-environment/documentation"
+
+- fuente: "Proxmox VE – System Requirements"
+  descripcion: "Requisitos y recomendaciones oficiales de hardware para Proxmox VE. Trata CPU con extensiones de virtualización, memoria, almacenamiento, controladoras, redes y consideraciones específicas para ZFS y Ceph."
+  url: "https://www.proxmox.com/en/products/proxmox-virtual-environment/requirements"
+
+- fuente: "Proxmox VE – Features"
+  descripcion: "Descripción oficial de las capacidades de Proxmox VE: virtualización, clústeres, alta disponibilidad, almacenamiento, redes, firewall, migración, snapshots, copias de seguridad y administración."
+  url: "https://www.proxmox.com/en/products/proxmox-virtual-environment/features"
+
+- fuente: "Linux Kernel – Virtualization Support"
+  descripcion: "Índice de la documentación del kernel Linux relacionada con virtualización. Incluye KVM, interfaces de virtualización, arquitecturas soportadas y tecnologías relacionadas."
+  url: "https://docs.kernel.org/virt/"
+
+- fuente: "Linux Kernel – KVM"
+  descripcion: "Documentación técnica de Kernel-based Virtual Machine. Describe la API de KVM, sus capacidades, interfaces de ejecución de máquinas virtuales y características específicas de las arquitecturas soportadas."
+  url: "https://docs.kernel.org/virt/kvm/index.html"
+
+- fuente: "QEMU – System Emulation"
+  descripcion: "Manual oficial de emulación de sistemas de QEMU. Explica la creación y ejecución de máquinas virtuales, aceleradores como KVM, dispositivos virtuales, almacenamiento, redes, snapshots, monitor QEMU y gestión de dispositivos."
+  url: "https://www.qemu.org/docs/master/system/"
+
+- fuente: "QEMU – Introduction to System Emulation"
+  descripcion: "Introducción a la emulación de sistemas de QEMU. Resulta útil para distinguir la emulación de hardware, la aceleración por hipervisor y la virtualización apoyada en KVM."
+  url: "https://www.qemu.org/docs/master/system/introduction.html"
+
+- fuente: "QEMU – QEMU System Emulator Manual"
+  descripcion: "Referencia de opciones de línea de comandos de QEMU para ejecutar máquinas virtuales, configurar CPU, memoria, dispositivos, discos, interfaces de red y otros componentes."
+  url: "https://www.qemu.org/docs/master/system/qemu-manpage.html"
+
+# ============================================================
+# 2. INSTALACIÓN Y ADMINISTRACIÓN DE PROXMOX VE
+# ============================================================
+
+- fuente: "Proxmox VE – Installation"
+  descripcion: "Capítulo de instalación de Proxmox VE. Referencia para preparar el medio de instalación, seleccionar el sistema de archivos, configurar discos, red, nombre del nodo y parámetros iniciales."
+  url: "https://pve.proxmox.com/pve-docs/chapter-pve-installation.html"
+
+- fuente: "Proxmox VE – Host System Administration"
+  descripcion: "Administración del sistema anfitrión Proxmox VE, incluyendo configuración del sistema, paquetes, repositorios, servicios, actualizaciones, tareas de mantenimiento y herramientas de administración."
+  url: "https://pve.proxmox.com/pve-docs/chapter-sysadmin.html"
+
+- fuente: "Proxmox VE – Command Line Tools"
+  descripcion: "Referencia de las herramientas de línea de comandos de Proxmox VE, entre ellas qm, pct, pvesm, pvecm, pvenode, pvesh y utilidades para administrar máquinas virtuales, contenedores, almacenamiento y clústeres."
+  url: "https://pve.proxmox.com/pve-docs/pve-admin-guide.html"
+
+- fuente: "Proxmox VE – API Viewer"
+  descripcion: "Explorador interactivo de la API REST de Proxmox VE. Permite consultar rutas, métodos, parámetros y estructuras de respuesta para automatizar la administración mediante API."
+  url: "https://api.proxmox.com/"
+
+- fuente: "Proxmox VE – API Documentation"
+  descripcion: "Documentación de referencia de la API REST de Proxmox VE. Complementa el API Viewer y permite estudiar la automatización de tareas administrativas y la integración con herramientas externas."
+  url: "https://pve.proxmox.com/pve-docs/api-viewer/"
+
+- fuente: "Proxmox – Community Forum"
+  descripcion: "Foro oficial de la comunidad Proxmox. Recurso complementario para consultar incidencias, configuraciones, experiencias de administración y resolución de problemas. Las soluciones deben contrastarse con la documentación oficial."
+  url: "https://forum.proxmox.com/"
+
+- fuente: "Proxmox – Wiki"
+  descripcion: "Wiki oficial con artículos técnicos, procedimientos y notas complementarias sobre productos Proxmox. Debe utilizarse como apoyo y comprobar la vigencia de cada artículo."
+  url: "https://pve.proxmox.com/wiki/"
+
+# ============================================================
+# 3. MÁQUINAS VIRTUALES, QEMU/KVM Y CONTENEDORES LXC
+# ============================================================
+
+- fuente: "Proxmox VE – QEMU/KVM Virtual Machines"
+  descripcion: "Capítulo del manual de Proxmox VE dedicado a las máquinas virtuales. Trata creación, configuración de hardware virtual, CPU, memoria, discos, controladoras, firmware, dispositivos, snapshots, plantillas, clones y migración."
+  url: "https://pve.proxmox.com/pve-docs/chapter-qm.html"
+
+- fuente: "Proxmox VE – Proxmox Container Toolkit"
+  descripcion: "Documentación oficial de los contenedores LXC en Proxmox VE. Explica creación, plantillas, configuración, recursos, redes, almacenamiento, snapshots, copias de seguridad y administración mediante pct."
+  url: "https://pve.proxmox.com/pve-docs/chapter-pct.html"
+
+- fuente: "Linux Containers – LXC Documentation"
+  descripcion: "Documentación del proyecto LXC sobre contenedores de sistema Linux, aislamiento, namespaces, cgroups, configuración de contenedores y herramientas de administración."
+  url: "https://linuxcontainers.org/lxc/documentation/"
+
+- fuente: "Linux Kernel – Control Group v2"
+  descripcion: "Documentación del mecanismo de grupos de control del kernel Linux. Explica la limitación y contabilización de recursos como CPU, memoria y E/S, conceptos importantes para comprender el aislamiento y la asignación de recursos."
+  url: "https://docs.kernel.org/admin-guide/cgroup-v2.html"
+
+- fuente: "Linux Kernel – Namespaces"
+  descripcion: "Documentación técnica de los namespaces del kernel Linux, mecanismos fundamentales para el aislamiento de procesos, usuarios, redes, montajes y otros recursos utilizados por los contenedores."
+  url: "https://man7.org/linux/man-pages/man7/namespaces.7.html"
+
+- fuente: "VirtIO – Documentation"
+  descripcion: "Documentación del estándar VirtIO para dispositivos virtualizados paravirtualizados, como interfaces de red y almacenamiento. Ayuda a comprender la comunicación eficiente entre máquinas virtuales e hipervisor."
+  url: "https://www.linux-kvm.org/page/Virtio"
+
+# ============================================================
+# 4. ALMACENAMIENTO EN PROXMOX VE
+# ============================================================
+
+- fuente: "Proxmox VE – Storage"
+  descripcion: "Capítulo sobre el subsistema de almacenamiento de Proxmox VE. Explica los tipos de almacenamiento soportados, configuración, contenido, identificadores, almacenamiento local y compartido, y su utilización por máquinas virtuales y contenedores."
+  url: "https://pve.proxmox.com/pve-docs/chapter-pvesm.html"
+
+- fuente: "Proxmox VE – Storage Model"
+  descripcion: "Referencia para comprender el modelo de almacenamiento de Proxmox VE y la integración de directorios, LVM, LVM-thin, ZFS, NFS, CIFS, iSCSI y Ceph RBD."
+  url: "https://pve.proxmox.com/pve-docs/pvesm.1.html"
+
+- fuente: "Linux LVM – Documentation"
+  descripcion: "Documentación del gestor de volúmenes lógicos LVM. Incluye volúmenes físicos, grupos de volúmenes, volúmenes lógicos, aprovisionamiento fino, snapshots y administración del almacenamiento."
+  url: "https://sourceware.org/lvm2/"
+
+- fuente: "Linux Kernel – Device Mapper Thin Provisioning"
+  descripcion: "Explica la implementación de aprovisionamiento fino y snapshots mediante device-mapper. Es una referencia técnica para comprender el funcionamiento de los pools thin utilizados por soluciones de almacenamiento."
+  url: "https://docs.kernel.org/admin-guide/device-mapper/thin-provisioning.html"
+
+- fuente: "OpenZFS – Documentation"
+  descripcion: "Documentación oficial de OpenZFS. Cubre instalación, conceptos, administración, pools, vdevs, datasets, zvols, snapshots, clones, compresión, integridad de datos y recuperación."
+  url: "https://openzfs.github.io/openzfs-docs/"
+
+- fuente: "OpenZFS – Basic Concepts"
+  descripcion: "Explica los conceptos fundamentales de ZFS: copy-on-write, estructura de pools y vdevs, RAIDZ, datasets, zvols, snapshots, clones, checksums, compresión y operaciones de mantenimiento."
+  url: "https://openzfs.github.io/openzfs-docs/Basic%20Concepts/"
+
+- fuente: "OpenZFS – Getting Started"
+  descripcion: "Guía de inicio de OpenZFS con indicaciones específicas por distribución, incluida Debian. Útil para contextualizar la instalación y administración de ZFS en sistemas Linux."
+  url: "https://openzfs.github.io/openzfs-docs/Getting%20Started/"
+
+- fuente: "NFS – Linux man-pages"
+  descripcion: "Manuales de referencia de NFS en Linux. Complementan el estudio del almacenamiento compartido mediante exportación y montaje de sistemas de archivos en red."
+  url: "https://man7.org/linux/man-pages/man5/exports.5.html"
+
+- fuente: "Open-iSCSI – Project Documentation"
+  descripcion: "Documentación del iniciador iSCSI para Linux. Permite estudiar descubrimiento de destinos, sesiones, autenticación, conexiones y administración de almacenamiento de bloques a través de IP."
+  url: "https://github.com/open-iscsi/open-iscsi"
+
+- fuente: "IETF RFC 7143 – Internet Small Computer System Interface (iSCSI) Protocol"
+  descripcion: "Especificación del protocolo iSCSI. Describe el transporte de comandos SCSI sobre TCP/IP y sirve como referencia para comprender el almacenamiento de bloques en red."
+  url: "https://www.rfc-editor.org/rfc/rfc7143.html"
+
+# ============================================================
+# 5. CEPH Y ALMACENAMIENTO DISTRIBUIDO
+# ============================================================
+
+- fuente: "Ceph – Official Documentation"
+  descripcion: "Portal oficial de documentación de Ceph. Reúne guías de instalación, arquitectura, administración, operaciones, monitorización y servicios de almacenamiento de objetos, bloques y archivos."
+  url: "https://docs.ceph.com/en/latest/"
+
+- fuente: "Ceph – Architecture"
+  descripcion: "Explica la arquitectura distribuida de Ceph y sus componentes: RADOS, MON, MGR, OSD, CRUSH, mapas del clúster, quorum, pools, placement groups, replicación y recuperación."
+  url: "https://docs.ceph.com/en/latest/architecture/"
+
+- fuente: "Ceph – Start Here"
+  descripcion: "Introducción oficial para nuevos usuarios de Ceph. Presenta los conceptos básicos y orienta hacia la instalación, arquitectura, operación y utilización de los servicios de almacenamiento."
+  url: "https://docs.ceph.com/en/latest/start/"
+
+- fuente: "Ceph – Installation"
+  descripcion: "Documentación de instalación de Ceph. Incluye los requisitos, métodos de despliegue y preparación de los nodos para construir un clúster de almacenamiento distribuido."
+  url: "https://docs.ceph.com/en/latest/install/"
+
+- fuente: "Ceph – Cephadm"
+  descripcion: "Guía del orquestador oficial cephadm. Explica el bootstrap, incorporación de hosts, despliegue de demonios, gestión de servicios, actualización, mantenimiento y diagnóstico del ciclo de vida del clúster."
+  url: "https://docs.ceph.com/en/latest/cephadm/"
+
+- fuente: "Ceph – Cluster Operations"
+  descripcion: "Documentación de operaciones de clúster Ceph: estado y salud, configuración, pools, placement groups, OSD, monitorización, recuperación, mantenimiento y resolución de problemas."
+  url: "https://docs.ceph.com/en/latest/rados/operations/"
+
+- fuente: "Ceph – Health Checks"
+  descripcion: "Referencia de los estados y avisos de salud de Ceph. Ayuda a interpretar alertas, identificar causas de degradación y diagnosticar problemas en OSD, MON, PG y otros componentes."
+  url: "https://docs.ceph.com/en/latest/rados/operations/health-checks/"
+
+- fuente: "Ceph – CRUSH Maps"
+  descripcion: "Explica el algoritmo CRUSH y la distribución de datos en el clúster, incluyendo jerarquías de dispositivos, reglas de ubicación, dominios de fallo y políticas de distribución."
+  url: "https://docs.ceph.com/en/latest/rados/operations/crush-map/"
+
+- fuente: "Ceph – Pool, Placement Groups and Replication"
+  descripcion: "Documentación sobre pools, placement groups, replicación y distribución de datos. Fundamental para comprender la redundancia, capacidad y comportamiento del almacenamiento distribuido."
+  url: "https://docs.ceph.com/en/latest/rados/operations/pools/"
+
+- fuente: "Ceph – RADOS Block Device (RBD)"
+  descripcion: "Documentación de los dispositivos de bloques RBD. Trata imágenes, aprovisionamiento fino, snapshots, clones, replicación, caché e integración con QEMU/KVM y plataformas de virtualización."
+  url: "https://docs.ceph.com/en/latest/rbd/"
+
+- fuente: "Ceph – Ceph File System (CephFS)"
+  descripcion: "Documentación del sistema de archivos distribuido CephFS. Explica MDS, pools de metadatos y datos, montaje, clientes y administración del sistema de archivos."
+  url: "https://docs.ceph.com/en/latest/cephfs/"
+
+- fuente: "Ceph – RADOS Gateway"
+  descripcion: "Documentación del servicio de almacenamiento de objetos RGW, compatible con interfaces S3 y Swift. Complementa el estudio de almacenamiento de bloques y archivos."
+  url: "https://docs.ceph.com/en/latest/radosgw/"
+
+- fuente: "Proxmox VE – Deploy Hyper-Converged Ceph Cluster"
+  descripcion: "Capítulo del manual de Proxmox VE para desplegar y administrar Ceph integrado en un clúster Proxmox. Es la referencia prioritaria para las prácticas de almacenamiento hiperconvergente con Proxmox."
+  url: "https://pve.proxmox.com/pve-docs/chapter-pveceph.html"
+
+- fuente: "Proxmox VE – Ceph Integration"
+  descripcion: "Documentación del código y herramientas de integración de Ceph en Proxmox VE. Complementa el manual de administración para estudiar la gestión del clúster desde los nodos Proxmox."
+  url: "https://github.com/proxmox/pve-docs"
+
+# ============================================================
+# 6. REDES VIRTUALES Y CONECTIVIDAD
+# ============================================================
+
+- fuente: "Proxmox VE – Network Configuration"
+  descripcion: "Documentación de la configuración de red de Proxmox VE. Trata interfaces físicas, bridges Linux, VLAN, bonding, routing y conectividad de máquinas virtuales y contenedores."
+  url: "https://pve.proxmox.com/pve-docs/chapter-sysadmin.html#_network_configuration"
+
+- fuente: "Proxmox VE – Software Defined Network (SDN)"
+  descripcion: "Documentación del subsistema SDN de Proxmox VE. Explica zonas, VNets, subredes, aislamiento, redes overlay, VXLAN, EVPN y configuración de redes virtuales a escala de clúster."
+  url: "https://pve.proxmox.com/pve-docs/chapter-pvesdn.html"
+
+- fuente: "Proxmox VE – Firewall"
+  descripcion: "Documentación del firewall integrado de Proxmox VE. Explica los niveles de aplicación, reglas, grupos de seguridad, políticas, protección de nodos, máquinas virtuales y contenedores."
+  url: "https://pve.proxmox.com/pve-docs/chapter-pve-firewall.html"
+
+- fuente: "Linux Kernel – Bridge"
+  descripcion: "Documentación del subsistema bridge del kernel Linux. Referencia para comprender los puentes de red software utilizados para conectar interfaces físicas, máquinas virtuales y contenedores."
+  url: "https://docs.kernel.org/networking/bridge.html"
+
+- fuente: "Linux Kernel – VLAN"
+  descripcion: "Documentación del soporte VLAN del kernel Linux. Complementa el estudio de segmentación de redes y etiquetado IEEE 802.1Q."
+  url: "https://docs.kernel.org/networking/vlan.html"
+
+- fuente: "Linux Kernel – Bonding"
+  descripcion: "Documentación del controlador bonding de Linux. Explica la agregación de enlaces, modos de operación, redundancia y distribución de tráfico entre interfaces."
+  url: "https://docs.kernel.org/networking/bonding.html"
+
+- fuente: "Open vSwitch – Documentation"
+  descripcion: "Documentación oficial de Open vSwitch, conmutador virtual multicapa utilizado en entornos de virtualización y redes definidas por software. Incluye arquitectura, configuración, VLAN, túneles y OpenFlow."
+  url: "https://docs.openvswitch.org/en/latest/"
+
+- fuente: "IETF RFC 7348 – Virtual eXtensible Local Area Network (VXLAN)"
+  descripcion: "Especificación del protocolo VXLAN para crear redes overlay de capa 2 sobre redes IP. Es una referencia importante para estudiar segmentación y redes virtualizadas a gran escala."
+  url: "https://www.rfc-editor.org/rfc/rfc7348.html"
+
+- fuente: "IETF RFC 8365 – A Network Virtualization Overlay Solution Using EVPN"
+  descripcion: "Describe soluciones de virtualización de redes overlay basadas en EVPN. Complementa el estudio de VXLAN, BGP y redes virtualizadas de centros de datos."
+  url: "https://www.rfc-editor.org/rfc/rfc8365.html"
+
+# ============================================================
+# 7. CLÚSTERES, COROSYNC, QUORUM Y ALTA DISPONIBILIDAD
+# ============================================================
+
+- fuente: "Proxmox VE – Cluster Manager"
+  descripcion: "Capítulo sobre la creación y administración de clústeres Proxmox VE. Explica pvecm, comunicación entre nodos, Corosync, quorum, sincronización de configuración y requisitos de red."
+  url: "https://pve.proxmox.com/pve-docs/chapter-pvecm.html"
+
+- fuente: "Proxmox VE – High Availability"
+  descripcion: "Documentación del gestor de alta disponibilidad de Proxmox VE. Trata recursos HA, grupos, estados, nodos, recuperación ante fallos, watchdog y operación del clúster."
+  url: "https://pve.proxmox.com/pve-docs/chapter-ha-manager.html"
+
+- fuente: "Proxmox VE – Storage Replication"
+  descripcion: "Documentación de la replicación de almacenamiento de Proxmox VE. Explica la replicación programada de volúmenes ZFS entre nodos y sus limitaciones."
+  url: "https://pve.proxmox.com/pve-docs/pvesr.1.html"
+
+- fuente: "Corosync – Documentation"
+  descripcion: "Documentación del motor de comunicación de clústeres Corosync. Permite estudiar comunicación entre nodos, membresía, quorum y servicios de coordinación utilizados por Proxmox VE."
+  url: "https://corosync.github.io/corosync/"
+
+- fuente: "Kronosnet – Documentation"
+  descripcion: "Documentación de Kronosnet (knet), biblioteca de transporte de red utilizada por Corosync en versiones actuales. Explica enlaces, redundancia y transporte de comunicaciones de clúster."
+  url: "https://kronosnet.org/"
+
+- fuente: "Proxmox VE – Cluster File System (pmxcfs)"
+  descripcion: "Documentación del sistema de archivos de configuración distribuido de Proxmox VE. Explica cómo se replica la configuración del clúster y la relación con Corosync."
+  url: "https://pve.proxmox.com/pve-docs/chapter-pmxcfs.html"
+
+# ============================================================
+# 8. COPIAS DE SEGURIDAD Y RECUPERACIÓN
+# ============================================================
+
+- fuente: "Proxmox Backup Server – Documentation"
+  descripcion: "Manual oficial de Proxmox Backup Server. Trata arquitectura, instalación, datastores, clientes, copias incrementales, deduplicación, verificación, sincronización, restauración, cifrado y administración."
+  url: "https://pbs.proxmox.com/docs/"
+
+- fuente: "Proxmox Backup Server – Administration Guide Downloads"
+  descripcion: "Portal oficial de descarga de las guías de administración de Proxmox Backup Server para las distintas versiones."
+  url: "https://www.proxmox.com/en/downloads/proxmox-backup-server/documentation"
+
+- fuente: "Proxmox VE – Backup and Restore"
+  descripcion: "Capítulo del manual de Proxmox VE sobre copias de seguridad y restauración de máquinas virtuales y contenedores, incluyendo vzdump y la integración con Proxmox Backup Server."
+  url: "https://pve.proxmox.com/pve-docs/chapter-vzdump.html"
+
+- fuente: "Proxmox Backup Server – Installation"
+  descripcion: "Guía oficial de instalación de Proxmox Backup Server, tanto mediante imagen ISO como sobre Debian. Incluye requisitos y consideraciones para separar el sistema de copias del hipervisor."
+  url: "https://pbs.proxmox.com/docs/installation.html"
+
+- fuente: "NIST SP 800-34 Rev. 1 – Contingency Planning Guide for Federal Information Systems"
+  descripcion: "Guía del NIST para planificación de contingencias y continuidad. Aporta metodología para analizar impacto, definir estrategias de recuperación y planificar pruebas de restauración y recuperación ante desastres."
+  url: "https://csrc.nist.gov/pubs/sp/800/34/r1/final"
+
+# ============================================================
+# 9. SEGURIDAD Y ADMINISTRACIÓN DE ACCESOS
+# ============================================================
+
+- fuente: "Proxmox VE – User Management"
+  descripcion: "Documentación del sistema de gestión de usuarios y permisos de Proxmox VE. Explica realms, usuarios, grupos, roles, ACL, tokens de API y autenticación multifactor."
+  url: "https://pve.proxmox.com/pve-docs/chapter-pveum.html"
+
+- fuente: "Proxmox VE – Security"
+  descripcion: "Documentación y recomendaciones de seguridad de Proxmox VE. Debe utilizarse junto con los capítulos de usuarios, permisos, firewall, certificados y administración del host."
+  url: "https://pve.proxmox.com/wiki/Security"
+
+- fuente: "Debian – Securing Debian Manual"
+  descripcion: "Manual del proyecto Debian sobre seguridad del sistema. Incluye endurecimiento, gestión de servicios, actualizaciones, control de acceso, seguridad de red y auditoría."
+  url: "https://www.debian.org/doc/manuals/securing-debian-manual/"
+
+- fuente: "NIST SP 800-125 – Guide to Security for Full Virtualization Technologies"
+  descripcion: "Guía del NIST sobre seguridad de tecnologías de virtualización completa. Analiza amenazas, riesgos y recomendaciones para hipervisores, máquinas virtuales y componentes de la infraestructura."
+  url: "https://csrc.nist.gov/pubs/sp/800/125/final"
+
+- fuente: "NIST SP 800-125A Rev. 1 – Security Recommendations for Server-based Hypervisor Platforms"
+  descripcion: "Recomendaciones de seguridad para plataformas de hipervisor de servidor. Referencia para analizar aislamiento, configuración segura, administración y protección del entorno de virtualización."
+  url: "https://csrc.nist.gov/pubs/sp/800/125/a/r1/final"
+
+- fuente: "CIS Benchmarks"
+  descripcion: "Catálogo de guías de configuración segura para sistemas operativos, plataformas y servicios. Puede utilizarse como referencia complementaria para elaborar listas de comprobación de hardening, verificando la disponibilidad y versión de cada benchmark."
+  url: "https://www.cisecurity.org/cis-benchmarks"
+
+# ============================================================
+# 10. DEBIAN Y ADMINISTRACIÓN DEL SISTEMA LINUX
+# ============================================================
+
+- fuente: "Debian – Debian Reference"
+  descripcion: "Guía de referencia oficial del proyecto Debian. Aporta conocimientos de administración Linux, sistema de archivos, paquetes, red, procesos, seguridad y herramientas de consola aplicables a los nodos Proxmox."
+  url: "https://www.debian.org/doc/manuals/debian-reference/index.es.html"
+
+- fuente: "Debian – Debian Administrator's Handbook"
+  descripcion: "Manual de administración de Debian. Trata instalación, paquetes, kernel, red, almacenamiento, servicios, usuarios, seguridad y mantenimiento de sistemas."
+  url: "https://www.debian.org/doc/manuals/debian-handbook/"
+
+- fuente: "systemd – Documentation"
+  descripcion: "Documentación oficial de systemd. Incluye unidades, servicios, arranque, dependencias, journal, temporizadores y administración de servicios del sistema Linux."
+  url: "https://www.freedesktop.org/software/systemd/man/latest/"
+
+- fuente: "Linux man-pages Project"
+  descripcion: "Colección de manuales de referencia de las interfaces y utilidades Linux. Recurso de consulta para comandos, llamadas al sistema, configuración de red, almacenamiento, procesos y administración."
+  url: "https://man7.org/linux/man-pages/"
+
+# ============================================================
+# 11. AUTOMATIZACIÓN, API E INFRAESTRUCTURA COMO CÓDIGO
+# ============================================================
+
+- fuente: "Proxmox VE – API Viewer"
+  descripcion: "Interfaz de consulta de la API de Proxmox VE para explorar operaciones y parámetros. Es el punto de partida para automatizar tareas desde scripts y herramientas externas."
+  url: "https://api.proxmox.com/"
+
+- fuente: "OpenTofu – Documentation"
+  descripcion: "Documentación oficial de OpenTofu, herramienta de infraestructura como código. Explica lenguaje HCL, proveedores, recursos, módulos, variables, outputs, estado, plan y apply."
+  url: "https://opentofu.org/docs/"
+
+- fuente: "OpenTofu – Language Documentation"
+  descripcion: "Referencia del lenguaje de configuración de OpenTofu: bloques, expresiones, tipos, variables, módulos, recursos y funciones."
+  url: "https://opentofu.org/docs/language/"
+
+- fuente: "OpenTofu – State"
+  descripcion: "Explica el propósito y funcionamiento del estado de OpenTofu, la relación entre recursos declarados y objetos reales, los backends y las operaciones de inspección y modificación."
+  url: "https://opentofu.org/docs/language/state/"
+
+- fuente: "OpenTofu – Providers"
+  descripcion: "Documentación sobre proveedores, instalación, configuración y bloqueo de versiones. Fundamental para integrar OpenTofu con la API de Proxmox VE."
+  url: "https://opentofu.org/docs/language/providers/"
+
+- fuente: "OpenTofu Registry – bpg/proxmox Provider"
+  descripcion: "Registro oficial de proveedores de OpenTofu para el proveedor bpg/proxmox. Permite consultar versiones, recursos, fuentes de datos y requisitos para aprovisionar máquinas virtuales y otros recursos en Proxmox VE."
+  url: "https://search.opentofu.org/provider/bpg/proxmox/latest"
+
+- fuente: "bpg/proxmox – Provider Documentation"
+  descripcion: "Documentación del proveedor bpg/proxmox para Terraform y OpenTofu. Explica autenticación frente a la API de Proxmox VE, recursos de máquinas virtuales y contenedores, almacenamiento, redes y configuración."
+  url: "https://www.bpg.sh/docs/"
+
+- fuente: "bpg/proxmox – Source Code"
+  descripcion: "Repositorio del código fuente del proveedor bpg/proxmox. Útil para consultar ejemplos, cambios, incidencias y comportamiento de recursos cuando la documentación de referencia no sea suficiente."
+  url: "https://github.com/bpg/terraform-provider-proxmox"
+
+- fuente: "Proxmox VE – pvesh"
+  descripcion: "Herramienta de línea de comandos para acceder a la API de Proxmox VE desde el propio nodo. Resulta útil para relacionar operaciones de la interfaz web con llamadas API y automatización."
+  url: "https://pve.proxmox.com/pve-docs/pvesh.1.html"
+
+# ============================================================
+# 12. VAGRANT Y APROVISIONAMIENTO DE LABORATORIOS
+# ============================================================
+
+- fuente: "HashiCorp Vagrant – Documentation"
+  descripcion: "Documentación oficial de Vagrant para gestionar el ciclo de vida de entornos virtualizados reproducibles. Incluye Vagrantfile, boxes, comandos, proveedores, redes, carpetas compartidas y aprovisionamiento."
+  url: "https://developer.hashicorp.com/vagrant/docs"
+
+- fuente: "HashiCorp Vagrant – Vagrantfile"
+  descripcion: "Referencia del fichero Vagrantfile, que permite describir máquinas, recursos, redes, discos, proveedores y acciones de aprovisionamiento para construir laboratorios reproducibles."
+  url: "https://developer.hashicorp.com/vagrant/docs/vagrantfile"
+
+- fuente: "HashiCorp Vagrant – Providers"
+  descripcion: "Documentación sobre los proveedores de Vagrant y la integración con plataformas de virtualización. Explica cómo seleccionar y configurar el proveedor que ejecutará las máquinas."
+  url: "https://developer.hashicorp.com/vagrant/docs/providers"
+
+- fuente: "HashiCorp Vagrant – VirtualBox Provider"
+  descripcion: "Documentación específica del proveedor VirtualBox de Vagrant. Describe requisitos, configuración y opciones para gestionar máquinas VirtualBox mediante Vagrant."
+  url: "https://developer.hashicorp.com/vagrant/docs/providers/virtualbox"
+
+- fuente: "HashiCorp Vagrant – Provisioning"
+  descripcion: "Explica los mecanismos de aprovisionamiento de Vagrant para instalar paquetes, crear usuarios, desplegar configuraciones y preparar automáticamente las máquinas de laboratorio."
+  url: "https://developer.hashicorp.com/vagrant/docs/provisioning"
+
+- fuente: "HashiCorp Vagrant – Networking"
+  descripcion: "Documentación sobre redes privadas, públicas y redireccionamiento de puertos en Vagrant. Es útil para diseñar topologías de prácticas y comunicar máquinas virtuales."
+  url: "https://developer.hashicorp.com/vagrant/docs/networking"
+
+- fuente: "HashiCorp Vagrant – Synced Folders"
+  descripcion: "Explica cómo compartir directorios entre el equipo anfitrión y las máquinas virtuales, facilitando el intercambio de código, configuraciones y materiales de laboratorio."
+  url: "https://developer.hashicorp.com/vagrant/docs/synced-folders"
+
+- fuente: "HashiCorp Vagrant – CLI"
+  descripcion: "Referencia de los comandos de Vagrant para inicializar, crear, arrancar, detener, suspender, destruir y administrar entornos virtuales."
+  url: "https://developer.hashicorp.com/vagrant/docs/cli"
+
+# ============================================================
+# 13. ORACLE VIRTUALBOX
+# ============================================================
+
+- fuente: "Oracle VirtualBox – User Manual"
+  descripcion: "Manual oficial de VirtualBox. Cubre instalación, creación y configuración de máquinas virtuales, hardware virtual, almacenamiento, redes, snapshots, Guest Additions, VBoxManage y resolución de problemas."
+  url: "https://docs.oracle.com/en/virtualization/virtualbox/7.1/user/"
+
+- fuente: "Oracle VirtualBox – Virtual Storage"
+  descripcion: "Capítulo sobre almacenamiento virtual de VirtualBox. Explica controladoras, discos virtuales, formatos, imágenes, medios extraíbles y administración del almacenamiento de las máquinas."
+  url: "https://docs.oracle.com/en/virtualization/virtualbox/7.1/user/"
+
+- fuente: "Oracle VirtualBox – Virtual Networking"
+  descripcion: "Capítulo sobre redes virtuales de VirtualBox. Describe NAT, redes NAT, adaptadores puente, redes internas, solo-anfitrión y otros modos de conectividad."
+  url: "https://docs.oracle.com/en/virtualization/virtualbox/7.1/user/"
+
+- fuente: "Oracle VirtualBox – VBoxManage"
+  descripcion: "Referencia de la herramienta de línea de comandos VBoxManage. Permite automatizar la creación, configuración, arranque y administración de máquinas virtuales y redes."
+  url: "https://docs.oracle.com/en/virtualization/virtualbox/7.1/user/vboxmanage.html"
+
+# ============================================================
+# 14. GIT, GITHUB Y CONTROL DE VERSIONES DE LOS LABORATORIOS
+# ============================================================
+
+- fuente: "Git – Documentation"
+  descripcion: "Portal oficial de documentación de Git. Incluye el libro Pro Git, referencia de comandos, tutoriales y documentación para el control de versiones distribuido."
+  url: "https://git-scm.com/doc"
+
+- fuente: "Pro Git – Book"
+  descripcion: "Libro de referencia sobre Git. Explica fundamentos, repositorios, commits, ramas, fusiones, repositorios remotos, flujos de trabajo y herramientas avanzadas."
+  url: "https://git-scm.com/book/es/v2"
+
+- fuente: "Git – Reference"
+  descripcion: "Referencia oficial de comandos Git. Permite consultar sintaxis y opciones de operaciones como init, clone, add, commit, branch, switch, merge, fetch, pull y push."
+  url: "https://git-scm.com/docs"
+
+- fuente: "GitHub Docs – Repositories"
+  descripcion: "Documentación de GitHub sobre repositorios, organización de archivos, configuración, permisos, colaboración y publicación de proyectos y materiales."
+  url: "https://docs.github.com/en/repositories"
+
+- fuente: "GitHub Docs – Branches"
+  descripcion: "Explica la creación y administración de ramas en GitHub, los flujos de trabajo paralelos y la integración de cambios."
+  url: "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches"
+
+- fuente: "GitHub Docs – Pull Requests"
+  descripcion: "Documentación sobre solicitudes de integración, revisión de cambios, comparación de ramas y colaboración en proyectos."
+  url: "https://docs.github.com/en/pull-requests"
+
+- fuente: "GitHub Actions – Documentation"
+  descripcion: "Documentación oficial de automatización CI/CD en GitHub. Puede utilizarse para validar ficheros de configuración, ejecutar pruebas de laboratorio y automatizar comprobaciones sobre entregas."
+  url: "https://docs.github.com/en/actions"
+
+- fuente: "GitHub Actions – Workflow Syntax"
+  descripcion: "Referencia de la sintaxis YAML de los workflows de GitHub Actions, incluyendo eventos, jobs, steps, runners, variables, secretos y artefactos."
+  url: "https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions"
+
+# ============================================================
+# 15. MONITORIZACIÓN, MÉTRICAS Y DIAGNÓSTICO
+# ============================================================
+
+- fuente: "Proxmox VE – External Metric Server"
+  descripcion: "Documentación de la integración de Proxmox VE con sistemas externos de métricas. Explica la exportación de estadísticas para monitorización y análisis de rendimiento."
+  url: "https://pve.proxmox.com/pve-docs/chapter-pve-external-metric-server.html"
+
+- fuente: "Prometheus – Documentation"
+  descripcion: "Documentación oficial de Prometheus para monitorización mediante métricas, consultas PromQL, reglas de alerta y descubrimiento de objetivos. Puede complementar los laboratorios de observabilidad."
+  url: "https://prometheus.io/docs/introduction/overview/"
+
+- fuente: "Grafana – Documentation"
+  descripcion: "Documentación oficial de Grafana para visualización de métricas, cuadros de mando, alertas y exploración de datos de monitorización."
+  url: "https://grafana.com/docs/grafana/latest/"
+
+- fuente: "Ceph – Monitoring"
+  descripcion: "Documentación de monitorización de Ceph. Explica métricas, integración con Prometheus, alertas y observabilidad de los componentes del clúster."
+  url: "https://docs.ceph.com/en/latest/monitoring/"
+
+- fuente: "Linux – procfs and sysfs"
+  descripcion: "Documentación de interfaces del kernel expuestas mediante /proc y /sys. Referencia para prácticas de diagnóstico de CPU, memoria, dispositivos, procesos y estado del sistema."
+  url: "https://docs.kernel.org/filesystems/proc.html"
+
+# ============================================================
+# 16. ESTÁNDARES Y REFERENCIAS COMPLEMENTARIAS
+# ============================================================
+
+- fuente: "NIST SP 800-125 – Guide to Security for Full Virtualization Technologies"
+  descripcion: "Referencia metodológica para identificar riesgos y controles de seguridad en infraestructuras de virtualización completa. Complementa el estudio técnico de Proxmox, KVM y QEMU."
+  url: "https://csrc.nist.gov/pubs/sp/800/125/final"
+
+- fuente: "NIST SP 800-125A Rev. 1 – Security Recommendations for Server-based Hypervisor Platforms"
+  descripcion: "Recomendaciones de seguridad para hipervisores de servidor. Permite relacionar la configuración del hipervisor con aislamiento, administración segura y protección de máquinas virtuales."
+  url: "https://csrc.nist.gov/pubs/sp/800/125/a/r1/final"
+
+- fuente: "IETF RFC 7143 – iSCSI Protocol"
+  descripcion: "Especificación del protocolo iSCSI para transportar comandos SCSI sobre redes TCP/IP. Útil para estudiar almacenamiento compartido de bloques."
+  url: "https://www.rfc-editor.org/rfc/rfc7143.html"
+
+- fuente: "IETF RFC 7348 – VXLAN"
+  descripcion: "Especificación de VXLAN para la creación de redes overlay. Complementa los contenidos de SDN y segmentación de redes virtualizadas."
+  url: "https://www.rfc-editor.org/rfc/rfc7348.html"
+
+- fuente: "IETF RFC 8365 – EVPN Network Virtualization Overlay"
+  descripcion: "Referencia técnica para arquitecturas overlay basadas en EVPN. Adecuada para ampliar los contenidos de redes definidas por software y centros de datos."
+  url: "https://www.rfc-editor.org/rfc/rfc8365.html"
+
+# ============================================================
+# 17. INTERFAZ WEB Y PLANO DE ADMINISTRACIÓN DE PROXMOX VE
+# ============================================================
+
+- fuente: "Proxmox VE Administration Guide - Graphical User Interface"
+  descripcion: "Documentación oficial de la interfaz web de Proxmox VE. Permite estudiar la organización de la consola, la administración de nodos, máquinas virtuales, contenedores, almacenamiento, redes, clústeres y tareas."
+  url: "https://pve.proxmox.com/pve-docs/pve-admin-guide.html#_graphical_user_interface"
+
+- fuente: "Proxmox VE Administration Guide"
+  descripcion: "Manual oficial de administración de Proxmox VE. Referencia principal para comprender la arquitectura de gestión, los servicios del sistema y las operaciones de administración."
+  url: "https://pve.proxmox.com/pve-docs/pve-admin-guide.html"
+
+- fuente: "Proxmox VE - pveproxy"
+  descripcion: "Documentación del servicio que proporciona la API HTTPS y sirve de intermediario para las peticiones de administración. Permite estudiar el acceso a la API y su relación con los servicios internos de Proxmox."
+  url: "https://pve.proxmox.com/pve-docs/pveproxy.8.html"
+
+- fuente: "Proxmox VE - pvedaemon"
+  descripcion: "Documentación del servicio encargado de ejecutar operaciones de administración privilegiadas. Resulta útil para comprender cómo se procesan las solicitudes de gestión en los nodos."
+  url: "https://pve.proxmox.com/pve-docs/pvedaemon.8.html"
+
+- fuente: "Proxmox VE - pvestatd"
+  descripcion: "Documentación del servicio encargado de recopilar y actualizar información de estado de los recursos de Proxmox VE."
+  url: "https://pve.proxmox.com/pve-docs/pvestatd.8.html"
+
+- fuente: "Proxmox VE - pmxcfs"
+  descripcion: "Documentación del sistema de archivos de configuración de Proxmox VE. Permite estudiar cómo se almacenan y sincronizan los datos de configuración entre los nodos de un clúster."
+  url: "https://pve.proxmox.com/pve-docs/pmxcfs.8.html"
+
+
+# ============================================================
+# 18. API REST DE PROXMOX VE: DISEÑO, EXPLORACIÓN Y OPERACIONES
+# ============================================================
+
+- fuente: "Proxmox VE API Viewer"
+  descripcion: "Explorador interactivo de la API oficial de Proxmox VE. Permite consultar los endpoints disponibles, métodos HTTP, parámetros, tipos de datos y operaciones sobre los distintos recursos de la plataforma. Es una referencia fundamental para desarrollar clientes y automatizaciones."
+  url: "https://pve.proxmox.com/pve-docs/api-viewer/"
+
+- fuente: "Proxmox VE - API Documentation"
+  descripcion: "Documentación oficial de la API de Proxmox VE. Permite comprender la estructura de las peticiones, respuestas, recursos, autenticación y operaciones disponibles."
+  url: "https://pve.proxmox.com/pve-docs/pve-admin-guide.html"
+
+- fuente: "Proxmox VE - Authentication"
+  descripcion: "Documentación sobre los mecanismos de autenticación de Proxmox VE, incluyendo usuarios, realms, tickets de autenticación y tokens API. Es especialmente útil para desarrollar clientes externos seguros."
+  url: "https://pve.proxmox.com/pve-docs/pve-admin-guide.html#pveum_authentication"
+
+- fuente: "Proxmox VE - User Management"
+  descripcion: "Documentación oficial sobre gestión de usuarios, grupos, roles, permisos y ACL. Permite estudiar el modelo de autorización que controla el acceso a los recursos mediante la interfaz web, la CLI y la API."
+  url: "https://pve.proxmox.com/pve-docs/chapter-pveum.html"
+
+- fuente: "Proxmox VE - API Proxy"
+  descripcion: "Documentación del servicio pveproxy, responsable de exponer la API REST mediante HTTPS en el puerto 8006 y gestionar las solicitudes de administración."
+  url: "https://pve.proxmox.com/pve-docs/pveproxy.8.html"
+
+- fuente: "Proxmox VE - Task Management and UPIDs"
+  descripcion: "Documentación relacionada con la ejecución y seguimiento de tareas de Proxmox VE. Permite comprender el funcionamiento de las operaciones asíncronas y la identificación de tareas mediante UPID."
+  url: "https://pve.proxmox.com/pve-docs/api-viewer/"
+
+- fuente: "RFC 9110 - HTTP Semantics"
+  descripcion: "Especificación oficial del protocolo HTTP. Referencia para estudiar los métodos GET, POST, PUT, DELETE, los códigos de estado, las cabeceras y la semántica de las peticiones utilizadas por las API REST."
+  url: "https://www.rfc-editor.org/rfc/rfc9110.html"
+
+- fuente: "RFC 8259 - The JavaScript Object Notation (JSON) Data Interchange Format"
+  descripcion: "Especificación oficial del formato JSON. Permite estudiar la estructura de los datos intercambiados entre clientes y servidores mediante la API REST."
+  url: "https://www.rfc-editor.org/rfc/rfc8259.html"
+
+- fuente: "curl - Documentation"
+  descripcion: "Documentación oficial de curl, herramienta de línea de comandos para realizar peticiones HTTP y HTTPS. Muy útil para explorar y probar directamente la API REST de Proxmox VE."
+  url: "https://curl.se/docs/"
+
+- fuente: "curl - Manual"
+  descripcion: "Manual completo de curl con sus opciones y parámetros. Referencia para construir peticiones HTTP, enviar cabeceras, gestionar autenticación y procesar respuestas JSON."
+  url: "https://curl.se/docs/manpage.html"
+
+
+# ============================================================
+# 19. CLI DE PROXMOX VE Y ADMINISTRACIÓN DESDE TERMINAL
+# ============================================================
+
+- fuente: "Proxmox VE - Command Line Tools"
+  descripcion: "Documentación oficial de las herramientas de administración mediante línea de comandos. Permite estudiar la gestión de máquinas virtuales, contenedores, almacenamiento, clústeres, usuarios y servicios."
+  url: "https://pve.proxmox.com/pve-docs/pve-admin-guide.html"
+
+- fuente: "Proxmox VE - pvesh"
+  descripcion: "Documentación de pvesh, herramienta que permite acceder a la API de Proxmox VE desde la línea de comandos. Es especialmente interesante para relacionar las operaciones de la CLI con los endpoints de la API REST."
+  url: "https://pve.proxmox.com/pve-docs/pvesh.1.html"
+
+- fuente: "Proxmox VE - qm"
+  descripcion: "Documentación del comando qm para administrar máquinas virtuales QEMU/KVM desde terminal. Incluye operaciones de creación, configuración, inicio, parada, clonación y migración."
+  url: "https://pve.proxmox.com/pve-docs/qm.1.html"
+
+- fuente: "Proxmox VE - pct"
+  descripcion: "Documentación del comando pct para administrar contenedores LXC. Permite estudiar su creación, configuración, ciclo de vida y gestión desde terminal."
+  url: "https://pve.proxmox.com/pve-docs/pct.1.html"
+
+- fuente: "Proxmox VE - pvesm"
+  descripcion: "Documentación del comando pvesm para administrar los recursos de almacenamiento de Proxmox VE."
+  url: "https://pve.proxmox.com/pve-docs/pvesm.1.html"
+
+- fuente: "Proxmox VE - pvecm"
+  descripcion: "Documentación del comando pvecm para administrar clústeres Proxmox VE, consultar su estado y gestionar sus nodos."
+  url: "https://pve.proxmox.com/pve-docs/pvecm.1.html"
+
+- fuente: "Proxmox VE - pveum"
+  descripcion: "Documentación del comando pveum para administrar usuarios, grupos, roles, permisos y dominios de autenticación."
+  url: "https://pve.proxmox.com/pve-docs/pveum.1.html"
+
+- fuente: "Proxmox VE - pvenode"
+  descripcion: "Documentación del comando pvenode para realizar operaciones de administración sobre los nodos de Proxmox VE."
+  url: "https://pve.proxmox.com/pve-docs/pvenode.1.html"
+
+- fuente: "Proxmox VE - pveceph"
+  descripcion: "Documentación del comando pveceph para desplegar, configurar y administrar Ceph desde los nodos Proxmox VE."
+  url: "https://pve.proxmox.com/pve-docs/pveceph.1.html"
+
+- fuente: "Proxmox VE - ha-manager"
+  descripcion: "Documentación de la herramienta de administración de alta disponibilidad. Permite estudiar la configuración y gestión de recursos HA en clústeres Proxmox VE."
+  url: "https://pve.proxmox.com/pve-docs/ha-manager.1.html"
+
+- fuente: "Proxmox VE - vzdump"
+  descripcion: "Documentación de la herramienta de copias de seguridad de máquinas virtuales y contenedores. Permite estudiar la automatización de backups y sus opciones de ejecución."
+  url: "https://pve.proxmox.com/pve-docs/vzdump.1.html"
+
+- fuente: "Proxmox VE - pvesr"
+  descripcion: "Documentación de la herramienta de replicación de almacenamiento. Permite estudiar la configuración y gestión de tareas de replicación entre nodos."
+  url: "https://pve.proxmox.com/pve-docs/pvesr.1.html"
+
+- fuente: "Proxmox VE - pveversion"
+  descripcion: "Documentación del comando para consultar las versiones de Proxmox VE y de sus componentes instalados. Útil para inventariar y verificar entornos."
+  url: "https://pve.proxmox.com/pve-docs/pveversion.1.html"
+
+
+# ============================================================
+# 20. PYTHON Y PROXMOXER: CLIENTES PROGRAMÁTICOS DE LA API
+# ============================================================
+
+- fuente: "Proxmoxer - Documentation"
+  descripcion: "Documentación oficial de Proxmoxer, biblioteca Python que proporciona una interfaz de alto nivel para interactuar con la API de Proxmox VE. Es una referencia principal para desarrollar scripts y aplicaciones de administración."
+  url: "https://proxmoxer.github.io/docs/"
+
+- fuente: "Proxmoxer - Basic Usage"
+  descripcion: "Guía de uso básico de Proxmoxer. Explica cómo establecer conexiones con Proxmox VE y ejecutar operaciones sobre nodos, máquinas virtuales, contenedores y otros recursos."
+  url: "https://proxmoxer.github.io/docs/latest/basic_usage/"
+
+- fuente: "Proxmoxer - Setup and Backends"
+  descripcion: "Documentación sobre la instalación, configuración y selección de backends de conexión de Proxmoxer. Permite estudiar las distintas formas de acceder a la infraestructura."
+  url: "https://proxmoxer.github.io/docs/latest/setup/"
+
+- fuente: "Proxmoxer - Authentication"
+  descripcion: "Documentación sobre los mecanismos de autenticación de Proxmoxer, incluyendo usuarios, tokens API y configuración de conexiones seguras."
+  url: "https://proxmoxer.github.io/docs/latest/authentication/"
+
+- fuente: "Proxmoxer - Tools"
+  descripcion: "Documentación de herramientas auxiliares de Proxmoxer, útiles para gestionar tareas y operaciones de administración desde aplicaciones Python."
+  url: "https://proxmoxer.github.io/docs/latest/tools/"
+
+- fuente: "Proxmoxer - Examples"
+  descripcion: "Colección de ejemplos de uso de Proxmoxer para interactuar programáticamente con Proxmox VE. Útil como referencia para diseñar scripts de automatización."
+  url: "https://proxmoxer.github.io/docs/latest/examples/"
+
+- fuente: "Proxmoxer - GitHub Repository"
+  descripcion: "Repositorio oficial de Proxmoxer. Contiene el código fuente, ejemplos, historial de versiones, incidencias y documentación del proyecto."
+  url: "https://github.com/proxmoxer/proxmoxer"
+
+- fuente: "Python Requests"
+  descripcion: "Documentación de la biblioteca Requests para realizar peticiones HTTP desde Python. Permite desarrollar clientes REST personalizados y comprender el funcionamiento de las comunicaciones con la API de Proxmox VE."
+  url: "https://requests.readthedocs.io/en/latest/"
+
+- fuente: "Python - json"
+  descripcion: "Documentación oficial del módulo json de Python. Referencia para serializar y deserializar los datos JSON intercambiados con la API REST."
+  url: "https://docs.python.org/3/library/json.html"
+
+- fuente: "Python - argparse"
+  descripcion: "Documentación oficial del módulo argparse para construir interfaces de línea de comandos en aplicaciones Python. Útil para desarrollar herramientas propias de administración de Proxmox VE."
+  url: "https://docs.python.org/3/library/argparse.html"
+
+
+# ============================================================
+# 21. BRUNO: CLIENTE REST, COLECCIONES Y PRUEBAS DE API
+# ============================================================
+
+- fuente: "Bruno - Documentation"
+  descripcion: "Documentación oficial de Bruno, cliente de API que permite construir, ejecutar y organizar peticiones HTTP. Resulta especialmente útil para explorar y probar la API REST de Proxmox VE."
+  url: "https://docs.usebruno.com/"
+
+- fuente: "Bruno - API Client"
+  descripcion: "Descripción de las funcionalidades del cliente Bruno. Permite estudiar el diseño y ejecución de peticiones REST, la gestión de entornos y el trabajo con colecciones."
+  url: "https://www.usebruno.com/product/api-client"
+
+- fuente: "Bruno - Environments and Variables"
+  descripcion: "Documentación sobre la gestión de entornos y variables en Bruno. Permite configurar colecciones reutilizables para trabajar con distintos nodos y entornos Proxmox."
+  url: "https://docs.usebruno.com/"
+
+- fuente: "Bruno - Scripting and Tests"
+  descripcion: "Documentación sobre scripts y pruebas en Bruno. Permite automatizar validaciones de respuestas y construir pruebas para comprobar el comportamiento de endpoints de la API."
+  url: "https://docs.usebruno.com/"
+
+- fuente: "Bruno - CLI"
+  descripcion: "Documentación de la interfaz de línea de comandos de Bruno. Permite ejecutar colecciones de peticiones API desde terminal y automatizar pruebas en scripts o pipelines CI/CD."
+  url: "https://docs.usebruno.com/bru-cli/overview"
+
+- fuente: "Bruno - Git-native API Client"
+  descripcion: "Descripción del enfoque Git-native de Bruno, que permite almacenar colecciones de peticiones como archivos dentro de un repositorio. Facilita el control de versiones, la colaboración y la documentación de las operaciones sobre la API."
+  url: "https://www.usebruno.com/product/api-client"
+
+- fuente: "Bruno - OpenCollection"
+  descripcion: "Documentación del formato OpenCollection, utilizado para representar colecciones de peticiones API mediante archivos legibles y versionables. Permite estudiar la organización de peticiones, autenticación, variables y pruebas."
+  url: "https://www.usebruno.com/opencollection"
+
+- fuente: "Bruno - GitHub Repository"
+  descripcion: "Repositorio oficial de Bruno. Contiene el código fuente, documentación, ejemplos y evolución del proyecto."
+  url: "https://github.com/usebruno/bruno"
+
+
+# ============================================================
+# 22. HERRAMIENTAS COMPLEMENTARIAS DEL ECOSISTEMA DE GESTIÓN
+# ============================================================
+
+- fuente: "Ansible - Community General Collection"
+  descripcion: "Documentación de la colección community.general de Ansible, que incluye módulos para administrar recursos de Proxmox VE. Permite estudiar la automatización de tareas de infraestructura mediante herramientas declarativas."
+  url: "https://docs.ansible.com/ansible/latest/collections/community/general/"
+
+- fuente: "Ansible - proxmox_kvm"
+  descripcion: "Documentación del módulo proxmox_kvm para administrar máquinas virtuales QEMU/KVM en Proxmox VE mediante Ansible."
+  url: "https://docs.ansible.com/ansible/latest/collections/community/general/proxmox_kvm_module.html"
+
+- fuente: "Ansible - proxmox"
+  descripcion: "Documentación del módulo proxmox para gestionar contenedores y recursos de Proxmox VE mediante Ansible."
+  url: "https://docs.ansible.com/ansible/latest/collections/community/general/proxmox_module.html"
+
+- fuente: "HashiCorp Packer - Documentation"
+  descripcion: "Documentación oficial de Packer, herramienta para automatizar la creación de imágenes de máquinas virtuales. Puede utilizarse para preparar imágenes reutilizables destinadas a desplegarse posteriormente en Proxmox VE."
+  url: "https://developer.hashicorp.com/packer/docs"
+
+- fuente: "Packer - Proxmox Integration"
+  descripcion: "Documentación del plugin de Proxmox para Packer. Permite automatizar la creación de plantillas de máquinas virtuales en Proxmox VE."
+  url: "https://developer.hashicorp.com/packer/integrations/hashicorp/proxmox"
+
+- fuente: "Proxmox VE - Cloud-Init"
+  descripcion: "Documentación oficial sobre la integración de Cloud-Init en Proxmox VE. Permite estudiar la configuración inicial automatizada de máquinas virtuales, incluyendo usuarios, claves SSH, red y parámetros del sistema."
+  url: "https://pve.proxmox.com/pve-docs/pve-admin-guide.html#qm_cloud_init"
+
+- fuente: "Cloud-Init - Documentation"
+  descripcion: "Documentación oficial de Cloud-Init. Referencia para comprender la inicialización automatizada de sistemas Linux en entornos virtualizados y de infraestructura como código."
+  url: "https://cloudinit.readthedocs.io/en/latest/"
+
+- fuente: "Git - Submodules"
+  descripcion: "Documentación oficial sobre submódulos Git. Permite estudiar cómo integrar repositorios externos en un proyecto, por ejemplo para mantener colecciones Bruno, scripts Python y configuraciones de laboratorio."
+  url: "https://git-scm.com/book/en/v2/Git-Tools-Submodules"
+
+
+# ============================================================
+# 23. DISEÑO DE AUTOMATIZACIONES Y SEGURIDAD DE CLIENTES API
+# ============================================================
+
+- fuente: "OWASP REST Security Cheat Sheet"
+  descripcion: "Guía de seguridad de OWASP para el desarrollo y consumo de API REST. Incluye recomendaciones sobre autenticación, autorización, validación de entradas, gestión de errores, métodos HTTP y protección de comunicaciones."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/REST_Security_Cheat_Sheet.html"
+
+- fuente: "OWASP Secrets Management Cheat Sheet"
+  descripcion: "Guía sobre gestión segura de secretos y credenciales. Permite estudiar el almacenamiento y tratamiento de tokens API, contraseñas y otros datos sensibles utilizados por scripts y clientes de administración."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html"
+
+- fuente: "OWASP Transport Layer Security Cheat Sheet"
+  descripcion: "Guía sobre el uso seguro de TLS para proteger las comunicaciones. Resulta útil para estudiar la validación de certificados y la protección de las conexiones HTTPS con Proxmox VE."
+  url: "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html"

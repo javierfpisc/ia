@@ -1,0 +1,249 @@
+- fuente: IEEE Standards Association
+  descripcion: Organismo de normalización; estándares de Ethernet, Wi-Fi, bridges y VLAN.
+  url: https://standards.ieee.org/
+- fuente: IEEE 802.1 Working Group
+  descripcion: Estándares para bridges, switching y VLAN, incluido IEEE 802.1Q.
+  url: https://www.ieee802.org/1/
+- fuente: IEEE 802.3 Working Group
+  descripcion: Estándares y documentación técnica de Ethernet.
+  url: https://www.ieee802.org/3/
+- fuente: IEEE 802.11 Working Group
+  descripcion: Estándares y documentación técnica de redes inalámbricas Wi-Fi.
+  url: https://www.ieee802.org/11/
+- fuente: Internet Society
+  descripcion: Recursos sobre arquitectura, funcionamiento, evolución y gobernanza de Internet.
+  url: https://www.internetsociety.org/
+- fuente: RIPE NCC
+  descripcion: Registro regional de Internet para Europa, Oriente Medio y partes de Asia; recursos sobre direccionamiento,
+    routing y operación de redes.
+  url: https://www.ripe.net/
+- fuente: ARIN Resource Guide
+  descripcion: Guías sobre direcciones IP, CIDR, registros y administración de recursos de Internet.
+  url: https://www.arin.net/resources/guide/
+- fuente: NIST Cybersecurity
+  descripcion: Publicaciones y recursos institucionales sobre ciberseguridad, arquitectura de protección y buenas
+    prácticas.
+  url: https://www.nist.gov/cybersecurity
+- fuente: CISA
+  descripcion: Agencia estadounidense de ciberseguridad; alertas, guías y recomendaciones de seguridad.
+  url: https://www.cisa.gov/
+- fuente: CIS
+  descripcion: Buenas prácticas, controles y benchmarks de configuración segura de sistemas y dispositivos.
+  url: https://www.cisecurity.org/
+- fuente: Netfilter
+  descripcion: Proyecto del kernel Linux responsable de la infraestructura de filtrado de paquetes, NAT y seguimiento
+    de conexiones.
+  url: https://www.netfilter.org/
+- fuente: Netfilter Documentation
+  descripcion: Documentación oficial del proyecto Netfilter sobre filtrado, hooks, NAT, connection tracking y herramientas
+    relacionadas.
+  url: https://www.netfilter.org/documentation/
+- fuente: nftables
+  descripcion: Proyecto de filtrado de paquetes de Linux que proporciona el sistema moderno de configuración de
+    reglas sobre Netfilter.
+  url: https://www.nftables.org/
+- fuente: nftables Wiki
+  descripcion: 'Documentación y ejemplos de nftables: tablas, cadenas, reglas, conjuntos, mapas y NAT.'
+  url: https://wiki.nftables.org/
+- fuente: 'Linux man-pages: iptables'
+  descripcion: Página de manual del comando iptables y sus opciones de administración de reglas.
+  url: https://man7.org/linux/man-pages/man8/iptables.8.html
+- fuente: Linux Kernel Networking Documentation
+  descripcion: Documentación oficial del subsistema de red del kernel Linux, incluyendo interfaces, routing, bridges
+    y tecnologías de red.
+  url: https://www.kernel.org/doc/html/latest/networking/
+- fuente: 'Linux Kernel: Ethernet Bridging'
+  descripcion: Documentación del soporte de bridges Ethernet en el kernel Linux.
+  url: https://www.kernel.org/doc/html/latest/networking/bridge.html
+- fuente: 'Linux Kernel: IP sysctl'
+  descripcion: Documentación de parámetros del kernel relacionados con el comportamiento de IPv4 e IPv6.
+  url: https://www.kernel.org/doc/html/latest/networking/ip-sysctl.html
+- fuente: ip-link man page
+  descripcion: Manual de ip-link para administrar interfaces de red, dispositivos virtuales y VLAN.
+  url: https://man7.org/linux/man-pages/man8/ip-link.8.html
+- fuente: ip-route man page
+  descripcion: Manual de ip-route para consultar y administrar tablas y rutas IP.
+  url: https://man7.org/linux/man-pages/man8/ip-route.8.html
+- fuente: ip-rule man page
+  descripcion: Manual de ip-rule para configurar reglas de policy routing.
+  url: https://man7.org/linux/man-pages/man8/ip-rule.8.html
+- fuente: strongSwan
+  descripcion: Implementación de IPsec para Linux; documentación sobre IKEv2, ESP, autenticación, certificados y
+    túneles VPN.
+  url: https://www.strongswan.org/
+- fuente: WireGuard
+  descripcion: Implementación moderna de VPN con criptografía de clave pública, interfaces virtuales y configuración
+    basada en pares.
+  url: https://www.wireguard.com/
+- fuente: WireGuard Quick Start
+  descripcion: Guía oficial de inicio y configuración de WireGuard.
+  url: https://www.wireguard.com/quickstart/
+- fuente: OpenVPN
+  descripcion: Proyecto VPN basado en TLS; documentación y recursos sobre túneles, certificados y acceso remoto.
+  url: https://openvpn.net/
+- fuente: Fortinet Documentation
+  descripcion: Documentación de FortiGate, firewalls, políticas de seguridad y VPN IPsec.
+  url: https://docs.fortinet.com/
+- fuente: Debian Documentation
+  descripcion: Documentación oficial de Debian para administración de sistemas y servicios de red.
+  url: https://www.debian.org/doc/
+- fuente: 'ArchWiki: nftables'
+  descripcion: Guía práctica de configuración y administración de nftables en Linux.
+  url: https://wiki.archlinux.org/title/Nftables
+- fuente: 'ArchWiki: NetworkManager'
+  descripcion: Guía de configuración y administración de conexiones de red mediante NetworkManager.
+  url: https://wiki.archlinux.org/title/NetworkManager
+- fuente: 'RFC 791: Internet Protocol'
+  descripcion: Especificación histórica del protocolo IPv4; consultar también los RFC que la actualizan.
+  url: https://www.rfc-editor.org/rfc/rfc791
+- fuente: 'RFC 9293: Transmission Control Protocol'
+  descripcion: Especificación vigente de referencia para TCP.
+  url: https://www.rfc-editor.org/rfc/rfc9293
+- fuente: 'RFC 768: User Datagram Protocol'
+  descripcion: Especificación del protocolo UDP.
+  url: https://www.rfc-editor.org/rfc/rfc768
+- fuente: 'RFC 792: Internet Control Message Protocol'
+  descripcion: Especificación de ICMP para IPv4.
+  url: https://www.rfc-editor.org/rfc/rfc792
+- fuente: 'RFC 4632: Classless Inter-domain Routing'
+  descripcion: Documento de referencia sobre CIDR y asignación/enrutamiento de bloques de direcciones IP.
+  url: https://www.rfc-editor.org/rfc/rfc4632
+- fuente: 'RFC 8200: IPv6'
+  descripcion: Especificación del protocolo IPv6.
+  url: https://www.rfc-editor.org/rfc/rfc8200
+- fuente: 'RFC 1122: Requirements for Internet Hosts'
+  descripcion: Requisitos y arquitectura de la capa de comunicación de hosts de Internet.
+  url: https://www.rfc-editor.org/rfc/rfc1122
+- fuente: IEEE 802.1Q
+  descripcion: Estándar para bridges y redes VLAN.
+  url: https://standards.ieee.org/ieee/802.1Q/10323/
+- fuente: IANA IPv4 Address Space Registry
+  descripcion: Registro oficial de asignaciones del espacio de direcciones IPv4.
+  url: https://www.iana.org/assignments/ipv4-address-space/ipv4-address-space.xhtml
+- fuente: IANA IPv4 Special-Purpose Address Registry
+  descripcion: Registro oficial de bloques IPv4 de propósito especial.
+  url: https://www.iana.org/assignments/iana-ipv4-special-registry/iana-ipv4-special-registry.xhtml
+- fuente: 'RFC 4301: IP Security Architecture'
+  descripcion: Especificación de la arquitectura de seguridad IPsec.
+  url: https://www.rfc-editor.org/rfc/rfc4301
+- fuente: 'RFC 4302: IP Authentication Header'
+  descripcion: Especificación del protocolo Authentication Header (AH) de IPsec.
+  url: https://www.rfc-editor.org/rfc/rfc4302
+- fuente: 'RFC 4303: IP Encapsulating Security Payload'
+  descripcion: Especificación del protocolo ESP de IPsec.
+  url: https://www.rfc-editor.org/rfc/rfc4303
+- fuente: 'RFC 7296: Internet Key Exchange Protocol Version 2'
+  descripcion: Especificación del protocolo IKEv2 para establecer asociaciones de seguridad IPsec.
+  url: https://www.rfc-editor.org/rfc/rfc7296
+- fuente: 'RFC 3947: Negotiation of NAT-Traversal'
+  descripcion: Especificación de negociación de NAT-Traversal para IPsec.
+  url: https://www.rfc-editor.org/rfc/rfc3947
+- fuente: 'RFC 3948: UDP Encapsulation of IPsec ESP'
+  descripcion: Especificación de encapsulación UDP de paquetes ESP para atravesar dispositivos NAT.
+  url: https://www.rfc-editor.org/rfc/rfc3948
+- fuente: 'RFC 826: Address Resolution Protocol'
+  descripcion: Especificación de ARP para resolver direcciones de protocolo en direcciones de red local.
+  url: https://www.rfc-editor.org/rfc/rfc826
+- fuente: 'RFC 2131: Dynamic Host Configuration Protocol'
+  descripcion: Especificación del protocolo DHCPv4.
+  url: https://www.rfc-editor.org/rfc/rfc2131
+- fuente: 'RFC 1035: Domain Names'
+  descripcion: Especificación de implementación y estructura del sistema DNS.
+  url: https://www.rfc-editor.org/rfc/rfc1035
+- fuente: 'RFC 3022: Traditional IP Network Address Translator'
+  descripcion: Descripción de mecanismos tradicionales de traducción de direcciones IPv4 (NAT).
+  url: https://www.rfc-editor.org/rfc/rfc3022
+- fuente: 'RFC 4271: Border Gateway Protocol 4'
+  descripcion: Especificación del protocolo de enrutamiento interdominio BGP-4.
+  url: https://www.rfc-editor.org/rfc/rfc4271
+- fuente: 'RFC 2328: OSPF Version 2'
+  descripcion: Especificación del protocolo de enrutamiento interior OSPFv2.
+  url: https://www.rfc-editor.org/rfc/rfc2328
+- fuente: 'RFC 2784: Generic Routing Encapsulation'
+  descripcion: Especificación del mecanismo de encapsulación GRE.
+  url: https://www.rfc-editor.org/rfc/rfc2784
+- fuente: 'RFC 7348: Virtual eXtensible Local Area Network'
+  descripcion: Especificación de VXLAN para redes Ethernet virtuales superpuestas.
+  url: https://www.rfc-editor.org/rfc/rfc7348
+- fuente: 'RFC 8446: TLS 1.3'
+  descripcion: Especificación del protocolo TLS 1.3 para proteger comunicaciones.
+  url: https://www.rfc-editor.org/rfc/rfc8446
+- fuente: 'RFC 3411: SNMP Management Framework'
+  descripcion: Arquitectura del marco de gestión de redes SNMP.
+  url: https://www.rfc-editor.org/rfc/rfc3411
+- fuente: iptables-extensions(8)
+  descripcion: 'Manual detallado de las extensiones de coincidencia y objetivos de iptables: conntrack, limit, multiport,
+    mark, LOG, DNAT, SNAT, MASQUERADE, policy IPsec, entre otras.'
+  url: https://man7.org/linux/man-pages/man8/iptables-extensions.8.html
+- fuente: iptables(8)
+  descripcion: 'Manual del comando iptables: sintaxis, tablas, cadenas, reglas, políticas y operaciones de administración
+    del firewall.'
+  url: https://man7.org/linux/man-pages/man8/iptables.8.html
+- fuente: iptables-save(8)
+  descripcion: Manual de la herramienta para volcar las reglas actuales de iptables en un formato que puede guardarse
+    y restaurarse.
+  url: https://man7.org/linux/man-pages/man8/iptables-save.8.html
+- fuente: iptables-restore(8)
+  descripcion: Manual de la herramienta para restaurar reglas de iptables desde un fichero o entrada estándar.
+  url: https://man7.org/linux/man-pages/man8/iptables-restore.8.html
+- fuente: ip-link(8)
+  descripcion: Manual de ip-link para crear y administrar interfaces y dispositivos virtuales; incluye ejemplos
+    y parámetros de dispositivos VLAN.
+  url: https://man7.org/linux/man-pages/man8/ip-link.8.html
+- fuente: bridge(8)
+  descripcion: Manual de la utilidad bridge de iproute2 para administrar bridges Ethernet, puertos, VLAN filtering,
+    VLAN por puerto y FDB.
+  url: https://man7.org/linux/man-pages/man8/bridge.8.html
+- fuente: ip-address(8)
+  descripcion: Manual de ip-address para mostrar y configurar direcciones IPv4 e IPv6 en interfaces de red.
+  url: https://man7.org/linux/man-pages/man8/ip-address.8.html
+- fuente: ip-route(8)
+  descripcion: Manual de ip-route para consultar y administrar rutas, tablas de enrutamiento, métricas y rutas por
+    defecto.
+  url: https://man7.org/linux/man-pages/man8/ip-route.8.html
+- fuente: ip-rule(8)
+  descripcion: Manual de ip-rule para configurar reglas de enrutamiento basado en políticas (policy routing).
+  url: https://man7.org/linux/man-pages/man8/ip-rule.8.html
+- fuente: ip-tunnel(8)
+  descripcion: Manual de ip-tunnel para crear y administrar túneles IPIP, SIT y GRE.
+  url: https://man7.org/linux/man-pages/man8/ip-tunnel.8.html
+- fuente: ip-xfrm(8)
+  descripcion: Manual de ip-xfrm para administrar políticas y asociaciones de seguridad XFRM utilizadas por IPsec
+    en Linux.
+  url: https://man7.org/linux/man-pages/man8/ip-xfrm.8.html
+- fuente: tc-vlan(8)
+  descripcion: Manual del clasificador VLAN de tc (traffic control), con opciones para filtrar tráfico según etiquetas
+    VLAN.
+  url: https://man7.org/linux/man-pages/man8/tc-vlan.8.html
+- fuente: 'nftables: Configuring chains'
+  descripcion: Guía práctica del proyecto nftables para crear cadenas base y definir hooks, prioridades y políticas.
+  url: https://wiki.nftables.org/wiki-nftables/index.php/Configuring_chains
+- fuente: 'nftables: Configuring tables'
+  descripcion: Guía práctica para crear y administrar tablas nftables y comprender las familias de direcciones.
+  url: https://wiki.nftables.org/wiki-nftables/index.php/Configuring_tables
+- fuente: 'nftables: Performing NAT'
+  descripcion: Documentación de nftables sobre configuración de SNAT, DNAT, masquerading y cadenas NAT.
+  url: https://wiki.nftables.org/wiki-nftables/index.php/Performing_Network_Address_Translation_(NAT)
+- fuente: 'nftables: Matching connection tracking stateful metainformation'
+  descripcion: Ejemplos de filtrado con seguimiento de conexiones y estados como established, related, new e invalid.
+  url: https://wiki.nftables.org/wiki-nftables/index.php/Matching_connection_tracking_stateful_metainformation
+- fuente: 'strongSwan: Introduction'
+  descripcion: Introducción técnica a IKE, IPsec, asociaciones de seguridad, políticas, archivos de configuración
+    y escenarios site-to-site y host-to-host.
+  url: https://docs.strongswan.org/docs/latest/howtos/introduction.html
+- fuente: 'strongSwan: Configuration Quickstart'
+  descripcion: Guía práctica con configuraciones completas de VPN IPsec, incluyendo escenarios site-to-site y acceso
+    remoto, certificados y ficheros swanctl.conf.
+  url: https://docs.strongswan.org/docs/latest/config/quickstart.html
+- fuente: 'strongSwan: IKEv2 Configuration Examples'
+  descripcion: Colección de configuraciones IKEv2 para acceso remoto, asignación de direcciones virtuales, VPN site-to-site
+    y host-to-host.
+  url: https://docs.strongswan.org/docs/latest/config/IKEv2.html
+- fuente: 'strongSwan: swanctl.conf'
+  descripcion: Referencia de configuración de conexiones, secretos, credenciales y pools de direcciones IP mediante
+    swanctl.conf.
+  url: https://docs.strongswan.org/docs/latest/swanctl/swanctlConf.html
+- fuente: 'strongSwan: swanctl'
+  descripcion: Manual de la herramienta swanctl para cargar configuraciones, credenciales, iniciar conexiones y
+    consultar el estado de las asociaciones IKE e IPsec.
+  url: https://docs.strongswan.org/docs/latest/swanctl/swanctl.html

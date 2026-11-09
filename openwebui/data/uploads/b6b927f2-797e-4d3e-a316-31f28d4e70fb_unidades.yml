@@ -1,0 +1,277 @@
+# Meta archivo de extensión y alcance de los contenidos.
+# Lo mantiene el profesor. El agente lo lee para dimensionar cada apartado; no inventa valores.
+#
+# Presupuesto de palabras de un apartado (si no se fija `palabras`):
+#   sesiones_apartado × palabras_por_sesion × factor_profundidad
+# donde sesiones_apartado = `sesiones` del apartado o, si falta, sesiones de la unidad / nº de apartados.
+# Los valores de `configuracion` son propuestos y editables.
+#
+# RECONSTRUIDO a partir de contenidos/unidades/NN/*.md (ver trabajo/_respaldo/ para la versión anterior).
+# Los campos marcados con POR DEFINIR no se pueden deducir de los archivos existentes.
+
+configuracion:
+  palabras_por_sesion: 300
+  tolerancia: 0.30          # margen admitido sobre el presupuesto (±30 %)
+  factor_profundidad:
+    introductorio: 0.8
+    descriptivo: 1.0
+    aplicado: 1.3
+
+# Campos de cada apartado:
+#   id            nombre del archivo .md de salida (sin extensión) en contenidos/unidades/NN/
+#   titulo        título del apartado
+#   sesiones      (opcional) sesiones dedicadas
+#   palabras      (opcional) presupuesto fijo; anula el cálculo
+#   profundidad   (opcional) introductorio | descriptivo | aplicado
+#   diagramas     nº mínimo de diagramas Mermaid/imágenes
+#   fuentes       carpeta de documentacion/ con las fuentes (fuentes.yaml y documentos)
+#   urls          textos que seleccionan, dentro de fuentes.yaml, las URLs que usa este apartado
+#   documentos    textos que seleccionan, por ruta, los documentos locales de la carpeta `fuentes` que usa este apartado
+#   incluir / excluir   (opcionales) temas a cubrir o a dejar fuera
+#   minimos       (opcional) lista de aspectos/conceptos OBLIGATORIOS a mencionar en el apartado.
+#   autoevaluacion  (opcional) nº de preguntas de «Comprueba lo aprendido». Si falta, el apartado NO lleva esa sección
+#   estado        borrador | revisado | aprobado  (ciclo de revisión humana)
+
+unidades:
+  - unidad: 0
+    titulo: Introducción al módulo
+    apartados:
+      - id: 1-aspectos-legales-modulo
+        titulo: "Resumen del Módulo Profesional: Despliegue de Plataformas de Ejecución de Contenedores"
+        palabras: 1300
+        diagramas: 0
+        fuentes: documentacion/unidad0-introduccion
+        minimos:
+          - Normativa legal aplicable a ciberseguridad en España
+          - Regulaciones de privacidad y protección de datos
+          - Marcos de cumplimiento normativo del sector
+        estado: borrador
+      # POR DEFINIR: sesiones o palabras (la unidad 0 no declara sesiones)
+      - id: 2-entorno-trabajo
+        titulo: "Guía del Entorno de Prácticas: Infraestructura y Herramientas de Trabajo"
+        diagramas: 0
+        fuentes: documentacion/unidad0-introduccion
+        estado: borrador
+      # POR DEFINIR: sesiones o palabras (la unidad 0 no declara sesiones)
+      - id: 3-creacion-entorno
+        titulo: "Preparación del entorno de trabajo"
+        diagramas: 0
+        fuentes: documentacion/unidad0-introduccion
+        estado: borrador
+
+  - unidad: 1
+    titulo: Entornos de virtualización
+    sesiones: 12
+    profundidad: introductorio
+    apartados:
+      - id: 1-guia
+        titulo: "Guía de la unidad: despliegue de Proxmox VE"
+        diagramas: 0
+        fuentes: documentacion/unidad1-virtualizacion
+        estado: borrador
+      - id: 2-introduccion
+        titulo: "Introducción a Proxmox"
+        diagramas: 0
+        fuentes: documentacion/unidad1-virtualizacion
+        estado: borrador
+      - id: 3-entorno
+        titulo: "Entorno de ejecución para Proxmox"
+        diagramas: 0
+        fuentes: documentacion/unidad1-virtualizacion
+        estado: borrador
+      - id: 4-cluster
+        titulo: "Clúster de Proxmox"
+        diagramas: 0
+        fuentes: documentacion/unidad1-virtualizacion
+        estado: borrador
+      - id: 5-ceph
+        titulo: "Implementación de Ceph en Proxmox VE"
+        diagramas: 0
+        fuentes: documentacion/unidad1-virtualizacion
+        estado: borrador
+      - id: 6-network
+        titulo: "Gestión de la red en Proxmox"
+        diagramas: 0
+        fuentes: documentacion/unidad1-virtualizacion
+        estado: borrador
+      - id: 7-ha
+        titulo: "Implementación de HA en Proxmox"
+        diagramas: 0
+        fuentes: documentacion/unidad1-virtualizacion
+        estado: borrador
+      - id: 8-seguridad
+        titulo: "Seguridad en Proxmox VE. Enfoque RBAC"
+        diagramas: 0
+        fuentes: documentacion/unidad1-virtualizacion
+        estado: borrador
+      - id: 9-backups_snapshots
+        titulo: "Snapshots y Backups en Proxmox VE"
+        diagramas: 0
+        fuentes: documentacion/unidad1-virtualizacion
+        estado: borrador
+
+  - unidad: 2
+    titulo: Interfaces de acceso y gestión de infraestructura
+    sesiones: 12
+    profundidad: introductorio
+    apartados:
+      - id: 1-guia
+        titulo: "Guía docente de la unidad"
+        diagramas: 0
+        fuentes: documentacion/unidad2-interfaces-gestion
+        estado: borrador
+      - id: 2-introduccion
+        titulo: "Introducción: Interfaces de Acceso y Gestión en Proxmox VE"
+        diagramas: 0
+        fuentes: documentacion/unidad2-interfaces-gestion
+        estado: borrador
+      - id: 3-entorno
+        titulo: "Entorno de ejecución para Proxmox"
+        diagramas: 0
+        fuentes: documentacion/unidad2-interfaces-gestion
+        estado: borrador
+      - id: 4-webui
+        titulo: "Administración de Proxmox VE desde la Web UI"
+        diagramas: 0
+        fuentes: documentacion/unidad2-interfaces-gestion
+        estado: borrador
+      - id: 5-proxmox-tools
+        titulo: "Manual de Herramientas CLI de Proxmox VE"
+        diagramas: 0
+        fuentes: documentacion/unidad2-interfaces-gestion
+        estado: borrador
+      - id: 6-autenticacion
+        titulo: "Métodos de autenticación en Proxmox VE"
+        diagramas: 0
+        fuentes: documentacion/unidad2-interfaces-gestion
+        estado: borrador
+      - id: 7-cli
+        titulo: "Gestión por Línea de Comandos en Proxmox VE"
+        diagramas: 0
+        fuentes: documentacion/unidad2-interfaces-gestion
+        estado: borrador
+      - id: 8-cloud-init
+        titulo: "Cloud-Init en Proxmox VE: Despliegue Automatizado"
+        diagramas: 0
+        fuentes: documentacion/unidad2-interfaces-gestion
+        estado: borrador
+      - id: 9-acceso-api
+        titulo: "Administración de Proxmox VE: De la GUI a la Automatización con API"
+        diagramas: 0
+        fuentes: documentacion/unidad2-interfaces-gestion
+        estado: borrador
+
+  - unidad: 3
+    titulo: Infraestructura como código (IaC)
+    sesiones: 20
+    apartados:
+      - id: 1-guia
+        titulo: "Guía de la unidad: Infraestructura como Código"
+        diagramas: 0
+        fuentes: documentacion/unidad03-infraestructura-codigo
+        estado: borrador
+      - id: 2-introduccion
+        titulo: "Introducción. Infraestructura como Código y Automatización"
+        diagramas: 0
+        fuentes: documentacion/unidad03-infraestructura-codigo
+        estado: borrador
+      - id: 3-entorno
+        titulo: "Entorno de ejecución para Proxmox"
+        diagramas: 0
+        fuentes: documentacion/unidad03-infraestructura-codigo
+        estado: borrador
+      - id: 4-opentofu
+        titulo: "OpenTofu: automatización e Infraestructura como Código (IaC)"
+        diagramas: 0
+        fuentes: documentacion/unidad03-infraestructura-codigo
+        estado: borrador
+      - id: 5-ansible
+        titulo: "Ansible: Gestión de Configuración para Plataformas de Contenedores"
+        diagramas: 0
+        fuentes: documentacion/unidad03-infraestructura-codigo
+        estado: borrador
+      - id: 6-infraestructura
+        titulo: "Herramientas de Gestión de Infraestructura con Ansible y OpenTofu"
+        diagramas: 0
+        fuentes: documentacion/unidad03-infraestructura-codigo
+        estado: borrador
+
+  - unidad: 4
+    titulo: Orquestación, monitorización y seguridad digital
+    sesiones: 20
+    apartados:
+      - id: 1-guia
+        titulo: "Guía de la unidad: Orquestación, monitorización y seguridad digital"
+        diagramas: 0
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 2-introduccion
+        titulo: "Introducción a Kubernetes (K8s)"
+        diagramas: 0
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 3-entorno
+        titulo: "Entorno de ejecución"
+        diagramas: 0
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 4-kubernetes
+        titulo: "¿Por qué Kubernetes?"
+        diagramas: 3
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 5-kubernetes_artefactos
+        titulo: POR DEFINIR   # el archivo no tiene H1
+        diagramas: 1
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 6-kubernetes_networking
+        titulo: "Networking en Kubernetes: Conectividad y Seguridad"
+        diagramas: 0
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 7-kubernetes_namespaces
+        titulo: "Namespaces: Organización y Aislamiento en Kubernetes"
+        diagramas: 0
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 8-kubernetes_controllers
+        titulo: "Artefactos (controllers) de Kubernetes para el Despliegue de Microservicios"
+        diagramas: 0
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 9-kubernetes_services
+        titulo: "Services en Kubernetes"
+        diagramas: 0
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 10-kubernetes_storage
+        titulo: "Gestión de Almacenamiento en Kubernetes: Persistencia y Abstracción"
+        diagramas: 0
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 11-kubernetes_security
+        titulo: "Seguridad en Kubernetes: Protegiendo el Clúster y las Aplicaciones"
+        diagramas: 0
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 12-kubernetes_config_secrets
+        titulo: "Configuración y Secretos: Desacoplando la Aplicación del Entorno"
+        diagramas: 0
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 13-kubernetes_healthchecks
+        titulo: "Monitorización de Salud en Kubernetes: Probes (Sondas)"
+        diagramas: 0
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 14-kubernetes_requests_limits
+        titulo: "Gestión del uso de recursos en kubernetes"
+        diagramas: 0
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador
+      - id: 15-kubernetes_helm
+        titulo: "Introducción a Helm: El Gestor de Paquetes para Kubernetes"
+        diagramas: 0
+        fuentes: documentacion/unidad4-orquestacion
+        estado: borrador

@@ -1,0 +1,53 @@
+site_name: <AQUÍ VA EL NOMBRE DE LA UNIDAD O TEMA>
+site_description: Documentación de <AQUÍ VA EL NOMBRE DE LA UNIDAD O TEMA>
+site_author: Javier Fernández Peón
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Guía de Unidad: guia.md
+  - Inicio: index.md
+  - Entorno: entorno.md
+  - Conceptos:
+
+  - Prácticas:
+   
+  - Ejercicios:
+    
+
+plugins:
+  - search
+  - mermaid2
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+  - fenced_code
+  - codehilite
+  - pymdownx.superfences:
+        # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - pymdownx.details
+  - pymdownx.tabbed
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: <AQUÍ VA EL ENLACE AL REPOSITORIO DE GITHUB>
+
+extra_css:
+  - stylesheets/extra.css

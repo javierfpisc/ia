@@ -1,0 +1,9 @@
+# Materiales del módulo Despliegue de plataformas de ejecución de contenedores
+
+Vista previa local de los materiales. Las secciones se generan a partir de las carpetas de origen:
+
+- **Sistema de generación**: [guía del sistema](sistema.md), con el flujo de trabajo, los meta archivos y cómo mantener y revisar los materiales.
+- **Contenidos**: carpeta `contenidos/`, en el menú lateral.
+- **Prácticas**: carpeta `practicas/`, en el menú lateral.
+
+Los cambios en los archivos `.md` de `contenidos/` y `practicas/` se recargan automáticamente en el navegador.
